@@ -1457,3 +1457,37 @@ Started GET "/assets/timesheets.js?body=1" for 127.0.0.1 at 2014-08-06 11:37:22 
 
 
 Started GET "/assets/application.js?body=1" for 127.0.0.1 at 2014-08-06 11:37:22 -0400
+
+
+Started GET "/" for 127.0.0.1 at 2014-08-06 11:38:34 -0400
+  [1m[36mActiveRecord::SchemaMigration Load (0.1ms)[0m  [1mSELECT "schema_migrations".* FROM "schema_migrations"[0m
+Processing by TimesheetsController#new as HTML
+  Rendered timesheets/new.html.erb within layouts/application (11.1ms)
+Completed 200 OK in 64ms (Views: 54.7ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/assets/confirmation.css?body=1" for 127.0.0.1 at 2014-08-06 11:38:34 -0400
+
+
+Started GET "/assets/jquery_ujs.js?body=1" for 127.0.0.1 at 2014-08-06 11:38:34 -0400
+
+
+Started GET "/assets/application.css?body=1" for 127.0.0.1 at 2014-08-06 11:38:34 -0400
+
+
+Started GET "/assets/timesheets.css?body=1" for 127.0.0.1 at 2014-08-06 11:38:34 -0400
+
+
+Started GET "/assets/turbolinks.js?body=1" for 127.0.0.1 at 2014-08-06 11:38:34 -0400
+
+
+Started GET "/assets/jquery.js?body=1" for 127.0.0.1 at 2014-08-06 11:38:34 -0400
+
+
+Started GET "/assets/confirmation.js?body=1" for 127.0.0.1 at 2014-08-06 11:38:34 -0400
+
+
+Started GET "/assets/timesheets.js?body=1" for 127.0.0.1 at 2014-08-06 11:38:34 -0400
+
+
+Started GET "/assets/application.js?body=1" for 127.0.0.1 at 2014-08-06 11:38:34 -0400
