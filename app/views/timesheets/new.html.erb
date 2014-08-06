@@ -1,0 +1,30 @@
+<h1>Timesheets#new</h1>
+<h1>Let's Get You Paid</h1>
+<p>Find me in app/views/timesheets/new.html.erb</p>
+<%= form_for @timesheet do |f| %>
+  <p>
+    <%= f.label "Name" %>
+  </p>
+  <p>
+  </p>
+  <p>
+    <%= f.label "Email" %>
+  </p>
+  <p>
+    <%= f.text_field :email %>
+  </p>
+  <p>
+    <%= f.label "Type" %>
+  </p>
+  <p>
+  </p>
+  <p>
+    <%= f.label "Details" %>
+  </p>
+  <p>
+  </p>
+  <p>
+    <%= f.submit "Submit" %>
+  </p>
+<% end %>
+
