@@ -1,0 +1,30 @@
+<h1>Timesheets#new</h1>
+<h1>Let's Get You Paid</h1>
+<p>Find me in app/views/timesheets/new.html.erb</p>
+  <%= form_for(@employee) do |f| %>
+  <% if @employee.errors.any? %>
+    <div id="error_explanation">
+      <h2><%= pluralize(@employee.errors.count, "error") %> prohibited this employee from being saved:</h2>
+
+      <ul>
+      <% @employee.errors.full_messages.each do |message| %>
+        <li><%= message %></li>
+      <% end %>
+      </ul>
+    </div>
+  <% end %>
+    Date: <%= f.date_field :date %><br />
+    First name: <%= f.text_field :first_name %><br />
+    Last name:  <%= f.text_field :last_name %><br />
+    Email:  <%= f.email_field :email %><br />
+    Title:  <%= f.text_field :title %><br />
+    Shift:  <%= f.text_field :shift_start_time %><br />
+    Start time:  <%= f.text_field :hours_worked %><br />
+    Hours worked:  <%= f.text_field :hours_worked %><br />
+    <%= hidden_field(:timesheet, :work_week) %><br />
+    
+  <p>
+  <%= f.submit %>
+  </p>
+<% end %>
+

@@ -1,0 +1,28 @@
+<table style="width:800px">
+  <thead>
+    <tr>
+      <th>First name</th>
+      <th>Last name</th>
+      <th>Email</th>
+      <th>Title</th>
+      <th>Date</th>
+      <th>Shift</th>
+      <th>Hours worked</th>
+    </tr>
+  </thead>
+
+  <tbody>
+    <% Employee.all.each do |employee| %>
+      <tr>
+        <td><b><%=employee.first_name %></b></td>
+        <td><b><%=employee.last_name %></b></td>
+        <td><b><%=employee.email %></b></td>
+        <td><b><%=employee.title %></b></td>
+        <td><b><%=employee.date %></b></td>
+        <td><b><%=employee.shift_start_time %></b></td>
+        <td><b><%=employee.hours_worked %></b></td>
+      </tr>
+
+    <% end %>
+  </tbody>
+</table>

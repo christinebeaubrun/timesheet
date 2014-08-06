@@ -11,30 +11,19 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20140806153104) do
+ActiveRecord::Schema.define(version: 20140806204022) do
 
   create_table "employees", force: true do |t|
-    t.string   "firstname"
-    t.string   "lastname"
-    t.datetime "created_at"
-    t.datetime "updated_at"
-  end
-
-  create_table "timesheets", force: true do |t|
-    t.string   "name"
+    t.string   "first_name"
+    t.string   "last_name"
     t.string   "email"
-    t.string   "day_worked"
-    t.string   "start_time"
-    t.decimal  "hours_worked"
-    t.decimal  "total_hours_worked"
-    t.integer  "total_pay"
-    t.string   "position"
-    t.integer  "pay_rate"
-    t.string   "work_week"
-    t.integer  "grand_total"
+    t.date     "date"
+    t.string   "shift_start_time"
+    t.integer  "hours_worked"
+    t.string   "title"
     t.datetime "created_at"
     t.datetime "updated_at"
-    t.date     "date"
+    t.string   "employee_id"
   end
 
 end
