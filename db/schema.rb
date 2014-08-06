@@ -21,6 +21,20 @@ ActiveRecord::Schema.define(version: 20140806132146) do
   end
 
   create_table "timesheets", force: true do |t|
+    t.string   "name"
+    t.string   "email"
+    t.datetime "date"
+    t.string   "day_worked"
+    t.string   "start_time"
+    t.decimal  "hours_worked"
+    t.decimal  "total_hours_worked"
+    t.integer  "total_pay"
+    t.string   "position"
+    t.integer  "pay_rate"
+    t.string   "work_week"
+    t.integer  "grand_total"
+    t.datetime "created_at"
+    t.datetime "updated_at"
   end
 
 end
