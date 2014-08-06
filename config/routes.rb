@@ -7,7 +7,8 @@ Rails.application.routes.draw do
   resources :timesheets
   resources :confirmation
 
-  post '/' => 'timesheets#create'
+  post '/' => 'timesheets#sendemail'
+  get "send_email" => "timesheets#send_email", as: 'send'
 
   # The priority is based upon order of creation: first created -> highest priority.
   # See how all your routes lay out with "rake routes".

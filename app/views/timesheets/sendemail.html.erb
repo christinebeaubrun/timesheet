@@ -1,8 +1,6 @@
-<h1>Let's Review Your Timesheet</h1>
-<%= @timesheet %>
 <%= form_for :timesheet do |f| %>
    
   <%= f.submit "send" %>
-  </p>
 <% end %>
 
+<%= link_to "send email", send_path %>
