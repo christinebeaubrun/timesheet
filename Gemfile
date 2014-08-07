@@ -28,7 +28,7 @@ gem 'spring',        group: :development
 # group :development, :test do # <<<< :development, not devlopment
 #   gem 'sqlite3'
 # end
-gem 'sqlite3', :group => [:development, :test]
+#gem 'sqlite3', :group => [:development, :test]
 group :production do
 gem 'thin'
 gem 'pg'
