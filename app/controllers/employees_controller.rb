@@ -14,7 +14,7 @@ class EmployeesController < ApplicationController
    end
   def email
     # @employee = Employee.find(params[:id])
-    Employee.first.destroy
+    #Employee.first.destroy
     ConfirmationMailer.confirmation_email(@name, @message).deliver
     # render nothing: true, status: 200
   end
