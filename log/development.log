@@ -27364,3 +27364,3542 @@ Content-Transfer-Encoding: 7bit
 </table>
   Rendered employees/email.html.erb within layouts/application (0.6ms)
 Completed 200 OK in 3747ms (Views: 20.4ms | ActiveRecord: 8.3ms)
+
+
+Started GET "/" for 127.0.0.1 at 2014-08-07 18:30:16 -0400
+  [1m[36mActiveRecord::SchemaMigration Load (0.1ms)[0m  [1mSELECT "schema_migrations".* FROM "schema_migrations"[0m
+Processing by EmployeesController#new as HTML
+  Rendered employees/_form.html.erb (31.2ms)
+  Rendered employees/new.html.erb within layouts/application (35.9ms)
+Completed 200 OK in 97ms (Views: 85.2ms | ActiveRecord: 0.3ms)
+
+
+Started GET "/assets/confirmation.css?body=1" for 127.0.0.1 at 2014-08-07 18:30:16 -0400
+
+
+Started GET "/assets/employees.css?body=1" for 127.0.0.1 at 2014-08-07 18:30:16 -0400
+
+
+Started GET "/assets/jquery.js?body=1" for 127.0.0.1 at 2014-08-07 18:30:16 -0400
+
+
+Started GET "/assets/application.css?body=1" for 127.0.0.1 at 2014-08-07 18:30:16 -0400
+
+
+Started GET "/assets/timesheets.css?body=1" for 127.0.0.1 at 2014-08-07 18:30:16 -0400
+
+
+Started GET "/assets/jquery_ujs.js?body=1" for 127.0.0.1 at 2014-08-07 18:30:16 -0400
+
+
+Started GET "/assets/turbolinks.js?body=1" for 127.0.0.1 at 2014-08-07 18:30:16 -0400
+
+
+Started GET "/assets/confirmation.js?body=1" for 127.0.0.1 at 2014-08-07 18:30:16 -0400
+
+
+Started GET "/assets/employees.js?body=1" for 127.0.0.1 at 2014-08-07 18:30:16 -0400
+
+
+Started GET "/assets/timesheets.js?body=1" for 127.0.0.1 at 2014-08-07 18:30:16 -0400
+
+
+Started GET "/assets/application.js?body=1" for 127.0.0.1 at 2014-08-07 18:30:16 -0400
+
+
+Started POST "/employees" for 127.0.0.1 at 2014-08-07 18:30:56 -0400
+Processing by EmployeesController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"T6u5piubV8uAqWmcUAs7q5wQUnXAogsjap/xvZqED2s=", "employee"=>{"date"=>"", "first_name"=>"sammy", "last_name"=>"khaleel", "email"=>"sammykhaleel83@gmail.com", "title"=>"", "shift_start_time"=>"", "hours_worked"=>""}, "timesheet"=>{"work_week"=>""}, "commit"=>"Create Employee"}
+  [1m[35m (0.2ms)[0m  begin transaction
+  [1m[36mSQL (0.5ms)[0m  [1mINSERT INTO "employees" ("created_at", "email", "first_name", "last_name", "shift_start_time", "title", "updated_at") VALUES (?, ?, ?, ?, ?, ?, ?)[0m  [["created_at", "2014-08-07 22:30:56.252298"], ["email", "sammykhaleel83@gmail.com"], ["first_name", "sammy"], ["last_name", "khaleel"], ["shift_start_time", ""], ["title", ""], ["updated_at", "2014-08-07 22:30:56.252298"]]
+  [1m[35m (0.7ms)[0m  commit transaction
+Redirected to http://localhost:3000/employees/6
+Completed 302 Found in 18ms (ActiveRecord: 1.8ms)
+
+
+Started GET "/employees/6" for 127.0.0.1 at 2014-08-07 18:30:56 -0400
+Processing by EmployeesController#show as HTML
+  Parameters: {"id"=>"6"}
+  [1m[36mEmployee Load (0.2ms)[0m  [1mSELECT  "employees".* FROM "employees"  WHERE "employees"."id" = ? LIMIT 1[0m  [["id", 6]]
+  [1m[35mCACHE (0.0ms)[0m  SELECT  "employees".* FROM "employees"  WHERE "employees"."id" = ? LIMIT 1  [["id", "6"]]
+  Rendered employees/show.html.erb within layouts/application (1.3ms)
+Completed 200 OK in 12ms (Views: 8.5ms | ActiveRecord: 0.3ms)
+
+
+Started GET "/assets/employees.css?body=1" for 127.0.0.1 at 2014-08-07 18:30:56 -0400
+
+
+Started GET "/assets/confirmation.css?body=1" for 127.0.0.1 at 2014-08-07 18:30:56 -0400
+
+
+Started GET "/assets/jquery_ujs.js?body=1" for 127.0.0.1 at 2014-08-07 18:30:56 -0400
+
+
+Started GET "/assets/application.css?body=1" for 127.0.0.1 at 2014-08-07 18:30:56 -0400
+
+
+Started GET "/assets/jquery.js?body=1" for 127.0.0.1 at 2014-08-07 18:30:56 -0400
+
+
+Started GET "/assets/timesheets.css?body=1" for 127.0.0.1 at 2014-08-07 18:30:56 -0400
+
+
+Started GET "/assets/turbolinks.js?body=1" for 127.0.0.1 at 2014-08-07 18:30:56 -0400
+
+
+Started GET "/assets/confirmation.js?body=1" for 127.0.0.1 at 2014-08-07 18:30:56 -0400
+
+
+Started GET "/assets/employees.js?body=1" for 127.0.0.1 at 2014-08-07 18:30:56 -0400
+
+
+Started GET "/assets/timesheets.js?body=1" for 127.0.0.1 at 2014-08-07 18:30:56 -0400
+
+
+Started GET "/assets/application.js?body=1" for 127.0.0.1 at 2014-08-07 18:30:56 -0400
+
+
+Started GET "/go/6" for 127.0.0.1 at 2014-08-07 18:30:57 -0400
+Processing by EmployeesController#email as HTML
+  Parameters: {"id"=>"6"}
+  [1m[36mEmployee Load (0.2ms)[0m  [1mSELECT  "employees".* FROM "employees"  WHERE "employees"."id" = ? LIMIT 1[0m  [["id", 6]]
+  [1m[35mEmployee Load (0.2ms)[0m  SELECT  "employees".* FROM "employees"   ORDER BY "employees"."id" DESC LIMIT 1
+  Rendered confirmation_mailer/confirmation_email.html.erb (1.6ms)
+
+ConfirmationMailer#confirmation_email: processed outbound mail in 15.1ms
+
+Sent mail to mhmailr@gmail.com (2544.5ms)
+Date: Thu, 07 Aug 2014 18:30:57 -0400
+From: mhmailr@gmail.com
+To: mhmailr@gmail.com
+Message-ID: <53e3fe21cb6d3_48ed81abfa8c60336@samers-air.mail>
+Subject: Sent from Timesheet app!
+Mime-Version: 1.0
+Content-Type: text/html;
+ charset=UTF-8
+Content-Transfer-Encoding: 7bit
+
+<table style="width:800px">
+  <thead>
+    <tr>
+      <th>First name</th>
+      <th>Last name</th>
+      <th>Email</th>
+      <th>Title</th>
+      <th>Date</th>
+      <th>Shift</th>
+      <th>Hours worked</th>
+    </tr>
+  </thead>
+
+  <tbody>
+  </tbody>
+</table>
+  Rendered employees/email.html.erb within layouts/application (0.6ms)
+Completed 200 OK in 2581ms (Views: 11.6ms | ActiveRecord: 0.4ms)
+
+
+Started GET "/" for 127.0.0.1 at 2014-08-07 18:31:29 -0400
+Processing by EmployeesController#new as HTML
+  Rendered employees/_form.html.erb (3.2ms)
+  Rendered employees/new.html.erb within layouts/application (4.5ms)
+Completed 200 OK in 18ms (Views: 16.6ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/assets/confirmation.css?body=1" for 127.0.0.1 at 2014-08-07 18:31:29 -0400
+
+
+Started GET "/assets/application.css?body=1" for 127.0.0.1 at 2014-08-07 18:31:29 -0400
+
+
+Started GET "/assets/jquery_ujs.js?body=1" for 127.0.0.1 at 2014-08-07 18:31:29 -0400
+
+
+Started GET "/assets/timesheets.css?body=1" for 127.0.0.1 at 2014-08-07 18:31:29 -0400
+
+
+Started GET "/assets/employees.css?body=1" for 127.0.0.1 at 2014-08-07 18:31:29 -0400
+
+
+Started GET "/assets/jquery.js?body=1" for 127.0.0.1 at 2014-08-07 18:31:29 -0400
+
+
+Started GET "/assets/turbolinks.js?body=1" for 127.0.0.1 at 2014-08-07 18:31:29 -0400
+
+
+Started GET "/assets/confirmation.js?body=1" for 127.0.0.1 at 2014-08-07 18:31:29 -0400
+
+
+Started GET "/assets/employees.js?body=1" for 127.0.0.1 at 2014-08-07 18:31:29 -0400
+
+
+Started GET "/assets/timesheets.js?body=1" for 127.0.0.1 at 2014-08-07 18:31:29 -0400
+
+
+Started GET "/assets/application.js?body=1" for 127.0.0.1 at 2014-08-07 18:31:29 -0400
+
+
+Started POST "/employees" for 127.0.0.1 at 2014-08-07 18:31:34 -0400
+Processing by EmployeesController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"T6u5piubV8uAqWmcUAs7q5wQUnXAogsjap/xvZqED2s=", "employee"=>{"date"=>"", "first_name"=>"sammy", "last_name"=>"khaleel", "email"=>"sammykhaleel83@gmail.com", "title"=>"", "shift_start_time"=>"", "hours_worked"=>""}, "timesheet"=>{"work_week"=>""}, "commit"=>"Create Employee"}
+  [1m[36m (0.1ms)[0m  [1mbegin transaction[0m
+  [1m[35mSQL (0.7ms)[0m  INSERT INTO "employees" ("created_at", "email", "first_name", "last_name", "shift_start_time", "title", "updated_at") VALUES (?, ?, ?, ?, ?, ?, ?)  [["created_at", "2014-08-07 22:31:34.548542"], ["email", "sammykhaleel83@gmail.com"], ["first_name", "sammy"], ["last_name", "khaleel"], ["shift_start_time", ""], ["title", ""], ["updated_at", "2014-08-07 22:31:34.548542"]]
+  [1m[36m (0.7ms)[0m  [1mcommit transaction[0m
+Redirected to http://localhost:3000/employees/7
+Completed 302 Found in 7ms (ActiveRecord: 1.5ms)
+
+
+Started GET "/employees/7" for 127.0.0.1 at 2014-08-07 18:31:34 -0400
+Processing by EmployeesController#show as HTML
+  Parameters: {"id"=>"7"}
+  [1m[35mEmployee Load (0.5ms)[0m  SELECT  "employees".* FROM "employees"  WHERE "employees"."id" = ? LIMIT 1  [["id", 7]]
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT  "employees".* FROM "employees"  WHERE "employees"."id" = ? LIMIT 1[0m  [["id", "7"]]
+  Rendered employees/show.html.erb within layouts/application (0.8ms)
+Completed 200 OK in 13ms (Views: 8.6ms | ActiveRecord: 0.5ms)
+
+
+Started GET "/assets/timesheets.css?body=1" for 127.0.0.1 at 2014-08-07 18:31:34 -0400
+
+
+Started GET "/assets/confirmation.css?body=1" for 127.0.0.1 at 2014-08-07 18:31:34 -0400
+
+
+Started GET "/assets/jquery.js?body=1" for 127.0.0.1 at 2014-08-07 18:31:34 -0400
+
+
+Started GET "/assets/jquery_ujs.js?body=1" for 127.0.0.1 at 2014-08-07 18:31:34 -0400
+
+
+Started GET "/assets/employees.css?body=1" for 127.0.0.1 at 2014-08-07 18:31:34 -0400
+
+
+Started GET "/assets/application.css?body=1" for 127.0.0.1 at 2014-08-07 18:31:34 -0400
+
+
+Started GET "/assets/turbolinks.js?body=1" for 127.0.0.1 at 2014-08-07 18:31:34 -0400
+
+
+Started GET "/assets/confirmation.js?body=1" for 127.0.0.1 at 2014-08-07 18:31:34 -0400
+
+
+Started GET "/assets/employees.js?body=1" for 127.0.0.1 at 2014-08-07 18:31:34 -0400
+
+
+Started GET "/assets/timesheets.js?body=1" for 127.0.0.1 at 2014-08-07 18:31:34 -0400
+
+
+Started GET "/assets/application.js?body=1" for 127.0.0.1 at 2014-08-07 18:31:34 -0400
+
+
+Started GET "/go/7" for 127.0.0.1 at 2014-08-07 18:31:35 -0400
+Processing by EmployeesController#email as HTML
+  Parameters: {"id"=>"7"}
+  [1m[35mEmployee Load (0.1ms)[0m  SELECT  "employees".* FROM "employees"  WHERE "employees"."id" = ? LIMIT 1  [["id", 7]]
+  [1m[36mEmployee Load (0.2ms)[0m  [1mSELECT  "employees".* FROM "employees"   ORDER BY "employees"."id" DESC LIMIT 1[0m
+  Rendered confirmation_mailer/confirmation_email.html.erb (0.9ms)
+
+ConfirmationMailer#confirmation_email: processed outbound mail in 16.5ms
+
+Sent mail to mhmailr@gmail.com (2423.9ms)
+Date: Thu, 07 Aug 2014 18:31:35 -0400
+From: mhmailr@gmail.com
+To: mhmailr@gmail.com
+Message-ID: <53e3fe4768ff0_48ed809aca9c6046f@samers-air.mail>
+Subject: Sent from Timesheet app!
+Mime-Version: 1.0
+Content-Type: text/html;
+ charset=UTF-8
+Content-Transfer-Encoding: 7bit
+
+<table style="width:800px">
+  <thead>
+    <tr>
+      <th>First name</th>
+      <th>Last name</th>
+      <th>Email</th>
+      <th>Title</th>
+      <th>Date</th>
+      <th>Shift</th>
+      <th>Hours worked</th>
+    </tr>
+  </thead>
+
+  <tbody>
+  </tbody>
+</table>
+  Rendered employees/email.html.erb within layouts/application (0.1ms)
+Completed 200 OK in 2451ms (Views: 7.7ms | ActiveRecord: 0.3ms)
+  [1m[36mEmployee Load (0.2ms)[0m  [1mSELECT  "employees".* FROM "employees"   ORDER BY "employees"."id" DESC LIMIT 1[0m
+
+
+Started GET "/" for 127.0.0.1 at 2014-08-07 18:32:40 -0400
+  [1m[36mActiveRecord::SchemaMigration Load (0.1ms)[0m  [1mSELECT "schema_migrations".* FROM "schema_migrations"[0m
+Processing by EmployeesController#new as HTML
+  Rendered employees/_form.html.erb (20.2ms)
+  Rendered employees/new.html.erb within layouts/application (24.0ms)
+Completed 200 OK in 84ms (Views: 72.6ms | ActiveRecord: 0.3ms)
+
+
+Started GET "/assets/confirmation.css?body=1" for 127.0.0.1 at 2014-08-07 18:32:41 -0400
+
+
+Started GET "/assets/jquery_ujs.js?body=1" for 127.0.0.1 at 2014-08-07 18:32:41 -0400
+
+
+Started GET "/assets/application.css?body=1" for 127.0.0.1 at 2014-08-07 18:32:41 -0400
+
+
+Started GET "/assets/timesheets.css?body=1" for 127.0.0.1 at 2014-08-07 18:32:41 -0400
+
+
+Started GET "/assets/employees.css?body=1" for 127.0.0.1 at 2014-08-07 18:32:41 -0400
+
+
+Started GET "/assets/jquery.js?body=1" for 127.0.0.1 at 2014-08-07 18:32:41 -0400
+
+
+Started GET "/assets/turbolinks.js?body=1" for 127.0.0.1 at 2014-08-07 18:32:41 -0400
+
+
+Started GET "/assets/confirmation.js?body=1" for 127.0.0.1 at 2014-08-07 18:32:41 -0400
+
+
+Started GET "/assets/employees.js?body=1" for 127.0.0.1 at 2014-08-07 18:32:41 -0400
+
+
+Started GET "/assets/timesheets.js?body=1" for 127.0.0.1 at 2014-08-07 18:32:41 -0400
+
+
+Started GET "/assets/application.js?body=1" for 127.0.0.1 at 2014-08-07 18:32:41 -0400
+
+
+Started POST "/employees" for 127.0.0.1 at 2014-08-07 18:32:45 -0400
+Processing by EmployeesController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"T6u5piubV8uAqWmcUAs7q5wQUnXAogsjap/xvZqED2s=", "employee"=>{"date"=>"", "first_name"=>"sammy", "last_name"=>"khaleel", "email"=>"sammykhaleel83@gmail.com", "title"=>"", "shift_start_time"=>"", "hours_worked"=>""}, "timesheet"=>{"work_week"=>""}, "commit"=>"Create Employee"}
+  [1m[35m (0.2ms)[0m  begin transaction
+  [1m[36mSQL (0.6ms)[0m  [1mINSERT INTO "employees" ("created_at", "email", "first_name", "last_name", "shift_start_time", "title", "updated_at") VALUES (?, ?, ?, ?, ?, ?, ?)[0m  [["created_at", "2014-08-07 22:32:45.180964"], ["email", "sammykhaleel83@gmail.com"], ["first_name", "sammy"], ["last_name", "khaleel"], ["shift_start_time", ""], ["title", ""], ["updated_at", "2014-08-07 22:32:45.180964"]]
+  [1m[35m (0.7ms)[0m  commit transaction
+Redirected to http://localhost:3000/employees/8
+Completed 302 Found in 10ms (ActiveRecord: 1.4ms)
+
+
+Started GET "/employees/8" for 127.0.0.1 at 2014-08-07 18:32:45 -0400
+Processing by EmployeesController#show as HTML
+  Parameters: {"id"=>"8"}
+  [1m[36mEmployee Load (0.2ms)[0m  [1mSELECT  "employees".* FROM "employees"  WHERE "employees"."id" = ? LIMIT 1[0m  [["id", 8]]
+  [1m[35mCACHE (0.0ms)[0m  SELECT  "employees".* FROM "employees"  WHERE "employees"."id" = ? LIMIT 1  [["id", "8"]]
+  Rendered employees/show.html.erb within layouts/application (1.1ms)
+Completed 200 OK in 13ms (Views: 9.3ms | ActiveRecord: 0.3ms)
+
+
+Started GET "/assets/confirmation.css?body=1" for 127.0.0.1 at 2014-08-07 18:32:45 -0400
+
+
+Started GET "/assets/application.css?body=1" for 127.0.0.1 at 2014-08-07 18:32:45 -0400
+
+
+Started GET "/assets/employees.css?body=1" for 127.0.0.1 at 2014-08-07 18:32:45 -0400
+
+
+Started GET "/assets/jquery_ujs.js?body=1" for 127.0.0.1 at 2014-08-07 18:32:45 -0400
+
+
+Started GET "/assets/jquery.js?body=1" for 127.0.0.1 at 2014-08-07 18:32:45 -0400
+
+
+Started GET "/assets/timesheets.css?body=1" for 127.0.0.1 at 2014-08-07 18:32:45 -0400
+
+
+Started GET "/assets/turbolinks.js?body=1" for 127.0.0.1 at 2014-08-07 18:32:45 -0400
+
+
+Started GET "/assets/confirmation.js?body=1" for 127.0.0.1 at 2014-08-07 18:32:45 -0400
+
+
+Started GET "/assets/employees.js?body=1" for 127.0.0.1 at 2014-08-07 18:32:45 -0400
+
+
+Started GET "/assets/application.js?body=1" for 127.0.0.1 at 2014-08-07 18:32:45 -0400
+
+
+Started GET "/assets/timesheets.js?body=1" for 127.0.0.1 at 2014-08-07 18:32:45 -0400
+
+
+Started GET "/go/8" for 127.0.0.1 at 2014-08-07 18:32:46 -0400
+Processing by EmployeesController#email as HTML
+  Parameters: {"id"=>"8"}
+  [1m[36mEmployee Load (0.1ms)[0m  [1mSELECT  "employees".* FROM "employees"  WHERE "employees"."id" = ? LIMIT 1[0m  [["id", 8]]
+  [1m[35mEmployee Load (0.2ms)[0m  SELECT  "employees".* FROM "employees"   ORDER BY "employees"."id" DESC LIMIT 1
+  Rendered confirmation_mailer/confirmation_email.html.erb (1.5ms)
+
+ConfirmationMailer#confirmation_email: processed outbound mail in 20.1ms
+
+Sent mail to mhmailr@gmail.com (2742.4ms)
+Date: Thu, 07 Aug 2014 18:32:46 -0400
+From: mhmailr@gmail.com
+To: mhmailr@gmail.com
+Message-ID: <53e3fe8ea747e_4be3818a3bcc6303b@samers-air.mail>
+Subject: Sent from Timesheet app!
+Mime-Version: 1.0
+Content-Type: text/html;
+ charset=UTF-8
+Content-Transfer-Encoding: 7bit
+
+<table style="width:800px">
+  <thead>
+    <tr>
+      <th>First name</th>
+      <th>Last name</th>
+      <th>Email</th>
+      <th>Title</th>
+      <th>Date</th>
+      <th>Shift</th>
+      <th>Hours worked</th>
+    </tr>
+  </thead>
+
+  <tbody>
+  </tbody>
+</table>
+  Rendered employees/email.html.erb within layouts/application (0.4ms)
+Completed 200 OK in 2781ms (Views: 8.4ms | ActiveRecord: 0.3ms)
+  [1m[36mEmployee Load (0.2ms)[0m  [1mSELECT  "employees".* FROM "employees"   ORDER BY "employees"."id" DESC LIMIT 1[0m
+
+
+Started GET "/" for 127.0.0.1 at 2014-08-07 18:46:52 -0400
+  [1m[36mActiveRecord::SchemaMigration Load (0.1ms)[0m  [1mSELECT "schema_migrations".* FROM "schema_migrations"[0m
+Processing by EmployeesController#new as HTML
+  Rendered employees/_form.html.erb (27.2ms)
+  Rendered employees/new.html.erb within layouts/application (31.2ms)
+Completed 200 OK in 91ms (Views: 78.7ms | ActiveRecord: 0.4ms)
+
+
+Started GET "/assets/employees.css?body=1" for 127.0.0.1 at 2014-08-07 18:46:52 -0400
+
+
+Started GET "/assets/jquery.js?body=1" for 127.0.0.1 at 2014-08-07 18:46:52 -0400
+
+
+Started GET "/assets/confirmation.css?body=1" for 127.0.0.1 at 2014-08-07 18:46:52 -0400
+
+
+Started GET "/assets/timesheets.css?body=1" for 127.0.0.1 at 2014-08-07 18:46:52 -0400
+
+
+Started GET "/assets/application.css?body=1" for 127.0.0.1 at 2014-08-07 18:46:52 -0400
+
+
+Started GET "/assets/jquery_ujs.js?body=1" for 127.0.0.1 at 2014-08-07 18:46:52 -0400
+
+
+Started GET "/assets/turbolinks.js?body=1" for 127.0.0.1 at 2014-08-07 18:46:52 -0400
+
+
+Started GET "/assets/confirmation.js?body=1" for 127.0.0.1 at 2014-08-07 18:46:52 -0400
+
+
+Started GET "/assets/employees.js?body=1" for 127.0.0.1 at 2014-08-07 18:46:52 -0400
+
+
+Started GET "/assets/timesheets.js?body=1" for 127.0.0.1 at 2014-08-07 18:46:52 -0400
+
+
+Started GET "/assets/application.js?body=1" for 127.0.0.1 at 2014-08-07 18:46:52 -0400
+
+
+Started POST "/employees" for 127.0.0.1 at 2014-08-07 18:46:58 -0400
+Processing by EmployeesController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"T6u5piubV8uAqWmcUAs7q5wQUnXAogsjap/xvZqED2s=", "employee"=>{"date"=>"", "first_name"=>"", "last_name"=>"sasas", "email"=>"", "title"=>"", "shift_start_time"=>"", "hours_worked"=>""}, "timesheet"=>{"work_week"=>""}, "commit"=>"Create Employee"}
+  [1m[35m (0.1ms)[0m  begin transaction
+  [1m[36mSQL (0.4ms)[0m  [1mINSERT INTO "employees" ("created_at", "email", "first_name", "last_name", "shift_start_time", "title", "updated_at") VALUES (?, ?, ?, ?, ?, ?, ?)[0m  [["created_at", "2014-08-07 22:46:58.928337"], ["email", ""], ["first_name", ""], ["last_name", "sasas"], ["shift_start_time", ""], ["title", ""], ["updated_at", "2014-08-07 22:46:58.928337"]]
+  [1m[35m (0.9ms)[0m  commit transaction
+Redirected to http://localhost:3000/employees/9
+Completed 302 Found in 10ms (ActiveRecord: 1.4ms)
+
+
+Started GET "/employees/9" for 127.0.0.1 at 2014-08-07 18:46:58 -0400
+Processing by EmployeesController#show as HTML
+  Parameters: {"id"=>"9"}
+  [1m[36mEmployee Load (0.3ms)[0m  [1mSELECT  "employees".* FROM "employees"  WHERE "employees"."id" = ? LIMIT 1[0m  [["id", 9]]
+  [1m[35mCACHE (0.0ms)[0m  SELECT  "employees".* FROM "employees"  WHERE "employees"."id" = ? LIMIT 1  [["id", "9"]]
+  Rendered employees/show.html.erb within layouts/application (1.1ms)
+Completed 200 OK in 12ms (Views: 8.4ms | ActiveRecord: 0.3ms)
+
+
+Started GET "/assets/confirmation.css?body=1" for 127.0.0.1 at 2014-08-07 18:46:58 -0400
+
+
+Started GET "/assets/jquery.js?body=1" for 127.0.0.1 at 2014-08-07 18:46:59 -0400
+
+
+Started GET "/assets/employees.css?body=1" for 127.0.0.1 at 2014-08-07 18:46:59 -0400
+
+
+Started GET "/assets/timesheets.css?body=1" for 127.0.0.1 at 2014-08-07 18:46:59 -0400
+
+
+Started GET "/assets/application.css?body=1" for 127.0.0.1 at 2014-08-07 18:46:59 -0400
+
+
+Started GET "/assets/jquery_ujs.js?body=1" for 127.0.0.1 at 2014-08-07 18:46:59 -0400
+
+
+Started GET "/assets/turbolinks.js?body=1" for 127.0.0.1 at 2014-08-07 18:46:59 -0400
+
+
+Started GET "/assets/confirmation.js?body=1" for 127.0.0.1 at 2014-08-07 18:46:59 -0400
+
+
+Started GET "/assets/employees.js?body=1" for 127.0.0.1 at 2014-08-07 18:46:59 -0400
+
+
+Started GET "/assets/timesheets.js?body=1" for 127.0.0.1 at 2014-08-07 18:46:59 -0400
+
+
+Started GET "/assets/application.js?body=1" for 127.0.0.1 at 2014-08-07 18:46:59 -0400
+
+
+Started GET "/go/9" for 127.0.0.1 at 2014-08-07 18:47:00 -0400
+Processing by EmployeesController#email as HTML
+  Parameters: {"id"=>"9"}
+  [1m[36mEmployee Load (0.2ms)[0m  [1mSELECT  "employees".* FROM "employees"  WHERE "employees"."id" = ? LIMIT 1[0m  [["id", 9]]
+  [1m[35mEmployee Load (0.3ms)[0m  SELECT  "employees".* FROM "employees"   ORDER BY "employees"."id" DESC LIMIT 1
+  Rendered confirmation_mailer/confirmation_email.html.erb (2.3ms)
+
+ConfirmationMailer#confirmation_email: processed outbound mail in 33.8ms
+
+Sent mail to mhmailr@gmail.com (2421.9ms)
+Date: Thu, 07 Aug 2014 18:47:01 -0400
+From: mhmailr@gmail.com
+To: mhmailr@gmail.com
+Message-ID: <53e401e53c41_605d8114d71032664@samers-air.mail>
+Subject: Sent from Timesheet app!
+Mime-Version: 1.0
+Content-Type: text/html;
+ charset=UTF-8
+Content-Transfer-Encoding: 7bit
+
+<table style="width:800px">
+  <thead>
+    <tr>
+      <th>First name</th>
+      <th>Last name</th>
+      <th>Email</th>
+      <th>Title</th>
+      <th>Date</th>
+      <th>Shift</th>
+      <th>Hours worked</th>
+    </tr>
+  </thead>
+
+  <tbody>
+  </tbody>
+</table>
+  Rendered employees/email.html.erb within layouts/application (0.4ms)
+Completed 200 OK in 2473ms (Views: 8.2ms | ActiveRecord: 0.4ms)
+
+
+Started GET "/go/9" for 127.0.0.1 at 2014-08-07 19:06:59 -0400
+Processing by EmployeesController#email as HTML
+  Parameters: {"id"=>"9"}
+  [1m[36mEmployee Load (0.1ms)[0m  [1mSELECT  "employees".* FROM "employees"  WHERE "employees"."id" = ? LIMIT 1[0m  [["id", 9]]
+  [1m[35mEmployee Load (0.1ms)[0m  SELECT  "employees".* FROM "employees"   ORDER BY "employees"."id" DESC LIMIT 1
+  Rendered confirmation_mailer/confirmation_email.html.erb (0.8ms)
+
+ConfirmationMailer#confirmation_email: processed outbound mail in 10.2ms
+
+Sent mail to mhmailr@gmail.com (2428.7ms)
+Date: Thu, 07 Aug 2014 19:06:59 -0400
+From: mhmailr@gmail.com
+To: mhmailr@gmail.com
+Message-ID: <53e4069391025_605d8268ec64327c5@samers-air.mail>
+Subject: Sent from Timesheet app!
+Mime-Version: 1.0
+Content-Type: text/html;
+ charset=UTF-8
+Content-Transfer-Encoding: 7bit
+
+<table style="width:800px">
+  <thead>
+    <tr>
+      <th>First name</th>
+      <th>Last name</th>
+      <th>Email</th>
+      <th>Title</th>
+      <th>Date</th>
+      <th>Shift</th>
+      <th>Hours worked</th>
+    </tr>
+  </thead>
+
+  <tbody>
+  </tbody>
+</table>
+  Rendered employees/email.html.erb within layouts/application (0.6ms)
+Completed 200 OK in 2465ms (Views: 13.7ms | ActiveRecord: 0.7ms)
+
+
+Started GET "/assets/confirmation.css?body=1" for 127.0.0.1 at 2014-08-07 19:07:02 -0400
+
+
+Started GET "/assets/timesheets.css?body=1" for 127.0.0.1 at 2014-08-07 19:07:02 -0400
+
+
+Started GET "/assets/application.css?body=1" for 127.0.0.1 at 2014-08-07 19:07:02 -0400
+
+
+Started GET "/assets/employees.css?body=1" for 127.0.0.1 at 2014-08-07 19:07:02 -0400
+
+
+Started GET "/assets/jquery.js?body=1" for 127.0.0.1 at 2014-08-07 19:07:02 -0400
+
+
+Started GET "/assets/jquery_ujs.js?body=1" for 127.0.0.1 at 2014-08-07 19:07:02 -0400
+
+
+Started GET "/assets/turbolinks.js?body=1" for 127.0.0.1 at 2014-08-07 19:07:02 -0400
+
+
+Started GET "/assets/confirmation.js?body=1" for 127.0.0.1 at 2014-08-07 19:07:02 -0400
+
+
+Started GET "/assets/employees.js?body=1" for 127.0.0.1 at 2014-08-07 19:07:02 -0400
+
+
+Started GET "/assets/timesheets.js?body=1" for 127.0.0.1 at 2014-08-07 19:07:02 -0400
+
+
+Started GET "/assets/application.js?body=1" for 127.0.0.1 at 2014-08-07 19:07:02 -0400
+
+
+Started GET "/" for 127.0.0.1 at 2014-08-07 19:08:18 -0400
+Processing by EmployeesController#new as HTML
+  Rendered employees/_form.html.erb (6.1ms)
+  Rendered employees/new.html.erb within layouts/application (6.9ms)
+Completed 200 OK in 16ms (Views: 13.3ms | ActiveRecord: 0.5ms)
+
+
+Started GET "/assets/confirmation.css?body=1" for 127.0.0.1 at 2014-08-07 19:08:18 -0400
+
+
+Started GET "/assets/timesheets.css?body=1" for 127.0.0.1 at 2014-08-07 19:08:18 -0400
+
+
+Started GET "/assets/jquery_ujs.js?body=1" for 127.0.0.1 at 2014-08-07 19:08:18 -0400
+
+
+Started GET "/assets/application.css?body=1" for 127.0.0.1 at 2014-08-07 19:08:18 -0400
+
+
+Started GET "/assets/employees.css?body=1" for 127.0.0.1 at 2014-08-07 19:08:18 -0400
+
+
+Started GET "/assets/jquery.js?body=1" for 127.0.0.1 at 2014-08-07 19:08:18 -0400
+
+
+Started GET "/assets/application.js?body=1" for 127.0.0.1 at 2014-08-07 19:08:18 -0400
+
+
+Started GET "/assets/confirmation.js?body=1" for 127.0.0.1 at 2014-08-07 19:08:18 -0400
+
+
+Started GET "/assets/employees.js?body=1" for 127.0.0.1 at 2014-08-07 19:08:18 -0400
+
+
+Started GET "/assets/timesheets.js?body=1" for 127.0.0.1 at 2014-08-07 19:08:18 -0400
+
+
+Started GET "/assets/turbolinks.js?body=1" for 127.0.0.1 at 2014-08-07 19:08:18 -0400
+
+
+Started POST "/employees" for 127.0.0.1 at 2014-08-07 19:08:41 -0400
+Processing by EmployeesController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"T6u5piubV8uAqWmcUAs7q5wQUnXAogsjap/xvZqED2s=", "employee"=>{"date"=>"2014-07-31", "first_name"=>"", "last_name"=>"", "email"=>"", "title"=>"", "shift_start_time"=>"", "hours_worked"=>""}, "timesheet"=>{"work_week"=>""}, "commit"=>"Create Employee"}
+  [1m[36m (0.1ms)[0m  [1mbegin transaction[0m
+  [1m[35mSQL (0.4ms)[0m  INSERT INTO "employees" ("created_at", "date", "email", "first_name", "last_name", "shift_start_time", "title", "updated_at") VALUES (?, ?, ?, ?, ?, ?, ?, ?)  [["created_at", "2014-08-07 23:08:41.056160"], ["date", "2014-07-31"], ["email", ""], ["first_name", ""], ["last_name", ""], ["shift_start_time", ""], ["title", ""], ["updated_at", "2014-08-07 23:08:41.056160"]]
+  [1m[36m (8.9ms)[0m  [1mcommit transaction[0m
+Redirected to http://localhost:3000/employees/10
+Completed 302 Found in 15ms (ActiveRecord: 9.3ms)
+
+
+Started GET "/employees/10" for 127.0.0.1 at 2014-08-07 19:08:41 -0400
+Processing by EmployeesController#show as HTML
+  Parameters: {"id"=>"10"}
+  [1m[35mEmployee Load (0.2ms)[0m  SELECT  "employees".* FROM "employees"  WHERE "employees"."id" = ? LIMIT 1  [["id", 10]]
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT  "employees".* FROM "employees"  WHERE "employees"."id" = ? LIMIT 1[0m  [["id", "10"]]
+  Rendered employees/show.html.erb within layouts/application (0.5ms)
+Completed 200 OK in 9ms (Views: 6.9ms | ActiveRecord: 0.2ms)
+
+
+Started GET "/assets/timesheets.css?body=1" for 127.0.0.1 at 2014-08-07 19:08:41 -0400
+
+
+Started GET "/assets/jquery.js?body=1" for 127.0.0.1 at 2014-08-07 19:08:41 -0400
+
+
+Started GET "/assets/employees.css?body=1" for 127.0.0.1 at 2014-08-07 19:08:41 -0400
+
+
+Started GET "/assets/application.css?body=1" for 127.0.0.1 at 2014-08-07 19:08:41 -0400
+
+
+Started GET "/assets/jquery_ujs.js?body=1" for 127.0.0.1 at 2014-08-07 19:08:41 -0400
+
+
+Started GET "/assets/confirmation.css?body=1" for 127.0.0.1 at 2014-08-07 19:08:41 -0400
+
+
+Started GET "/assets/turbolinks.js?body=1" for 127.0.0.1 at 2014-08-07 19:08:41 -0400
+
+
+Started GET "/assets/confirmation.js?body=1" for 127.0.0.1 at 2014-08-07 19:08:41 -0400
+
+
+Started GET "/assets/employees.js?body=1" for 127.0.0.1 at 2014-08-07 19:08:41 -0400
+
+
+Started GET "/assets/timesheets.js?body=1" for 127.0.0.1 at 2014-08-07 19:08:41 -0400
+
+
+Started GET "/assets/application.js?body=1" for 127.0.0.1 at 2014-08-07 19:08:41 -0400
+
+
+Started GET "/go/10" for 127.0.0.1 at 2014-08-07 19:08:42 -0400
+Processing by EmployeesController#email as HTML
+  Parameters: {"id"=>"10"}
+  [1m[35mEmployee Load (0.2ms)[0m  SELECT  "employees".* FROM "employees"  WHERE "employees"."id" = ? LIMIT 1  [["id", 10]]
+  [1m[36mEmployee Load (0.4ms)[0m  [1mSELECT "employees".* FROM "employees"[0m
+  Rendered confirmation_mailer/confirmation_email.html.erb (2.7ms)
+
+ConfirmationMailer#confirmation_email: processed outbound mail in 16.0ms
+
+Sent mail to mhmailr@gmail.com (2492.9ms)
+Date: Thu, 07 Aug 2014 19:08:42 -0400
+From: mhmailr@gmail.com
+To: mhmailr@gmail.com
+Message-ID: <53e406fa39c2e_605d81231794328b@samers-air.mail>
+Subject: Sent from Timesheet app!
+Mime-Version: 1.0
+Content-Type: text/html;
+ charset=UTF-8
+Content-Transfer-Encoding: 7bit
+
+<table style="width:800px">
+  <thead>
+    <tr>
+      <th>First name</th>
+      <th>Last name</th>
+      <th>Email</th>
+      <th>Title</th>
+      <th>Date</th>
+      <th>Shift</th>
+      <th>Hours worked</th>
+    </tr>
+  </thead>
+
+  <tbody>
+      <tr>
+        <td><b>sammy</b></td>
+        <td><b>khaleel</b></td>
+        <td><b>sammykhaleel83@gmail.com</b></td>
+        <td><b></b></td>
+        <td><b></b></td>
+        <td><b></b></td>
+        <td><b></b></td>
+      </tr>
+
+      <tr>
+        <td><b>sammy</b></td>
+        <td><b>khaleel</b></td>
+        <td><b>sammykhaleel83@gmail.com</b></td>
+        <td><b></b></td>
+        <td><b></b></td>
+        <td><b></b></td>
+        <td><b></b></td>
+      </tr>
+
+      <tr>
+        <td><b>sammy</b></td>
+        <td><b>khaleel</b></td>
+        <td><b>sammykhaleel83@gmail.com</b></td>
+        <td><b></b></td>
+        <td><b></b></td>
+        <td><b></b></td>
+        <td><b></b></td>
+      </tr>
+
+      <tr>
+        <td><b>sammy</b></td>
+        <td><b>khaleel</b></td>
+        <td><b>sammykhaleel83@gmail.com</b></td>
+        <td><b></b></td>
+        <td><b></b></td>
+        <td><b></b></td>
+        <td><b></b></td>
+      </tr>
+
+      <tr>
+        <td><b></b></td>
+        <td><b>sasas</b></td>
+        <td><b></b></td>
+        <td><b></b></td>
+        <td><b></b></td>
+        <td><b></b></td>
+        <td><b></b></td>
+      </tr>
+
+      <tr>
+        <td><b></b></td>
+        <td><b></b></td>
+        <td><b></b></td>
+        <td><b></b></td>
+        <td><b>2014-07-31</b></td>
+        <td><b></b></td>
+        <td><b></b></td>
+      </tr>
+
+  </tbody>
+</table>
+  Rendered employees/email.html.erb within layouts/application (0.1ms)
+Completed 200 OK in 2525ms (Views: 7.5ms | ActiveRecord: 0.5ms)
+  [1m[36mEmployee Load (0.2ms)[0m  [1mSELECT  "employees".* FROM "employees"   ORDER BY "employees"."id" DESC LIMIT 1[0m
+
+
+Started GET "/" for 127.0.0.1 at 2014-08-07 19:11:16 -0400
+  [1m[36mActiveRecord::SchemaMigration Load (0.1ms)[0m  [1mSELECT "schema_migrations".* FROM "schema_migrations"[0m
+Processing by EmployeesController#new as HTML
+  Rendered employees/_form.html.erb (19.3ms)
+  Rendered employees/new.html.erb within layouts/application (23.7ms)
+Completed 200 OK in 82ms (Views: 71.2ms | ActiveRecord: 0.3ms)
+
+
+Started GET "/assets/employees.css?body=1" for 127.0.0.1 at 2014-08-07 19:11:16 -0400
+
+
+Started GET "/assets/jquery_ujs.js?body=1" for 127.0.0.1 at 2014-08-07 19:11:16 -0400
+
+
+Started GET "/assets/application.css?body=1" for 127.0.0.1 at 2014-08-07 19:11:16 -0400
+
+
+Started GET "/assets/jquery.js?body=1" for 127.0.0.1 at 2014-08-07 19:11:16 -0400
+
+
+Started GET "/assets/confirmation.css?body=1" for 127.0.0.1 at 2014-08-07 19:11:16 -0400
+
+
+Started GET "/assets/timesheets.css?body=1" for 127.0.0.1 at 2014-08-07 19:11:16 -0400
+
+
+Started GET "/assets/turbolinks.js?body=1" for 127.0.0.1 at 2014-08-07 19:11:16 -0400
+
+
+Started GET "/assets/confirmation.js?body=1" for 127.0.0.1 at 2014-08-07 19:11:16 -0400
+
+
+Started GET "/assets/employees.js?body=1" for 127.0.0.1 at 2014-08-07 19:11:16 -0400
+
+
+Started GET "/assets/timesheets.js?body=1" for 127.0.0.1 at 2014-08-07 19:11:16 -0400
+
+
+Started GET "/assets/application.js?body=1" for 127.0.0.1 at 2014-08-07 19:11:16 -0400
+
+
+Started POST "/employees" for 127.0.0.1 at 2014-08-07 19:11:21 -0400
+Processing by EmployeesController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"T6u5piubV8uAqWmcUAs7q5wQUnXAogsjap/xvZqED2s=", "employee"=>{"date"=>"", "first_name"=>"sammy", "last_name"=>"khaleel", "email"=>"sammykhaleel83@gmail.com", "title"=>"", "shift_start_time"=>"", "hours_worked"=>""}, "timesheet"=>{"work_week"=>""}, "commit"=>"Create Employee"}
+  [1m[35m (0.1ms)[0m  begin transaction
+  [1m[36mSQL (0.4ms)[0m  [1mINSERT INTO "employees" ("created_at", "email", "first_name", "last_name", "shift_start_time", "title", "updated_at") VALUES (?, ?, ?, ?, ?, ?, ?)[0m  [["created_at", "2014-08-07 23:11:21.776598"], ["email", "sammykhaleel83@gmail.com"], ["first_name", "sammy"], ["last_name", "khaleel"], ["shift_start_time", ""], ["title", ""], ["updated_at", "2014-08-07 23:11:21.776598"]]
+  [1m[35m (1.0ms)[0m  commit transaction
+Redirected to http://localhost:3000/employees/11
+Completed 302 Found in 10ms (ActiveRecord: 1.5ms)
+
+
+Started GET "/employees/11" for 127.0.0.1 at 2014-08-07 19:11:21 -0400
+Processing by EmployeesController#show as HTML
+  Parameters: {"id"=>"11"}
+  [1m[36mEmployee Load (0.2ms)[0m  [1mSELECT  "employees".* FROM "employees"  WHERE "employees"."id" = ? LIMIT 1[0m  [["id", 11]]
+  [1m[35mCACHE (0.0ms)[0m  SELECT  "employees".* FROM "employees"  WHERE "employees"."id" = ? LIMIT 1  [["id", "11"]]
+  Rendered employees/show.html.erb within layouts/application (1.6ms)
+Completed 200 OK in 15ms (Views: 10.1ms | ActiveRecord: 0.3ms)
+
+
+Started GET "/assets/timesheets.css?body=1" for 127.0.0.1 at 2014-08-07 19:11:21 -0400
+
+
+Started GET "/assets/confirmation.css?body=1" for 127.0.0.1 at 2014-08-07 19:11:21 -0400
+
+
+Started GET "/assets/application.css?body=1" for 127.0.0.1 at 2014-08-07 19:11:21 -0400
+
+
+Started GET "/assets/jquery_ujs.js?body=1" for 127.0.0.1 at 2014-08-07 19:11:21 -0400
+
+
+Started GET "/assets/employees.css?body=1" for 127.0.0.1 at 2014-08-07 19:11:21 -0400
+
+
+Started GET "/assets/jquery.js?body=1" for 127.0.0.1 at 2014-08-07 19:11:21 -0400
+
+
+Started GET "/assets/turbolinks.js?body=1" for 127.0.0.1 at 2014-08-07 19:11:21 -0400
+
+
+Started GET "/assets/confirmation.js?body=1" for 127.0.0.1 at 2014-08-07 19:11:21 -0400
+
+
+Started GET "/assets/employees.js?body=1" for 127.0.0.1 at 2014-08-07 19:11:21 -0400
+
+
+Started GET "/assets/timesheets.js?body=1" for 127.0.0.1 at 2014-08-07 19:11:21 -0400
+
+
+Started GET "/assets/application.js?body=1" for 127.0.0.1 at 2014-08-07 19:11:21 -0400
+
+
+Started GET "/go/11" for 127.0.0.1 at 2014-08-07 19:11:22 -0400
+Processing by EmployeesController#email as HTML
+  Parameters: {"id"=>"11"}
+  [1m[36mEmployee Load (0.2ms)[0m  [1mSELECT  "employees".* FROM "employees"  WHERE "employees"."id" = ? LIMIT 1[0m  [["id", 11]]
+  [1m[35mEmployee Load (0.2ms)[0m  SELECT  "employees".* FROM "employees"   ORDER BY "employees"."id" DESC LIMIT 1
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT  "employees".* FROM "employees"   ORDER BY "employees"."id" DESC LIMIT 1[0m
+  Rendered confirmation_mailer/confirmation_email.html.erb (15.2ms)
+
+ConfirmationMailer#confirmation_email: processed outbound mail in 26.0ms
+Completed 500 Internal Server Error in 36ms
+
+ActionView::Template::Error (undefined local variable or method `employee' for #<#<Class:0x000001011c1108>:0x000001011b98e0>):
+    16:       <tr>
+    17:         <td><b><%=Employee.last.first_name %></b></td>
+    18:         <td><b><%=Employee.last.last_name %></b></td>
+    19:         <td><b><%=employee.email %></b></td>
+    20:         <td><b><%=employee.title %></b></td>
+    21:         <td><b><%=employee.date %></b></td>
+    22:         <td><b><%=employee.shift_start_time %></b></td>
+  app/views/confirmation_mailer/confirmation_email.html.erb:19:in `_app_views_confirmation_mailer_confirmation_email_html_erb__1934924971150557239_2156806400'
+  app/mailers/confirmation_mailer.rb:9:in `confirmation_email'
+  app/controllers/employees_controller.rb:19:in `email'
+
+
+  Rendered /Users/samerkhaleel/.rvm/gems/ruby-2.1.1/gems/actionpack-4.1.4/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb (1.4ms)
+  Rendered /Users/samerkhaleel/.rvm/gems/ruby-2.1.1/gems/actionpack-4.1.4/lib/action_dispatch/middleware/templates/rescues/_request_and_response.html.erb (1.6ms)
+  Rendered /Users/samerkhaleel/.rvm/gems/ruby-2.1.1/gems/actionpack-4.1.4/lib/action_dispatch/middleware/templates/rescues/template_error.html.erb within rescues/layout (16.2ms)
+
+
+Started GET "/go/11" for 127.0.0.1 at 2014-08-07 19:11:22 -0400
+Processing by EmployeesController#email as HTML
+  Parameters: {"id"=>"11"}
+  [1m[35mEmployee Load (0.1ms)[0m  SELECT  "employees".* FROM "employees"  WHERE "employees"."id" = ? LIMIT 1  [["id", 11]]
+  [1m[36mEmployee Load (0.2ms)[0m  [1mSELECT  "employees".* FROM "employees"   ORDER BY "employees"."id" DESC LIMIT 1[0m
+  [1m[35mCACHE (0.0ms)[0m  SELECT  "employees".* FROM "employees"   ORDER BY "employees"."id" DESC LIMIT 1
+  Rendered confirmation_mailer/confirmation_email.html.erb (4.6ms)
+
+ConfirmationMailer#confirmation_email: processed outbound mail in 15.0ms
+Completed 500 Internal Server Error in 17ms
+
+ActionView::Template::Error (undefined local variable or method `employee' for #<#<Class:0x000001011c1108>:0x000001058a02e0>):
+    16:       <tr>
+    17:         <td><b><%=Employee.last.first_name %></b></td>
+    18:         <td><b><%=Employee.last.last_name %></b></td>
+    19:         <td><b><%=employee.email %></b></td>
+    20:         <td><b><%=employee.title %></b></td>
+    21:         <td><b><%=employee.date %></b></td>
+    22:         <td><b><%=employee.shift_start_time %></b></td>
+  app/views/confirmation_mailer/confirmation_email.html.erb:19:in `_app_views_confirmation_mailer_confirmation_email_html_erb__1934924971150557239_2156806400'
+  app/mailers/confirmation_mailer.rb:9:in `confirmation_email'
+  app/controllers/employees_controller.rb:19:in `email'
+
+
+  Rendered /Users/samerkhaleel/.rvm/gems/ruby-2.1.1/gems/actionpack-4.1.4/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb (1.4ms)
+  Rendered /Users/samerkhaleel/.rvm/gems/ruby-2.1.1/gems/actionpack-4.1.4/lib/action_dispatch/middleware/templates/rescues/_request_and_response.html.erb (1.0ms)
+  Rendered /Users/samerkhaleel/.rvm/gems/ruby-2.1.1/gems/actionpack-4.1.4/lib/action_dispatch/middleware/templates/rescues/template_error.html.erb within rescues/layout (12.9ms)
+
+
+Started GET "/" for 127.0.0.1 at 2014-08-07 19:11:37 -0400
+Processing by EmployeesController#new as HTML
+  Rendered employees/_form.html.erb (2.2ms)
+  Rendered employees/new.html.erb within layouts/application (3.1ms)
+Completed 200 OK in 12ms (Views: 11.1ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/assets/confirmation.css?body=1" for 127.0.0.1 at 2014-08-07 19:11:37 -0400
+
+
+Started GET "/assets/jquery.js?body=1" for 127.0.0.1 at 2014-08-07 19:11:37 -0400
+
+
+Started GET "/assets/employees.css?body=1" for 127.0.0.1 at 2014-08-07 19:11:37 -0400
+
+
+Started GET "/assets/application.css?body=1" for 127.0.0.1 at 2014-08-07 19:11:37 -0400
+
+
+Started GET "/assets/jquery_ujs.js?body=1" for 127.0.0.1 at 2014-08-07 19:11:37 -0400
+
+
+Started GET "/assets/timesheets.css?body=1" for 127.0.0.1 at 2014-08-07 19:11:37 -0400
+
+
+Started GET "/assets/turbolinks.js?body=1" for 127.0.0.1 at 2014-08-07 19:11:37 -0400
+
+
+Started GET "/assets/employees.js?body=1" for 127.0.0.1 at 2014-08-07 19:11:37 -0400
+
+
+Started GET "/assets/confirmation.js?body=1" for 127.0.0.1 at 2014-08-07 19:11:37 -0400
+
+
+Started GET "/assets/timesheets.js?body=1" for 127.0.0.1 at 2014-08-07 19:11:37 -0400
+
+
+Started GET "/assets/application.js?body=1" for 127.0.0.1 at 2014-08-07 19:11:37 -0400
+
+
+Started POST "/employees" for 127.0.0.1 at 2014-08-07 19:11:41 -0400
+Processing by EmployeesController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"T6u5piubV8uAqWmcUAs7q5wQUnXAogsjap/xvZqED2s=", "employee"=>{"date"=>"", "first_name"=>"sammy", "last_name"=>"khaleel", "email"=>"sammykhaleel83@gmail.com", "title"=>"", "shift_start_time"=>"", "hours_worked"=>""}, "timesheet"=>{"work_week"=>""}, "commit"=>"Create Employee"}
+  [1m[36m (0.2ms)[0m  [1mbegin transaction[0m
+  [1m[35mSQL (0.4ms)[0m  INSERT INTO "employees" ("created_at", "email", "first_name", "last_name", "shift_start_time", "title", "updated_at") VALUES (?, ?, ?, ?, ?, ?, ?)  [["created_at", "2014-08-07 23:11:41.911052"], ["email", "sammykhaleel83@gmail.com"], ["first_name", "sammy"], ["last_name", "khaleel"], ["shift_start_time", ""], ["title", ""], ["updated_at", "2014-08-07 23:11:41.911052"]]
+  [1m[36m (0.7ms)[0m  [1mcommit transaction[0m
+Redirected to http://localhost:3000/employees/12
+Completed 302 Found in 7ms (ActiveRecord: 1.3ms)
+
+
+Started GET "/employees/12" for 127.0.0.1 at 2014-08-07 19:11:41 -0400
+Processing by EmployeesController#show as HTML
+  Parameters: {"id"=>"12"}
+  [1m[35mEmployee Load (0.1ms)[0m  SELECT  "employees".* FROM "employees"  WHERE "employees"."id" = ? LIMIT 1  [["id", 12]]
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT  "employees".* FROM "employees"  WHERE "employees"."id" = ? LIMIT 1[0m  [["id", "12"]]
+  Rendered employees/show.html.erb within layouts/application (0.7ms)
+Completed 200 OK in 12ms (Views: 9.8ms | ActiveRecord: 0.2ms)
+
+
+Started GET "/assets/employees.css?body=1" for 127.0.0.1 at 2014-08-07 19:11:41 -0400
+
+
+Started GET "/assets/jquery.js?body=1" for 127.0.0.1 at 2014-08-07 19:11:41 -0400
+
+
+Started GET "/assets/jquery_ujs.js?body=1" for 127.0.0.1 at 2014-08-07 19:11:41 -0400
+
+
+Started GET "/assets/application.css?body=1" for 127.0.0.1 at 2014-08-07 19:11:41 -0400
+
+
+Started GET "/assets/timesheets.css?body=1" for 127.0.0.1 at 2014-08-07 19:11:41 -0400
+
+
+Started GET "/assets/confirmation.css?body=1" for 127.0.0.1 at 2014-08-07 19:11:41 -0400
+
+
+Started GET "/assets/turbolinks.js?body=1" for 127.0.0.1 at 2014-08-07 19:11:42 -0400
+
+
+Started GET "/assets/employees.js?body=1" for 127.0.0.1 at 2014-08-07 19:11:42 -0400
+
+
+Started GET "/assets/confirmation.js?body=1" for 127.0.0.1 at 2014-08-07 19:11:42 -0400
+
+
+Started GET "/assets/timesheets.js?body=1" for 127.0.0.1 at 2014-08-07 19:11:42 -0400
+
+
+Started GET "/assets/application.js?body=1" for 127.0.0.1 at 2014-08-07 19:11:42 -0400
+
+
+Started GET "/go/12" for 127.0.0.1 at 2014-08-07 19:11:42 -0400
+Processing by EmployeesController#email as HTML
+  Parameters: {"id"=>"12"}
+  [1m[35mEmployee Load (0.1ms)[0m  SELECT  "employees".* FROM "employees"  WHERE "employees"."id" = ? LIMIT 1  [["id", 12]]
+  [1m[36mEmployee Load (0.3ms)[0m  [1mSELECT  "employees".* FROM "employees"   ORDER BY "employees"."id" DESC LIMIT 1[0m
+  [1m[35mCACHE (0.0ms)[0m  SELECT  "employees".* FROM "employees"   ORDER BY "employees"."id" DESC LIMIT 1
+  Rendered confirmation_mailer/confirmation_email.html.erb (2.1ms)
+
+ConfirmationMailer#confirmation_email: processed outbound mail in 18.7ms
+
+Sent mail to mhmailr@gmail.com (2746.0ms)
+Date: Thu, 07 Aug 2014 19:11:42 -0400
+From: mhmailr@gmail.com
+To: mhmailr@gmail.com
+Message-ID: <53e407aee553c_84a580a31d3c82437@samers-air.mail>
+Subject: Sent from Timesheet app!
+Mime-Version: 1.0
+Content-Type: text/html;
+ charset=UTF-8
+Content-Transfer-Encoding: 7bit
+
+<table style="width:800px">
+  <thead>
+    <tr>
+      <th>First name</th>
+      <th>Last name</th>
+      <th>Email</th>
+      <th>Title</th>
+      <th>Date</th>
+      <th>Shift</th>
+      <th>Hours worked</th>
+    </tr>
+  </thead>
+
+  <tbody>
+    
+      <tr>
+        <td><b>sammy</b></td>
+        <td><b>khaleel</b></td>
+        
+      </tr>
+
+  
+  </tbody>
+</table>
+  Rendered employees/email.html.erb within layouts/application (0.6ms)
+Completed 200 OK in 2813ms (Views: 46.3ms | ActiveRecord: 0.4ms)
+
+
+Started GET "/" for 127.0.0.1 at 2014-08-07 19:12:06 -0400
+Processing by EmployeesController#new as HTML
+  Rendered employees/_form.html.erb (1.7ms)
+  Rendered employees/new.html.erb within layouts/application (2.4ms)
+Completed 200 OK in 12ms (Views: 10.4ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/assets/confirmation.css?body=1" for 127.0.0.1 at 2014-08-07 19:12:06 -0400
+
+
+Started GET "/assets/application.css?body=1" for 127.0.0.1 at 2014-08-07 19:12:06 -0400
+
+
+Started GET "/assets/timesheets.css?body=1" for 127.0.0.1 at 2014-08-07 19:12:06 -0400
+
+
+Started GET "/assets/jquery.js?body=1" for 127.0.0.1 at 2014-08-07 19:12:06 -0400
+
+
+Started GET "/assets/jquery_ujs.js?body=1" for 127.0.0.1 at 2014-08-07 19:12:06 -0400
+
+
+Started GET "/assets/employees.css?body=1" for 127.0.0.1 at 2014-08-07 19:12:06 -0400
+
+
+Started GET "/assets/turbolinks.js?body=1" for 127.0.0.1 at 2014-08-07 19:12:06 -0400
+
+
+Started GET "/assets/confirmation.js?body=1" for 127.0.0.1 at 2014-08-07 19:12:06 -0400
+
+
+Started GET "/assets/employees.js?body=1" for 127.0.0.1 at 2014-08-07 19:12:06 -0400
+
+
+Started GET "/assets/timesheets.js?body=1" for 127.0.0.1 at 2014-08-07 19:12:06 -0400
+
+
+Started GET "/assets/application.js?body=1" for 127.0.0.1 at 2014-08-07 19:12:06 -0400
+
+
+Started POST "/employees" for 127.0.0.1 at 2014-08-07 19:12:14 -0400
+Processing by EmployeesController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"T6u5piubV8uAqWmcUAs7q5wQUnXAogsjap/xvZqED2s=", "employee"=>{"date"=>"", "first_name"=>"chris", "last_name"=>"", "email"=>"", "title"=>"", "shift_start_time"=>"", "hours_worked"=>""}, "timesheet"=>{"work_week"=>""}, "commit"=>"Create Employee"}
+  [1m[36m (0.1ms)[0m  [1mbegin transaction[0m
+  [1m[35mSQL (0.4ms)[0m  INSERT INTO "employees" ("created_at", "email", "first_name", "last_name", "shift_start_time", "title", "updated_at") VALUES (?, ?, ?, ?, ?, ?, ?)  [["created_at", "2014-08-07 23:12:14.457308"], ["email", ""], ["first_name", "chris"], ["last_name", ""], ["shift_start_time", ""], ["title", ""], ["updated_at", "2014-08-07 23:12:14.457308"]]
+  [1m[36m (0.9ms)[0m  [1mcommit transaction[0m
+Redirected to http://localhost:3000/employees/13
+Completed 302 Found in 6ms (ActiveRecord: 1.4ms)
+
+
+Started GET "/employees/13" for 127.0.0.1 at 2014-08-07 19:12:14 -0400
+Processing by EmployeesController#show as HTML
+  Parameters: {"id"=>"13"}
+  [1m[35mEmployee Load (0.2ms)[0m  SELECT  "employees".* FROM "employees"  WHERE "employees"."id" = ? LIMIT 1  [["id", 13]]
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT  "employees".* FROM "employees"  WHERE "employees"."id" = ? LIMIT 1[0m  [["id", "13"]]
+  Rendered employees/show.html.erb within layouts/application (0.4ms)
+Completed 200 OK in 9ms (Views: 6.6ms | ActiveRecord: 0.3ms)
+
+
+Started GET "/assets/confirmation.css?body=1" for 127.0.0.1 at 2014-08-07 19:12:14 -0400
+
+
+Started GET "/assets/timesheets.css?body=1" for 127.0.0.1 at 2014-08-07 19:12:14 -0400
+
+
+Started GET "/assets/application.css?body=1" for 127.0.0.1 at 2014-08-07 19:12:14 -0400
+
+
+Started GET "/assets/employees.css?body=1" for 127.0.0.1 at 2014-08-07 19:12:14 -0400
+
+
+Started GET "/assets/jquery.js?body=1" for 127.0.0.1 at 2014-08-07 19:12:14 -0400
+
+
+Started GET "/assets/jquery_ujs.js?body=1" for 127.0.0.1 at 2014-08-07 19:12:14 -0400
+
+
+Started GET "/assets/turbolinks.js?body=1" for 127.0.0.1 at 2014-08-07 19:12:14 -0400
+
+
+Started GET "/assets/confirmation.js?body=1" for 127.0.0.1 at 2014-08-07 19:12:14 -0400
+
+
+Started GET "/assets/employees.js?body=1" for 127.0.0.1 at 2014-08-07 19:12:14 -0400
+
+
+Started GET "/assets/timesheets.js?body=1" for 127.0.0.1 at 2014-08-07 19:12:14 -0400
+
+
+Started GET "/assets/application.js?body=1" for 127.0.0.1 at 2014-08-07 19:12:14 -0400
+
+
+Started GET "/go/13" for 127.0.0.1 at 2014-08-07 19:12:15 -0400
+Processing by EmployeesController#email as HTML
+  Parameters: {"id"=>"13"}
+  [1m[35mEmployee Load (0.2ms)[0m  SELECT  "employees".* FROM "employees"  WHERE "employees"."id" = ? LIMIT 1  [["id", 13]]
+  [1m[36mEmployee Load (0.1ms)[0m  [1mSELECT  "employees".* FROM "employees"   ORDER BY "employees"."id" DESC LIMIT 1[0m
+  [1m[35mCACHE (0.0ms)[0m  SELECT  "employees".* FROM "employees"   ORDER BY "employees"."id" DESC LIMIT 1
+  Rendered confirmation_mailer/confirmation_email.html.erb (1.0ms)
+
+ConfirmationMailer#confirmation_email: processed outbound mail in 13.7ms
+
+Sent mail to mhmailr@gmail.com (2177.1ms)
+Date: Thu, 07 Aug 2014 19:12:15 -0400
+From: mhmailr@gmail.com
+To: mhmailr@gmail.com
+Message-ID: <53e407cfbc539_84a580a31d3c825b6@samers-air.mail>
+Subject: Sent from Timesheet app!
+Mime-Version: 1.0
+Content-Type: text/html;
+ charset=UTF-8
+Content-Transfer-Encoding: 7bit
+
+<table style="width:800px">
+  <thead>
+    <tr>
+      <th>First name</th>
+      <th>Last name</th>
+      <th>Email</th>
+      <th>Title</th>
+      <th>Date</th>
+      <th>Shift</th>
+      <th>Hours worked</th>
+    </tr>
+  </thead>
+
+  <tbody>
+    
+      <tr>
+        <td><b>chris</b></td>
+        <td><b></b></td>
+        
+      </tr>
+
+  
+  </tbody>
+</table>
+  Rendered employees/email.html.erb within layouts/application (0.1ms)
+Completed 200 OK in 2205ms (Views: 10.7ms | ActiveRecord: 0.3ms)
+
+
+Started GET "/" for 127.0.0.1 at 2014-08-07 19:13:23 -0400
+Processing by EmployeesController#new as HTML
+  Rendered employees/_form.html.erb (2.0ms)
+  Rendered employees/new.html.erb within layouts/application (2.7ms)
+Completed 200 OK in 10ms (Views: 9.6ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/assets/confirmation.css?body=1" for 127.0.0.1 at 2014-08-07 19:13:23 -0400
+
+
+Started GET "/assets/employees.css?body=1" for 127.0.0.1 at 2014-08-07 19:13:23 -0400
+
+
+Started GET "/assets/jquery_ujs.js?body=1" for 127.0.0.1 at 2014-08-07 19:13:23 -0400
+
+
+Started GET "/assets/jquery.js?body=1" for 127.0.0.1 at 2014-08-07 19:13:23 -0400
+
+
+Started GET "/assets/timesheets.css?body=1" for 127.0.0.1 at 2014-08-07 19:13:23 -0400
+
+
+Started GET "/assets/application.css?body=1" for 127.0.0.1 at 2014-08-07 19:13:23 -0400
+
+
+Started GET "/assets/turbolinks.js?body=1" for 127.0.0.1 at 2014-08-07 19:13:23 -0400
+
+
+Started GET "/assets/confirmation.js?body=1" for 127.0.0.1 at 2014-08-07 19:13:23 -0400
+
+
+Started GET "/assets/employees.js?body=1" for 127.0.0.1 at 2014-08-07 19:13:23 -0400
+
+
+Started GET "/assets/timesheets.js?body=1" for 127.0.0.1 at 2014-08-07 19:13:23 -0400
+
+
+Started GET "/assets/application.js?body=1" for 127.0.0.1 at 2014-08-07 19:13:23 -0400
+
+
+Started POST "/employees" for 127.0.0.1 at 2014-08-07 19:13:27 -0400
+Processing by EmployeesController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"T6u5piubV8uAqWmcUAs7q5wQUnXAogsjap/xvZqED2s=", "employee"=>{"date"=>"", "first_name"=>"sammy", "last_name"=>"khaleel", "email"=>"sammykhaleel83@gmail.com", "title"=>"", "shift_start_time"=>"", "hours_worked"=>""}, "timesheet"=>{"work_week"=>""}, "commit"=>"Create Employee"}
+  [1m[36m (0.1ms)[0m  [1mbegin transaction[0m
+  [1m[35mSQL (0.4ms)[0m  INSERT INTO "employees" ("created_at", "email", "first_name", "last_name", "shift_start_time", "title", "updated_at") VALUES (?, ?, ?, ?, ?, ?, ?)  [["created_at", "2014-08-07 23:13:27.300930"], ["email", "sammykhaleel83@gmail.com"], ["first_name", "sammy"], ["last_name", "khaleel"], ["shift_start_time", ""], ["title", ""], ["updated_at", "2014-08-07 23:13:27.300930"]]
+  [1m[36m (0.8ms)[0m  [1mcommit transaction[0m
+Redirected to http://localhost:3000/employees/14
+Completed 302 Found in 6ms (ActiveRecord: 1.3ms)
+
+
+Started GET "/employees/14" for 127.0.0.1 at 2014-08-07 19:13:27 -0400
+Processing by EmployeesController#show as HTML
+  Parameters: {"id"=>"14"}
+  [1m[35mEmployee Load (0.3ms)[0m  SELECT  "employees".* FROM "employees"  WHERE "employees"."id" = ? LIMIT 1  [["id", 14]]
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT  "employees".* FROM "employees"  WHERE "employees"."id" = ? LIMIT 1[0m  [["id", "14"]]
+  Rendered employees/show.html.erb within layouts/application (0.7ms)
+Completed 200 OK in 12ms (Views: 8.9ms | ActiveRecord: 0.3ms)
+
+
+Started GET "/assets/confirmation.css?body=1" for 127.0.0.1 at 2014-08-07 19:13:27 -0400
+
+
+Started GET "/assets/jquery_ujs.js?body=1" for 127.0.0.1 at 2014-08-07 19:13:27 -0400
+
+
+Started GET "/assets/timesheets.css?body=1" for 127.0.0.1 at 2014-08-07 19:13:27 -0400
+
+
+Started GET "/assets/employees.css?body=1" for 127.0.0.1 at 2014-08-07 19:13:27 -0400
+
+
+Started GET "/assets/application.css?body=1" for 127.0.0.1 at 2014-08-07 19:13:27 -0400
+
+
+Started GET "/assets/jquery.js?body=1" for 127.0.0.1 at 2014-08-07 19:13:27 -0400
+
+
+Started GET "/assets/turbolinks.js?body=1" for 127.0.0.1 at 2014-08-07 19:13:27 -0400
+
+
+Started GET "/assets/confirmation.js?body=1" for 127.0.0.1 at 2014-08-07 19:13:27 -0400
+
+
+Started GET "/assets/employees.js?body=1" for 127.0.0.1 at 2014-08-07 19:13:27 -0400
+
+
+Started GET "/assets/timesheets.js?body=1" for 127.0.0.1 at 2014-08-07 19:13:27 -0400
+
+
+Started GET "/assets/application.js?body=1" for 127.0.0.1 at 2014-08-07 19:13:27 -0400
+
+
+Started GET "/go/14" for 127.0.0.1 at 2014-08-07 19:13:28 -0400
+Processing by EmployeesController#email as HTML
+  Parameters: {"id"=>"14"}
+  [1m[35mEmployee Load (0.2ms)[0m  SELECT  "employees".* FROM "employees"  WHERE "employees"."id" = ? LIMIT 1  [["id", 14]]
+  [1m[36mEmployee Load (0.3ms)[0m  [1mSELECT  "employees".* FROM "employees"   ORDER BY "employees"."id" DESC LIMIT 1[0m
+  [1m[35mCACHE (0.0ms)[0m  SELECT  "employees".* FROM "employees"   ORDER BY "employees"."id" DESC LIMIT 1
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT  "employees".* FROM "employees"   ORDER BY "employees"."id" DESC LIMIT 1[0m
+  [1m[35mCACHE (0.0ms)[0m  SELECT  "employees".* FROM "employees"   ORDER BY "employees"."id" DESC LIMIT 1
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT  "employees".* FROM "employees"   ORDER BY "employees"."id" DESC LIMIT 1[0m
+  [1m[35mCACHE (0.0ms)[0m  SELECT  "employees".* FROM "employees"   ORDER BY "employees"."id" DESC LIMIT 1
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT  "employees".* FROM "employees"   ORDER BY "employees"."id" DESC LIMIT 1[0m
+  Rendered confirmation_mailer/confirmation_email.html.erb (5.4ms)
+
+ConfirmationMailer#confirmation_email: processed outbound mail in 21.9ms
+
+Sent mail to mhmailr@gmail.com (2423.8ms)
+Date: Thu, 07 Aug 2014 19:13:28 -0400
+From: mhmailr@gmail.com
+To: mhmailr@gmail.com
+Message-ID: <53e4081853e94_84a5812524d0826b5@samers-air.mail>
+Subject: Sent from Timesheet app!
+Mime-Version: 1.0
+Content-Type: text/html;
+ charset=UTF-8
+Content-Transfer-Encoding: 7bit
+
+<table style="width:800px">
+  <thead>
+    <tr>
+      <th>First name</th>
+      <th>Last name</th>
+      <th>Email</th>
+      <th>Title</th>
+      <th>Date</th>
+      <th>Shift</th>
+      <th>Hours worked</th>
+    </tr>
+  </thead>
+
+  <tbody>
+    
+      <tr>
+        <td><b>sammy</b></td>
+        <td><b>khaleel</b></td>
+        <td><b>sammykhaleel83@gmail.com</b></td>
+        <td><b></b></td>
+        <td><b></b></td>
+        <td><b></b></td>
+        <td><b></b></td>
+      </tr>
+
+  
+  </tbody>
+</table>
+  Rendered employees/email.html.erb within layouts/application (0.1ms)
+Completed 200 OK in 2457ms (Views: 8.5ms | ActiveRecord: 0.6ms)
+
+
+Started GET "/" for 127.0.0.1 at 2014-08-07 19:19:31 -0400
+Processing by EmployeesController#new as HTML
+  Rendered employees/_form.html.erb (7.4ms)
+  Rendered employees/new.html.erb within layouts/application (8.5ms)
+Completed 200 OK in 20ms (Views: 15.7ms | ActiveRecord: 0.8ms)
+
+
+Started GET "/assets/confirmation.css?body=1" for 127.0.0.1 at 2014-08-07 19:19:31 -0400
+
+
+Started GET "/assets/jquery.js?body=1" for 127.0.0.1 at 2014-08-07 19:19:31 -0400
+
+
+Started GET "/assets/employees.css?body=1" for 127.0.0.1 at 2014-08-07 19:19:31 -0400
+
+
+Started GET "/assets/application.css?body=1" for 127.0.0.1 at 2014-08-07 19:19:31 -0400
+
+
+Started GET "/assets/jquery_ujs.js?body=1" for 127.0.0.1 at 2014-08-07 19:19:31 -0400
+
+
+Started GET "/assets/timesheets.css?body=1" for 127.0.0.1 at 2014-08-07 19:19:31 -0400
+
+
+Started GET "/assets/turbolinks.js?body=1" for 127.0.0.1 at 2014-08-07 19:19:31 -0400
+
+
+Started GET "/assets/confirmation.js?body=1" for 127.0.0.1 at 2014-08-07 19:19:31 -0400
+
+
+Started GET "/assets/employees.js?body=1" for 127.0.0.1 at 2014-08-07 19:19:31 -0400
+
+
+Started GET "/assets/timesheets.js?body=1" for 127.0.0.1 at 2014-08-07 19:19:31 -0400
+
+
+Started GET "/assets/application.js?body=1" for 127.0.0.1 at 2014-08-07 19:19:31 -0400
+
+
+Started POST "/employees" for 127.0.0.1 at 2014-08-07 19:19:40 -0400
+Processing by EmployeesController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"T6u5piubV8uAqWmcUAs7q5wQUnXAogsjap/xvZqED2s=", "employee"=>{"date"=>"", "first_name"=>"sammy", "last_name"=>"khaleel", "email"=>"sammykhaleel83@gmail.com", "title"=>"", "shift_start_time"=>"", "hours_worked"=>""}, "timesheet"=>{"work_week"=>""}, "commit"=>"Create Employee"}
+  [1m[35m (0.1ms)[0m  begin transaction
+  [1m[36mSQL (0.6ms)[0m  [1mINSERT INTO "employees" ("created_at", "email", "first_name", "last_name", "shift_start_time", "title", "updated_at") VALUES (?, ?, ?, ?, ?, ?, ?)[0m  [["created_at", "2014-08-07 23:19:40.964084"], ["email", "sammykhaleel83@gmail.com"], ["first_name", "sammy"], ["last_name", "khaleel"], ["shift_start_time", ""], ["title", ""], ["updated_at", "2014-08-07 23:19:40.964084"]]
+  [1m[35m (1.1ms)[0m  commit transaction
+Redirected to http://localhost:3000/employees/15
+Completed 302 Found in 9ms (ActiveRecord: 1.8ms)
+
+
+Started GET "/employees/15" for 127.0.0.1 at 2014-08-07 19:19:40 -0400
+Processing by EmployeesController#show as HTML
+  Parameters: {"id"=>"15"}
+  [1m[36mEmployee Load (0.2ms)[0m  [1mSELECT  "employees".* FROM "employees"  WHERE "employees"."id" = ? LIMIT 1[0m  [["id", 15]]
+  [1m[35mCACHE (0.0ms)[0m  SELECT  "employees".* FROM "employees"  WHERE "employees"."id" = ? LIMIT 1  [["id", "15"]]
+  Rendered employees/show.html.erb within layouts/application (0.7ms)
+Completed 200 OK in 12ms (Views: 8.8ms | ActiveRecord: 0.3ms)
+
+
+Started GET "/assets/confirmation.css?body=1" for 127.0.0.1 at 2014-08-07 19:19:41 -0400
+
+
+Started GET "/assets/application.css?body=1" for 127.0.0.1 at 2014-08-07 19:19:41 -0400
+
+
+Started GET "/assets/employees.css?body=1" for 127.0.0.1 at 2014-08-07 19:19:41 -0400
+
+
+Started GET "/assets/jquery.js?body=1" for 127.0.0.1 at 2014-08-07 19:19:41 -0400
+
+
+Started GET "/assets/jquery_ujs.js?body=1" for 127.0.0.1 at 2014-08-07 19:19:41 -0400
+
+
+Started GET "/assets/timesheets.css?body=1" for 127.0.0.1 at 2014-08-07 19:19:41 -0400
+
+
+Started GET "/assets/turbolinks.js?body=1" for 127.0.0.1 at 2014-08-07 19:19:41 -0400
+
+
+Started GET "/assets/confirmation.js?body=1" for 127.0.0.1 at 2014-08-07 19:19:41 -0400
+
+
+Started GET "/assets/employees.js?body=1" for 127.0.0.1 at 2014-08-07 19:19:41 -0400
+
+
+Started GET "/assets/timesheets.js?body=1" for 127.0.0.1 at 2014-08-07 19:19:41 -0400
+
+
+Started GET "/assets/application.js?body=1" for 127.0.0.1 at 2014-08-07 19:19:41 -0400
+
+
+Started GET "/go/15" for 127.0.0.1 at 2014-08-07 19:19:42 -0400
+Processing by EmployeesController#email as HTML
+  Parameters: {"id"=>"15"}
+  [1m[36mEmployee Load (0.2ms)[0m  [1mSELECT  "employees".* FROM "employees"  WHERE "employees"."id" = ? LIMIT 1[0m  [["id", 15]]
+  [1m[35mCACHE (0.0ms)[0m  SELECT  "employees".* FROM "employees"  WHERE "employees"."id" = ? LIMIT 1  [["id", "15"]]
+Completed 500 Internal Server Error in 13ms
+
+NameError (undefined local variable or method `s' for #<EmployeesController:0x0000010133c7d0>):
+  app/controllers/employees_controller.rb:23:in `block in email'
+  app/controllers/employees_controller.rb:22:in `each'
+  app/controllers/employees_controller.rb:22:in `email'
+
+
+  Rendered /Users/samerkhaleel/.rvm/gems/ruby-2.1.1/gems/actionpack-4.1.4/lib/action_dispatch/middleware/templates/rescues/_source.erb (0.8ms)
+  Rendered /Users/samerkhaleel/.rvm/gems/ruby-2.1.1/gems/actionpack-4.1.4/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb (1.3ms)
+  Rendered /Users/samerkhaleel/.rvm/gems/ruby-2.1.1/gems/actionpack-4.1.4/lib/action_dispatch/middleware/templates/rescues/_request_and_response.html.erb (1.0ms)
+  Rendered /Users/samerkhaleel/.rvm/gems/ruby-2.1.1/gems/actionpack-4.1.4/lib/action_dispatch/middleware/templates/rescues/diagnostics.erb within rescues/layout (26.7ms)
+
+
+Started GET "/go/15" for 127.0.0.1 at 2014-08-07 19:19:42 -0400
+Processing by EmployeesController#email as HTML
+  Parameters: {"id"=>"15"}
+  [1m[36mEmployee Load (0.4ms)[0m  [1mSELECT  "employees".* FROM "employees"  WHERE "employees"."id" = ? LIMIT 1[0m  [["id", 15]]
+  [1m[35mCACHE (0.0ms)[0m  SELECT  "employees".* FROM "employees"  WHERE "employees"."id" = ? LIMIT 1  [["id", "15"]]
+Completed 500 Internal Server Error in 7ms
+
+NameError (undefined local variable or method `s' for #<EmployeesController:0x000001060fba20>):
+  app/controllers/employees_controller.rb:23:in `block in email'
+  app/controllers/employees_controller.rb:22:in `each'
+  app/controllers/employees_controller.rb:22:in `email'
+
+
+  Rendered /Users/samerkhaleel/.rvm/gems/ruby-2.1.1/gems/actionpack-4.1.4/lib/action_dispatch/middleware/templates/rescues/_source.erb (1.0ms)
+  Rendered /Users/samerkhaleel/.rvm/gems/ruby-2.1.1/gems/actionpack-4.1.4/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb (2.2ms)
+  Rendered /Users/samerkhaleel/.rvm/gems/ruby-2.1.1/gems/actionpack-4.1.4/lib/action_dispatch/middleware/templates/rescues/_request_and_response.html.erb (1.3ms)
+  Rendered /Users/samerkhaleel/.rvm/gems/ruby-2.1.1/gems/actionpack-4.1.4/lib/action_dispatch/middleware/templates/rescues/diagnostics.erb within rescues/layout (24.6ms)
+
+
+Started GET "/employees/15" for 127.0.0.1 at 2014-08-07 19:20:02 -0400
+Processing by EmployeesController#show as HTML
+  Parameters: {"id"=>"15"}
+  [1m[36mEmployee Load (0.2ms)[0m  [1mSELECT  "employees".* FROM "employees"  WHERE "employees"."id" = ? LIMIT 1[0m  [["id", 15]]
+  [1m[35mCACHE (0.0ms)[0m  SELECT  "employees".* FROM "employees"  WHERE "employees"."id" = ? LIMIT 1  [["id", "15"]]
+  Rendered employees/show.html.erb within layouts/application (1.0ms)
+Completed 200 OK in 30ms (Views: 14.7ms | ActiveRecord: 1.1ms)
+
+
+Started GET "/assets/employees.css?body=1" for 127.0.0.1 at 2014-08-07 19:20:03 -0400
+
+
+Started GET "/assets/timesheets.css?body=1" for 127.0.0.1 at 2014-08-07 19:20:03 -0400
+
+
+Started GET "/assets/application.css?body=1" for 127.0.0.1 at 2014-08-07 19:20:03 -0400
+
+
+Started GET "/assets/jquery.js?body=1" for 127.0.0.1 at 2014-08-07 19:20:03 -0400
+
+
+Started GET "/assets/turbolinks.js?body=1" for 127.0.0.1 at 2014-08-07 19:20:03 -0400
+
+
+Started GET "/assets/confirmation.css?body=1" for 127.0.0.1 at 2014-08-07 19:20:03 -0400
+
+
+Started GET "/assets/jquery_ujs.js?body=1" for 127.0.0.1 at 2014-08-07 19:20:03 -0400
+
+
+Started GET "/assets/confirmation.js?body=1" for 127.0.0.1 at 2014-08-07 19:20:03 -0400
+
+
+Started GET "/assets/employees.js?body=1" for 127.0.0.1 at 2014-08-07 19:20:03 -0400
+
+
+Started GET "/assets/timesheets.js?body=1" for 127.0.0.1 at 2014-08-07 19:20:03 -0400
+
+
+Started GET "/assets/application.js?body=1" for 127.0.0.1 at 2014-08-07 19:20:03 -0400
+
+
+Started GET "/go/15" for 127.0.0.1 at 2014-08-07 19:20:04 -0400
+Processing by EmployeesController#email as HTML
+  Parameters: {"id"=>"15"}
+  [1m[36mEmployee Load (0.5ms)[0m  [1mSELECT  "employees".* FROM "employees"  WHERE "employees"."id" = ? LIMIT 1[0m  [["id", 15]]
+  [1m[35mCACHE (0.1ms)[0m  SELECT  "employees".* FROM "employees"  WHERE "employees"."id" = ? LIMIT 1  [["id", "15"]]
+  [1m[36mEmployee Load (0.2ms)[0m  [1mSELECT  "employees".* FROM "employees"   ORDER BY "employees"."id" DESC LIMIT 1[0m
+  [1m[35mCACHE (0.0ms)[0m  SELECT  "employees".* FROM "employees"   ORDER BY "employees"."id" DESC LIMIT 1
+  [1m[36mCACHE (0.1ms)[0m  [1mSELECT  "employees".* FROM "employees"   ORDER BY "employees"."id" DESC LIMIT 1[0m
+  [1m[35mCACHE (0.0ms)[0m  SELECT  "employees".* FROM "employees"   ORDER BY "employees"."id" DESC LIMIT 1
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT  "employees".* FROM "employees"   ORDER BY "employees"."id" DESC LIMIT 1[0m
+  [1m[35mCACHE (0.0ms)[0m  SELECT  "employees".* FROM "employees"   ORDER BY "employees"."id" DESC LIMIT 1
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT  "employees".* FROM "employees"   ORDER BY "employees"."id" DESC LIMIT 1[0m
+  Rendered confirmation_mailer/confirmation_email.html.erb (5.0ms)
+
+ConfirmationMailer#confirmation_email: processed outbound mail in 21.5ms
+
+Sent mail to mhmailr@gmail.com (2902.1ms)
+Date: Thu, 07 Aug 2014 19:20:04 -0400
+From: mhmailr@gmail.com
+To: mhmailr@gmail.com
+Message-ID: <53e409a4f41bf_84a582c29e1c827a5@samers-air.mail>
+Subject: Sent from Timesheet app!
+Mime-Version: 1.0
+Content-Type: text/html;
+ charset=UTF-8
+Content-Transfer-Encoding: 7bit
+
+<table style="width:800px">
+  <thead>
+    <tr>
+      <th>First name</th>
+      <th>Last name</th>
+      <th>Email</th>
+      <th>Title</th>
+      <th>Date</th>
+      <th>Shift</th>
+      <th>Hours worked</th>
+    </tr>
+  </thead>
+
+  <tbody>
+    
+      <tr>
+        <td><b>sammy</b></td>
+        <td><b>khaleel</b></td>
+        <td><b>sammykhaleel83@gmail.com</b></td>
+        <td><b></b></td>
+        <td><b></b></td>
+        <td><b></b></td>
+        <td><b></b></td>
+      </tr>
+
+  
+  </tbody>
+</table>
+  [1m[35mCACHE (0.0ms)[0m  SELECT  "employees".* FROM "employees"   ORDER BY "employees"."id" DESC LIMIT 1
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT  "employees".* FROM "employees"   ORDER BY "employees"."id" DESC LIMIT 1[0m
+  [1m[35mCACHE (0.0ms)[0m  SELECT  "employees".* FROM "employees"   ORDER BY "employees"."id" DESC LIMIT 1
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT  "employees".* FROM "employees"   ORDER BY "employees"."id" DESC LIMIT 1[0m
+  [1m[35mCACHE (0.0ms)[0m  SELECT  "employees".* FROM "employees"   ORDER BY "employees"."id" DESC LIMIT 1
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT  "employees".* FROM "employees"   ORDER BY "employees"."id" DESC LIMIT 1[0m
+  [1m[35mCACHE (0.0ms)[0m  SELECT  "employees".* FROM "employees"   ORDER BY "employees"."id" DESC LIMIT 1
+  Rendered confirmation_mailer/confirmation_email.html.erb (2.4ms)
+
+ConfirmationMailer#confirmation_email: processed outbound mail in 12.1ms
+
+Sent mail to mhmailr@gmail.com (1874.3ms)
+Date: Thu, 07 Aug 2014 19:20:07 -0400
+From: mhmailr@gmail.com
+To: mhmailr@gmail.com
+Message-ID: <53e409a7df49d_84a582c29e1c82840@samers-air.mail>
+Subject: Sent from Timesheet app!
+Mime-Version: 1.0
+Content-Type: text/html;
+ charset=UTF-8
+Content-Transfer-Encoding: 7bit
+
+<table style="width:800px">
+  <thead>
+    <tr>
+      <th>First name</th>
+      <th>Last name</th>
+      <th>Email</th>
+      <th>Title</th>
+      <th>Date</th>
+      <th>Shift</th>
+      <th>Hours worked</th>
+    </tr>
+  </thead>
+
+  <tbody>
+    
+      <tr>
+        <td><b>sammy</b></td>
+        <td><b>khaleel</b></td>
+        <td><b>sammykhaleel83@gmail.com</b></td>
+        <td><b></b></td>
+        <td><b></b></td>
+        <td><b></b></td>
+        <td><b></b></td>
+      </tr>
+
+  
+  </tbody>
+</table>
+  Rendered employees/email.html.erb within layouts/application (0.1ms)
+Completed 200 OK in 4845ms (Views: 22.6ms | ActiveRecord: 1.0ms)
+
+
+Started GET "/" for 127.0.0.1 at 2014-08-07 19:20:34 -0400
+Processing by EmployeesController#new as HTML
+  Rendered employees/_form.html.erb (2.6ms)
+  Rendered employees/new.html.erb within layouts/application (3.9ms)
+Completed 200 OK in 11ms (Views: 10.3ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/assets/confirmation.css?body=1" for 127.0.0.1 at 2014-08-07 19:20:35 -0400
+
+
+Started GET "/assets/employees.css?body=1" for 127.0.0.1 at 2014-08-07 19:20:35 -0400
+
+
+Started GET "/assets/timesheets.css?body=1" for 127.0.0.1 at 2014-08-07 19:20:35 -0400
+
+
+Started GET "/assets/application.css?body=1" for 127.0.0.1 at 2014-08-07 19:20:35 -0400
+
+
+Started GET "/assets/jquery.js?body=1" for 127.0.0.1 at 2014-08-07 19:20:35 -0400
+
+
+Started GET "/assets/turbolinks.js?body=1" for 127.0.0.1 at 2014-08-07 19:20:35 -0400
+
+
+Started GET "/assets/jquery_ujs.js?body=1" for 127.0.0.1 at 2014-08-07 19:20:35 -0400
+
+
+Started GET "/assets/confirmation.js?body=1" for 127.0.0.1 at 2014-08-07 19:20:35 -0400
+
+
+Started GET "/assets/employees.js?body=1" for 127.0.0.1 at 2014-08-07 19:20:35 -0400
+
+
+Started GET "/assets/timesheets.js?body=1" for 127.0.0.1 at 2014-08-07 19:20:35 -0400
+
+
+Started GET "/assets/application.js?body=1" for 127.0.0.1 at 2014-08-07 19:20:35 -0400
+
+
+Started POST "/employees" for 127.0.0.1 at 2014-08-07 19:20:41 -0400
+Processing by EmployeesController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"T6u5piubV8uAqWmcUAs7q5wQUnXAogsjap/xvZqED2s=", "employee"=>{"date"=>"", "first_name"=>"sammy", "last_name"=>"khaleel", "email"=>"sammykhaleel83@gmail.com", "title"=>"", "shift_start_time"=>"", "hours_worked"=>""}, "timesheet"=>{"work_week"=>""}, "commit"=>"Create Employee"}
+  [1m[36m (0.1ms)[0m  [1mbegin transaction[0m
+  [1m[35mSQL (0.6ms)[0m  INSERT INTO "employees" ("created_at", "email", "first_name", "last_name", "shift_start_time", "title", "updated_at") VALUES (?, ?, ?, ?, ?, ?, ?)  [["created_at", "2014-08-07 23:20:41.825026"], ["email", "sammykhaleel83@gmail.com"], ["first_name", "sammy"], ["last_name", "khaleel"], ["shift_start_time", ""], ["title", ""], ["updated_at", "2014-08-07 23:20:41.825026"]]
+  [1m[36m (0.8ms)[0m  [1mcommit transaction[0m
+Redirected to http://localhost:3000/employees/16
+Completed 302 Found in 8ms (ActiveRecord: 1.5ms)
+
+
+Started GET "/employees/16" for 127.0.0.1 at 2014-08-07 19:20:41 -0400
+Processing by EmployeesController#show as HTML
+  Parameters: {"id"=>"16"}
+  [1m[35mEmployee Load (0.2ms)[0m  SELECT  "employees".* FROM "employees"  WHERE "employees"."id" = ? LIMIT 1  [["id", 16]]
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT  "employees".* FROM "employees"  WHERE "employees"."id" = ? LIMIT 1[0m  [["id", "16"]]
+  Rendered employees/show.html.erb within layouts/application (0.6ms)
+Completed 200 OK in 13ms (Views: 10.9ms | ActiveRecord: 0.2ms)
+
+
+Started GET "/assets/confirmation.css?body=1" for 127.0.0.1 at 2014-08-07 19:20:41 -0400
+
+
+Started GET "/assets/employees.css?body=1" for 127.0.0.1 at 2014-08-07 19:20:41 -0400
+
+
+Started GET "/assets/timesheets.css?body=1" for 127.0.0.1 at 2014-08-07 19:20:41 -0400
+
+
+Started GET "/assets/application.css?body=1" for 127.0.0.1 at 2014-08-07 19:20:41 -0400
+
+
+Started GET "/assets/jquery_ujs.js?body=1" for 127.0.0.1 at 2014-08-07 19:20:41 -0400
+
+
+Started GET "/assets/jquery.js?body=1" for 127.0.0.1 at 2014-08-07 19:20:41 -0400
+
+
+Started GET "/assets/turbolinks.js?body=1" for 127.0.0.1 at 2014-08-07 19:20:41 -0400
+
+
+Started GET "/assets/confirmation.js?body=1" for 127.0.0.1 at 2014-08-07 19:20:41 -0400
+
+
+Started GET "/assets/employees.js?body=1" for 127.0.0.1 at 2014-08-07 19:20:41 -0400
+
+
+Started GET "/assets/timesheets.js?body=1" for 127.0.0.1 at 2014-08-07 19:20:41 -0400
+
+
+Started GET "/assets/application.js?body=1" for 127.0.0.1 at 2014-08-07 19:20:41 -0400
+
+
+Started GET "/go/16" for 127.0.0.1 at 2014-08-07 19:20:42 -0400
+Processing by EmployeesController#email as HTML
+  Parameters: {"id"=>"16"}
+  [1m[35mEmployee Load (0.3ms)[0m  SELECT  "employees".* FROM "employees"  WHERE "employees"."id" = ? LIMIT 1  [["id", 16]]
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT  "employees".* FROM "employees"  WHERE "employees"."id" = ? LIMIT 1[0m  [["id", "16"]]
+  [1m[35mEmployee Load (0.2ms)[0m  SELECT  "employees".* FROM "employees"   ORDER BY "employees"."id" DESC LIMIT 1
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT  "employees".* FROM "employees"   ORDER BY "employees"."id" DESC LIMIT 1[0m
+  [1m[35mCACHE (0.0ms)[0m  SELECT  "employees".* FROM "employees"   ORDER BY "employees"."id" DESC LIMIT 1
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT  "employees".* FROM "employees"   ORDER BY "employees"."id" DESC LIMIT 1[0m
+  [1m[35mCACHE (0.0ms)[0m  SELECT  "employees".* FROM "employees"   ORDER BY "employees"."id" DESC LIMIT 1
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT  "employees".* FROM "employees"   ORDER BY "employees"."id" DESC LIMIT 1[0m
+  [1m[35mCACHE (0.0ms)[0m  SELECT  "employees".* FROM "employees"   ORDER BY "employees"."id" DESC LIMIT 1
+  Rendered confirmation_mailer/confirmation_email.html.erb (4.5ms)
+
+ConfirmationMailer#confirmation_email: processed outbound mail in 22.4ms
+
+Sent mail to mhmailr@gmail.com (2098.1ms)
+Date: Thu, 07 Aug 2014 19:20:43 -0400
+From: mhmailr@gmail.com
+To: mhmailr@gmail.com
+Message-ID: <53e409cb5c25_84a582c29e1c82946@samers-air.mail>
+Subject: Sent from Timesheet app!
+Mime-Version: 1.0
+Content-Type: text/html;
+ charset=UTF-8
+Content-Transfer-Encoding: 7bit
+
+<table style="width:800px">
+  <thead>
+    <tr>
+      <th>First name</th>
+      <th>Last name</th>
+      <th>Email</th>
+      <th>Title</th>
+      <th>Date</th>
+      <th>Shift</th>
+      <th>Hours worked</th>
+    </tr>
+  </thead>
+
+  <tbody>
+    
+      <tr>
+        <td><b>sammy</b></td>
+        <td><b>khaleel</b></td>
+        <td><b>sammykhaleel83@gmail.com</b></td>
+        <td><b></b></td>
+        <td><b></b></td>
+        <td><b></b></td>
+        <td><b></b></td>
+      </tr>
+
+  
+  </tbody>
+</table>
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT  "employees".* FROM "employees"   ORDER BY "employees"."id" DESC LIMIT 1[0m
+  [1m[35mCACHE (0.0ms)[0m  SELECT  "employees".* FROM "employees"   ORDER BY "employees"."id" DESC LIMIT 1
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT  "employees".* FROM "employees"   ORDER BY "employees"."id" DESC LIMIT 1[0m
+  [1m[35mCACHE (0.0ms)[0m  SELECT  "employees".* FROM "employees"   ORDER BY "employees"."id" DESC LIMIT 1
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT  "employees".* FROM "employees"   ORDER BY "employees"."id" DESC LIMIT 1[0m
+  [1m[35mCACHE (0.0ms)[0m  SELECT  "employees".* FROM "employees"   ORDER BY "employees"."id" DESC LIMIT 1
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT  "employees".* FROM "employees"   ORDER BY "employees"."id" DESC LIMIT 1[0m
+  Rendered confirmation_mailer/confirmation_email.html.erb (2.2ms)
+
+ConfirmationMailer#confirmation_email: processed outbound mail in 10.3ms
+
+Sent mail to mhmailr@gmail.com (2033.7ms)
+Date: Thu, 07 Aug 2014 19:20:45 -0400
+From: mhmailr@gmail.com
+To: mhmailr@gmail.com
+Message-ID: <53e409cd2028e_84a582c29e1c8309d@samers-air.mail>
+Subject: Sent from Timesheet app!
+Mime-Version: 1.0
+Content-Type: text/html;
+ charset=UTF-8
+Content-Transfer-Encoding: 7bit
+
+<table style="width:800px">
+  <thead>
+    <tr>
+      <th>First name</th>
+      <th>Last name</th>
+      <th>Email</th>
+      <th>Title</th>
+      <th>Date</th>
+      <th>Shift</th>
+      <th>Hours worked</th>
+    </tr>
+  </thead>
+
+  <tbody>
+    
+      <tr>
+        <td><b>sammy</b></td>
+        <td><b>khaleel</b></td>
+        <td><b>sammykhaleel83@gmail.com</b></td>
+        <td><b></b></td>
+        <td><b></b></td>
+        <td><b></b></td>
+        <td><b></b></td>
+      </tr>
+
+  
+  </tbody>
+</table>
+  Rendered employees/email.html.erb within layouts/application (0.1ms)
+Completed 200 OK in 4180ms (Views: 10.3ms | ActiveRecord: 0.7ms)
+
+
+Started GET "/" for 127.0.0.1 at 2014-08-07 19:21:30 -0400
+Processing by EmployeesController#new as HTML
+  Rendered employees/_form.html.erb (18.5ms)
+  Rendered employees/new.html.erb within layouts/application (20.1ms)
+Completed 200 OK in 38ms (Views: 33.8ms | ActiveRecord: 0.7ms)
+
+
+Started GET "/assets/confirmation.css?body=1" for 127.0.0.1 at 2014-08-07 19:21:30 -0400
+
+
+Started GET "/assets/application.css?body=1" for 127.0.0.1 at 2014-08-07 19:21:30 -0400
+
+
+Started GET "/assets/employees.css?body=1" for 127.0.0.1 at 2014-08-07 19:21:30 -0400
+
+
+Started GET "/assets/jquery.js?body=1" for 127.0.0.1 at 2014-08-07 19:21:30 -0400
+
+
+Started GET "/assets/timesheets.css?body=1" for 127.0.0.1 at 2014-08-07 19:21:30 -0400
+
+
+Started GET "/assets/turbolinks.js?body=1" for 127.0.0.1 at 2014-08-07 19:21:30 -0400
+
+
+Started GET "/assets/jquery_ujs.js?body=1" for 127.0.0.1 at 2014-08-07 19:21:30 -0400
+
+
+Started GET "/assets/confirmation.js?body=1" for 127.0.0.1 at 2014-08-07 19:21:30 -0400
+
+
+Started GET "/assets/employees.js?body=1" for 127.0.0.1 at 2014-08-07 19:21:30 -0400
+
+
+Started GET "/assets/timesheets.js?body=1" for 127.0.0.1 at 2014-08-07 19:21:30 -0400
+
+
+Started GET "/assets/application.js?body=1" for 127.0.0.1 at 2014-08-07 19:21:30 -0400
+
+
+Started POST "/employees" for 127.0.0.1 at 2014-08-07 19:21:46 -0400
+Processing by EmployeesController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"T6u5piubV8uAqWmcUAs7q5wQUnXAogsjap/xvZqED2s=", "employee"=>{"date"=>"", "first_name"=>"Chris", "last_name"=>"Lehneis", "email"=>"cdlehneis@gmail.com", "title"=>"super ", "shift_start_time"=>"duper", "hours_worked"=>"klj"}, "timesheet"=>{"work_week"=>""}, "commit"=>"Create Employee"}
+  [1m[35m (0.1ms)[0m  begin transaction
+  [1m[36mSQL (0.4ms)[0m  [1mINSERT INTO "employees" ("created_at", "email", "first_name", "hours_worked", "last_name", "shift_start_time", "title", "updated_at") VALUES (?, ?, ?, ?, ?, ?, ?, ?)[0m  [["created_at", "2014-08-07 23:21:46.792857"], ["email", "cdlehneis@gmail.com"], ["first_name", "Chris"], ["hours_worked", 0], ["last_name", "Lehneis"], ["shift_start_time", "duper"], ["title", "super "], ["updated_at", "2014-08-07 23:21:46.792857"]]
+  [1m[35m (1.1ms)[0m  commit transaction
+Redirected to http://localhost:3000/employees/17
+Completed 302 Found in 8ms (ActiveRecord: 1.6ms)
+
+
+Started GET "/employees/17" for 127.0.0.1 at 2014-08-07 19:21:46 -0400
+Processing by EmployeesController#show as HTML
+  Parameters: {"id"=>"17"}
+  [1m[36mEmployee Load (0.3ms)[0m  [1mSELECT  "employees".* FROM "employees"  WHERE "employees"."id" = ? LIMIT 1[0m  [["id", 17]]
+  [1m[35mCACHE (0.0ms)[0m  SELECT  "employees".* FROM "employees"  WHERE "employees"."id" = ? LIMIT 1  [["id", "17"]]
+  Rendered employees/show.html.erb within layouts/application (0.6ms)
+Completed 200 OK in 11ms (Views: 7.9ms | ActiveRecord: 0.3ms)
+
+
+Started GET "/assets/confirmation.css?body=1" for 127.0.0.1 at 2014-08-07 19:21:46 -0400
+
+
+Started GET "/assets/application.css?body=1" for 127.0.0.1 at 2014-08-07 19:21:46 -0400
+
+
+Started GET "/assets/employees.css?body=1" for 127.0.0.1 at 2014-08-07 19:21:46 -0400
+
+
+Started GET "/assets/jquery_ujs.js?body=1" for 127.0.0.1 at 2014-08-07 19:21:46 -0400
+
+
+Started GET "/assets/timesheets.css?body=1" for 127.0.0.1 at 2014-08-07 19:21:46 -0400
+
+
+Started GET "/assets/jquery.js?body=1" for 127.0.0.1 at 2014-08-07 19:21:46 -0400
+
+
+Started GET "/assets/turbolinks.js?body=1" for 127.0.0.1 at 2014-08-07 19:21:46 -0400
+
+
+Started GET "/assets/confirmation.js?body=1" for 127.0.0.1 at 2014-08-07 19:21:46 -0400
+
+
+Started GET "/assets/employees.js?body=1" for 127.0.0.1 at 2014-08-07 19:21:46 -0400
+
+
+Started GET "/assets/timesheets.js?body=1" for 127.0.0.1 at 2014-08-07 19:21:46 -0400
+
+
+Started GET "/assets/application.js?body=1" for 127.0.0.1 at 2014-08-07 19:21:46 -0400
+
+
+Started GET "/go/17" for 127.0.0.1 at 2014-08-07 19:21:49 -0400
+Processing by EmployeesController#email as HTML
+  Parameters: {"id"=>"17"}
+  [1m[36mEmployee Load (0.2ms)[0m  [1mSELECT  "employees".* FROM "employees"  WHERE "employees"."id" = ? LIMIT 1[0m  [["id", 17]]
+  [1m[35mCACHE (0.0ms)[0m  SELECT  "employees".* FROM "employees"  WHERE "employees"."id" = ? LIMIT 1  [["id", "17"]]
+Completed 500 Internal Server Error in 3ms
+
+NoMethodError (undefined method `pry' for #<Binding:0x0000010253d628>):
+  app/controllers/employees_controller.rb:20:in `email'
+
+
+  Rendered /Users/samerkhaleel/.rvm/gems/ruby-2.1.1/gems/actionpack-4.1.4/lib/action_dispatch/middleware/templates/rescues/_source.erb (1.0ms)
+  Rendered /Users/samerkhaleel/.rvm/gems/ruby-2.1.1/gems/actionpack-4.1.4/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb (1.4ms)
+  Rendered /Users/samerkhaleel/.rvm/gems/ruby-2.1.1/gems/actionpack-4.1.4/lib/action_dispatch/middleware/templates/rescues/_request_and_response.html.erb (1.3ms)
+  Rendered /Users/samerkhaleel/.rvm/gems/ruby-2.1.1/gems/actionpack-4.1.4/lib/action_dispatch/middleware/templates/rescues/diagnostics.erb within rescues/layout (22.3ms)
+
+
+Started GET "/go/17" for 127.0.0.1 at 2014-08-07 19:21:49 -0400
+Processing by EmployeesController#email as HTML
+  Parameters: {"id"=>"17"}
+  [1m[36mEmployee Load (0.2ms)[0m  [1mSELECT  "employees".* FROM "employees"  WHERE "employees"."id" = ? LIMIT 1[0m  [["id", 17]]
+  [1m[35mCACHE (0.0ms)[0m  SELECT  "employees".* FROM "employees"  WHERE "employees"."id" = ? LIMIT 1  [["id", "17"]]
+Completed 500 Internal Server Error in 3ms
+
+NoMethodError (undefined method `pry' for #<Binding:0x00000102442610>):
+  app/controllers/employees_controller.rb:20:in `email'
+
+
+  Rendered /Users/samerkhaleel/.rvm/gems/ruby-2.1.1/gems/actionpack-4.1.4/lib/action_dispatch/middleware/templates/rescues/_source.erb (0.8ms)
+  Rendered /Users/samerkhaleel/.rvm/gems/ruby-2.1.1/gems/actionpack-4.1.4/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb (1.3ms)
+  Rendered /Users/samerkhaleel/.rvm/gems/ruby-2.1.1/gems/actionpack-4.1.4/lib/action_dispatch/middleware/templates/rescues/_request_and_response.html.erb (1.0ms)
+  Rendered /Users/samerkhaleel/.rvm/gems/ruby-2.1.1/gems/actionpack-4.1.4/lib/action_dispatch/middleware/templates/rescues/diagnostics.erb within rescues/layout (15.7ms)
+
+
+Started POST "/employees" for 127.0.0.1 at 2014-08-07 19:22:44 -0400
+  [1m[36mActiveRecord::SchemaMigration Load (0.2ms)[0m  [1mSELECT "schema_migrations".* FROM "schema_migrations"[0m
+Processing by EmployeesController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"T6u5piubV8uAqWmcUAs7q5wQUnXAogsjap/xvZqED2s=", "employee"=>{"date"=>"", "first_name"=>"Chris", "last_name"=>"Lehneis", "email"=>"cdlehneis@gmail.com", "title"=>"super ", "shift_start_time"=>"duper", "hours_worked"=>"klj"}, "timesheet"=>{"work_week"=>""}, "commit"=>"Create Employee"}
+  [1m[35m (0.1ms)[0m  begin transaction
+  [1m[36mSQL (0.5ms)[0m  [1mINSERT INTO "employees" ("created_at", "email", "first_name", "hours_worked", "last_name", "shift_start_time", "title", "updated_at") VALUES (?, ?, ?, ?, ?, ?, ?, ?)[0m  [["created_at", "2014-08-07 23:22:44.290497"], ["email", "cdlehneis@gmail.com"], ["first_name", "Chris"], ["hours_worked", 0], ["last_name", "Lehneis"], ["shift_start_time", "duper"], ["title", "super "], ["updated_at", "2014-08-07 23:22:44.290497"]]
+  [1m[35m (0.7ms)[0m  commit transaction
+Redirected to http://localhost:3000/employees/18
+Completed 302 Found in 41ms (ActiveRecord: 1.7ms)
+
+
+Started GET "/employees/18" for 127.0.0.1 at 2014-08-07 19:22:44 -0400
+Processing by EmployeesController#show as HTML
+  Parameters: {"id"=>"18"}
+  [1m[36mEmployee Load (0.3ms)[0m  [1mSELECT  "employees".* FROM "employees"  WHERE "employees"."id" = ? LIMIT 1[0m  [["id", 18]]
+  [1m[35mCACHE (0.0ms)[0m  SELECT  "employees".* FROM "employees"  WHERE "employees"."id" = ? LIMIT 1  [["id", "18"]]
+  Rendered employees/show.html.erb within layouts/application (2.8ms)
+Completed 200 OK in 80ms (Views: 76.7ms | ActiveRecord: 0.3ms)
+
+
+Started GET "/assets/confirmation.css?body=1" for 127.0.0.1 at 2014-08-07 19:22:44 -0400
+
+
+Started GET "/assets/employees.css?body=1" for 127.0.0.1 at 2014-08-07 19:22:44 -0400
+
+
+Started GET "/assets/timesheets.css?body=1" for 127.0.0.1 at 2014-08-07 19:22:44 -0400
+
+
+Started GET "/assets/jquery.js?body=1" for 127.0.0.1 at 2014-08-07 19:22:44 -0400
+
+
+Started GET "/assets/application.css?body=1" for 127.0.0.1 at 2014-08-07 19:22:44 -0400
+
+
+Started GET "/assets/jquery_ujs.js?body=1" for 127.0.0.1 at 2014-08-07 19:22:44 -0400
+
+
+Started GET "/assets/turbolinks.js?body=1" for 127.0.0.1 at 2014-08-07 19:22:44 -0400
+
+
+Started GET "/assets/confirmation.js?body=1" for 127.0.0.1 at 2014-08-07 19:22:44 -0400
+
+
+Started GET "/assets/employees.js?body=1" for 127.0.0.1 at 2014-08-07 19:22:44 -0400
+
+
+Started GET "/assets/timesheets.js?body=1" for 127.0.0.1 at 2014-08-07 19:22:44 -0400
+
+
+Started GET "/assets/application.js?body=1" for 127.0.0.1 at 2014-08-07 19:22:44 -0400
+
+
+Started GET "/go/18" for 127.0.0.1 at 2014-08-07 19:22:45 -0400
+Processing by EmployeesController#email as HTML
+  Parameters: {"id"=>"18"}
+  [1m[36mEmployee Load (0.2ms)[0m  [1mSELECT  "employees".* FROM "employees"  WHERE "employees"."id" = ? LIMIT 1[0m  [["id", 18]]
+  [1m[35mCACHE (0.0ms)[0m  SELECT  "employees".* FROM "employees"  WHERE "employees"."id" = ? LIMIT 1  [["id", "18"]]
+Completed 500 Internal Server Error in 34022ms
+
+SystemExit (exit):
+  app/controllers/employees_controller.rb:20:in `email'
+
+
+  Rendered /Users/samerkhaleel/.rvm/gems/ruby-2.1.1/gems/actionpack-4.1.4/lib/action_dispatch/middleware/templates/rescues/_source.erb (0.8ms)
+  Rendered /Users/samerkhaleel/.rvm/gems/ruby-2.1.1/gems/actionpack-4.1.4/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb (1.5ms)
+  Rendered /Users/samerkhaleel/.rvm/gems/ruby-2.1.1/gems/actionpack-4.1.4/lib/action_dispatch/middleware/templates/rescues/_request_and_response.html.erb (1.8ms)
+  Rendered /Users/samerkhaleel/.rvm/gems/ruby-2.1.1/gems/actionpack-4.1.4/lib/action_dispatch/middleware/templates/rescues/diagnostics.erb within rescues/layout (22.1ms)
+
+
+Started GET "/go/18" for 127.0.0.1 at 2014-08-07 19:23:20 -0400
+Processing by EmployeesController#email as HTML
+  Parameters: {"id"=>"18"}
+  [1m[36mEmployee Load (0.3ms)[0m  [1mSELECT  "employees".* FROM "employees"  WHERE "employees"."id" = ? LIMIT 1[0m  [["id", 18]]
+  [1m[35mCACHE (0.0ms)[0m  SELECT  "employees".* FROM "employees"  WHERE "employees"."id" = ? LIMIT 1  [["id", "18"]]
+Completed 500 Internal Server Error in 4134ms
+
+SystemExit (exit):
+  app/controllers/employees_controller.rb:20:in `email'
+
+
+  Rendered /Users/samerkhaleel/.rvm/gems/ruby-2.1.1/gems/actionpack-4.1.4/lib/action_dispatch/middleware/templates/rescues/_source.erb (0.5ms)
+  Rendered /Users/samerkhaleel/.rvm/gems/ruby-2.1.1/gems/actionpack-4.1.4/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb (1.2ms)
+  Rendered /Users/samerkhaleel/.rvm/gems/ruby-2.1.1/gems/actionpack-4.1.4/lib/action_dispatch/middleware/templates/rescues/_request_and_response.html.erb (1.0ms)
+  Rendered /Users/samerkhaleel/.rvm/gems/ruby-2.1.1/gems/actionpack-4.1.4/lib/action_dispatch/middleware/templates/rescues/diagnostics.erb within rescues/layout (15.0ms)
+
+
+Started POST "/employees" for 127.0.0.1 at 2014-08-07 19:23:42 -0400
+Processing by EmployeesController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"T6u5piubV8uAqWmcUAs7q5wQUnXAogsjap/xvZqED2s=", "employee"=>{"date"=>"", "first_name"=>"Chris", "last_name"=>"Lehneis", "email"=>"cdlehneis@gmail.com", "title"=>"super ", "shift_start_time"=>"duper", "hours_worked"=>"klj"}, "timesheet"=>{"work_week"=>""}, "commit"=>"Create Employee"}
+  [1m[36m (0.1ms)[0m  [1mbegin transaction[0m
+  [1m[35mSQL (0.3ms)[0m  INSERT INTO "employees" ("created_at", "email", "first_name", "hours_worked", "last_name", "shift_start_time", "title", "updated_at") VALUES (?, ?, ?, ?, ?, ?, ?, ?)  [["created_at", "2014-08-07 23:23:42.697425"], ["email", "cdlehneis@gmail.com"], ["first_name", "Chris"], ["hours_worked", 0], ["last_name", "Lehneis"], ["shift_start_time", "duper"], ["title", "super "], ["updated_at", "2014-08-07 23:23:42.697425"]]
+  [1m[36m (0.8ms)[0m  [1mcommit transaction[0m
+Redirected to http://localhost:3000/employees/19
+Completed 302 Found in 15ms (ActiveRecord: 2.0ms)
+
+
+Started GET "/employees/19" for 127.0.0.1 at 2014-08-07 19:23:42 -0400
+Processing by EmployeesController#show as HTML
+  Parameters: {"id"=>"19"}
+  [1m[35mEmployee Load (0.2ms)[0m  SELECT  "employees".* FROM "employees"  WHERE "employees"."id" = ? LIMIT 1  [["id", 19]]
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT  "employees".* FROM "employees"  WHERE "employees"."id" = ? LIMIT 1[0m  [["id", "19"]]
+  Rendered employees/show.html.erb within layouts/application (0.4ms)
+Completed 200 OK in 9ms (Views: 7.0ms | ActiveRecord: 0.2ms)
+
+
+Started GET "/assets/employees.css?body=1" for 127.0.0.1 at 2014-08-07 19:23:42 -0400
+
+
+Started GET "/assets/timesheets.css?body=1" for 127.0.0.1 at 2014-08-07 19:23:42 -0400
+
+
+Started GET "/assets/application.css?body=1" for 127.0.0.1 at 2014-08-07 19:23:42 -0400
+
+
+Started GET "/assets/confirmation.css?body=1" for 127.0.0.1 at 2014-08-07 19:23:42 -0400
+
+
+Started GET "/assets/jquery.js?body=1" for 127.0.0.1 at 2014-08-07 19:23:42 -0400
+
+
+Started GET "/assets/jquery_ujs.js?body=1" for 127.0.0.1 at 2014-08-07 19:23:42 -0400
+
+
+Started GET "/assets/turbolinks.js?body=1" for 127.0.0.1 at 2014-08-07 19:23:42 -0400
+
+
+Started GET "/assets/confirmation.js?body=1" for 127.0.0.1 at 2014-08-07 19:23:42 -0400
+
+
+Started GET "/assets/employees.js?body=1" for 127.0.0.1 at 2014-08-07 19:23:42 -0400
+
+
+Started GET "/assets/application.js?body=1" for 127.0.0.1 at 2014-08-07 19:23:42 -0400
+
+
+Started GET "/assets/timesheets.js?body=1" for 127.0.0.1 at 2014-08-07 19:23:42 -0400
+
+
+Started GET "/go/19" for 127.0.0.1 at 2014-08-07 19:23:44 -0400
+Processing by EmployeesController#email as HTML
+  Parameters: {"id"=>"19"}
+  [1m[35mEmployee Load (0.2ms)[0m  SELECT  "employees".* FROM "employees"  WHERE "employees"."id" = ? LIMIT 1  [["id", 19]]
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT  "employees".* FROM "employees"  WHERE "employees"."id" = ? LIMIT 1[0m  [["id", "19"]]
+  [1m[35mEmployee Load (0.2ms)[0m  SELECT  "employees".* FROM "employees"   ORDER BY "employees"."id" DESC LIMIT 1
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT  "employees".* FROM "employees"   ORDER BY "employees"."id" DESC LIMIT 1[0m
+  [1m[35mCACHE (0.0ms)[0m  SELECT  "employees".* FROM "employees"   ORDER BY "employees"."id" DESC LIMIT 1
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT  "employees".* FROM "employees"   ORDER BY "employees"."id" DESC LIMIT 1[0m
+  [1m[35mCACHE (0.0ms)[0m  SELECT  "employees".* FROM "employees"   ORDER BY "employees"."id" DESC LIMIT 1
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT  "employees".* FROM "employees"   ORDER BY "employees"."id" DESC LIMIT 1[0m
+  [1m[35mCACHE (0.0ms)[0m  SELECT  "employees".* FROM "employees"   ORDER BY "employees"."id" DESC LIMIT 1
+  Rendered confirmation_mailer/confirmation_email.html.erb (4.8ms)
+
+ConfirmationMailer#confirmation_email: processed outbound mail in 24.8ms
+
+Sent mail to mhmailr@gmail.com (2538.1ms)
+Date: Thu, 07 Aug 2014 19:23:44 -0400
+From: mhmailr@gmail.com
+To: mhmailr@gmail.com
+Message-ID: <53e40a8023e8d_957b82c7d2b0747d1@samers-air.mail>
+Subject: Sent from Timesheet app!
+Mime-Version: 1.0
+Content-Type: text/html;
+ charset=UTF-8
+Content-Transfer-Encoding: 7bit
+
+<table style="width:800px">
+  <thead>
+    <tr>
+      <th>First name</th>
+      <th>Last name</th>
+      <th>Email</th>
+      <th>Title</th>
+      <th>Date</th>
+      <th>Shift</th>
+      <th>Hours worked</th>
+    </tr>
+  </thead>
+
+  <tbody>
+    
+      <tr>
+        <td><b>Chris</b></td>
+        <td><b>Lehneis</b></td>
+        <td><b>cdlehneis@gmail.com</b></td>
+        <td><b>super </b></td>
+        <td><b></b></td>
+        <td><b>duper</b></td>
+        <td><b>0</b></td>
+      </tr>
+
+  
+  </tbody>
+</table>
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT  "employees".* FROM "employees"   ORDER BY "employees"."id" DESC LIMIT 1[0m
+  [1m[35mCACHE (0.0ms)[0m  SELECT  "employees".* FROM "employees"   ORDER BY "employees"."id" DESC LIMIT 1
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT  "employees".* FROM "employees"   ORDER BY "employees"."id" DESC LIMIT 1[0m
+  [1m[35mCACHE (0.0ms)[0m  SELECT  "employees".* FROM "employees"   ORDER BY "employees"."id" DESC LIMIT 1
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT  "employees".* FROM "employees"   ORDER BY "employees"."id" DESC LIMIT 1[0m
+  [1m[35mCACHE (0.0ms)[0m  SELECT  "employees".* FROM "employees"   ORDER BY "employees"."id" DESC LIMIT 1
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT  "employees".* FROM "employees"   ORDER BY "employees"."id" DESC LIMIT 1[0m
+  Rendered confirmation_mailer/confirmation_email.html.erb (2.4ms)
+
+ConfirmationMailer#confirmation_email: processed outbound mail in 10.9ms
+
+Sent mail to mhmailr@gmail.com (2131.6ms)
+Date: Thu, 07 Aug 2014 19:23:46 -0400
+From: mhmailr@gmail.com
+To: mhmailr@gmail.com
+Message-ID: <53e40a82a915c_957b82c7d2b0748f5@samers-air.mail>
+Subject: Sent from Timesheet app!
+Mime-Version: 1.0
+Content-Type: text/html;
+ charset=UTF-8
+Content-Transfer-Encoding: 7bit
+
+<table style="width:800px">
+  <thead>
+    <tr>
+      <th>First name</th>
+      <th>Last name</th>
+      <th>Email</th>
+      <th>Title</th>
+      <th>Date</th>
+      <th>Shift</th>
+      <th>Hours worked</th>
+    </tr>
+  </thead>
+
+  <tbody>
+    
+      <tr>
+        <td><b>Chris</b></td>
+        <td><b>Lehneis</b></td>
+        <td><b>cdlehneis@gmail.com</b></td>
+        <td><b>super </b></td>
+        <td><b></b></td>
+        <td><b>duper</b></td>
+        <td><b>0</b></td>
+      </tr>
+
+  
+  </tbody>
+</table>
+  Rendered employees/email.html.erb within layouts/application (0.6ms)
+Completed 200 OK in 4742ms (Views: 19.5ms | ActiveRecord: 0.6ms)
+
+
+Started GET "/" for 127.0.0.1 at 2014-08-07 19:25:02 -0400
+Processing by EmployeesController#new as HTML
+  Rendered employees/_form.html.erb (33.6ms)
+  Rendered employees/new.html.erb within layouts/application (38.4ms)
+Completed 200 OK in 56ms (Views: 51.2ms | ActiveRecord: 0.7ms)
+
+
+Started GET "/assets/timesheets.css?body=1" for 127.0.0.1 at 2014-08-07 19:25:02 -0400
+
+
+Started GET "/assets/application.css?body=1" for 127.0.0.1 at 2014-08-07 19:25:02 -0400
+
+
+Started GET "/assets/employees.css?body=1" for 127.0.0.1 at 2014-08-07 19:25:02 -0400
+
+
+Started GET "/assets/jquery.js?body=1" for 127.0.0.1 at 2014-08-07 19:25:02 -0400
+
+
+Started GET "/assets/jquery_ujs.js?body=1" for 127.0.0.1 at 2014-08-07 19:25:02 -0400
+
+
+Started GET "/assets/confirmation.css?body=1" for 127.0.0.1 at 2014-08-07 19:25:02 -0400
+
+
+Started GET "/assets/turbolinks.js?body=1" for 127.0.0.1 at 2014-08-07 19:25:02 -0400
+
+
+Started GET "/assets/employees.js?body=1" for 127.0.0.1 at 2014-08-07 19:25:02 -0400
+
+
+Started GET "/assets/timesheets.js?body=1" for 127.0.0.1 at 2014-08-07 19:25:02 -0400
+
+
+Started GET "/assets/confirmation.js?body=1" for 127.0.0.1 at 2014-08-07 19:25:02 -0400
+
+
+Started GET "/assets/application.js?body=1" for 127.0.0.1 at 2014-08-07 19:25:02 -0400
+
+
+Started POST "/employees" for 127.0.0.1 at 2014-08-07 19:25:06 -0400
+Processing by EmployeesController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"T6u5piubV8uAqWmcUAs7q5wQUnXAogsjap/xvZqED2s=", "employee"=>{"date"=>"", "first_name"=>"sammy", "last_name"=>"khaleel", "email"=>"sammykhaleel83@gmail.com", "title"=>"", "shift_start_time"=>"", "hours_worked"=>""}, "timesheet"=>{"work_week"=>""}, "commit"=>"Create Employee"}
+  [1m[35m (0.2ms)[0m  begin transaction
+  [1m[36mSQL (0.5ms)[0m  [1mINSERT INTO "employees" ("created_at", "email", "first_name", "last_name", "shift_start_time", "title", "updated_at") VALUES (?, ?, ?, ?, ?, ?, ?)[0m  [["created_at", "2014-08-07 23:25:06.893587"], ["email", "sammykhaleel83@gmail.com"], ["first_name", "sammy"], ["last_name", "khaleel"], ["shift_start_time", ""], ["title", ""], ["updated_at", "2014-08-07 23:25:06.893587"]]
+  [1m[35m (0.7ms)[0m  commit transaction
+Redirected to http://localhost:3000/employees/20
+Completed 302 Found in 8ms (ActiveRecord: 1.4ms)
+
+
+Started GET "/employees/20" for 127.0.0.1 at 2014-08-07 19:25:06 -0400
+Processing by EmployeesController#show as HTML
+  Parameters: {"id"=>"20"}
+  [1m[36mEmployee Load (0.4ms)[0m  [1mSELECT  "employees".* FROM "employees"  WHERE "employees"."id" = ? LIMIT 1[0m  [["id", 20]]
+  [1m[35mCACHE (0.0ms)[0m  SELECT  "employees".* FROM "employees"  WHERE "employees"."id" = ? LIMIT 1  [["id", "20"]]
+  Rendered employees/show.html.erb within layouts/application (0.5ms)
+Completed 200 OK in 11ms (Views: 6.8ms | ActiveRecord: 0.4ms)
+
+
+Started GET "/assets/confirmation.css?body=1" for 127.0.0.1 at 2014-08-07 19:25:06 -0400
+
+
+Started GET "/assets/timesheets.css?body=1" for 127.0.0.1 at 2014-08-07 19:25:06 -0400
+
+
+Started GET "/assets/employees.css?body=1" for 127.0.0.1 at 2014-08-07 19:25:06 -0400
+
+
+Started GET "/assets/jquery_ujs.js?body=1" for 127.0.0.1 at 2014-08-07 19:25:06 -0400
+
+
+Started GET "/assets/application.css?body=1" for 127.0.0.1 at 2014-08-07 19:25:06 -0400
+
+
+Started GET "/assets/jquery.js?body=1" for 127.0.0.1 at 2014-08-07 19:25:06 -0400
+
+
+Started GET "/assets/turbolinks.js?body=1" for 127.0.0.1 at 2014-08-07 19:25:06 -0400
+
+
+Started GET "/assets/confirmation.js?body=1" for 127.0.0.1 at 2014-08-07 19:25:06 -0400
+
+
+Started GET "/assets/employees.js?body=1" for 127.0.0.1 at 2014-08-07 19:25:06 -0400
+
+
+Started GET "/assets/timesheets.js?body=1" for 127.0.0.1 at 2014-08-07 19:25:06 -0400
+
+
+Started GET "/assets/application.js?body=1" for 127.0.0.1 at 2014-08-07 19:25:06 -0400
+
+
+Started GET "/go/20" for 127.0.0.1 at 2014-08-07 19:25:07 -0400
+Processing by EmployeesController#email as HTML
+  Parameters: {"id"=>"20"}
+  [1m[36mEmployee Load (0.2ms)[0m  [1mSELECT  "employees".* FROM "employees"  WHERE "employees"."id" = ? LIMIT 1[0m  [["id", 20]]
+  [1m[35mCACHE (0.0ms)[0m  SELECT  "employees".* FROM "employees"  WHERE "employees"."id" = ? LIMIT 1  [["id", "20"]]
+Completed 500 Internal Server Error in 3ms
+
+NoMethodError (undefined method `all' for ["mhmailer@gmail.com", "sammykhaleel83@gmail.com"]:Array):
+  app/controllers/employees_controller.rb:23:in `email'
+
+
+  Rendered /Users/samerkhaleel/.rvm/gems/ruby-2.1.1/gems/actionpack-4.1.4/lib/action_dispatch/middleware/templates/rescues/_source.erb (1.4ms)
+  Rendered /Users/samerkhaleel/.rvm/gems/ruby-2.1.1/gems/actionpack-4.1.4/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb (1.1ms)
+  Rendered /Users/samerkhaleel/.rvm/gems/ruby-2.1.1/gems/actionpack-4.1.4/lib/action_dispatch/middleware/templates/rescues/_request_and_response.html.erb (0.9ms)
+  Rendered /Users/samerkhaleel/.rvm/gems/ruby-2.1.1/gems/actionpack-4.1.4/lib/action_dispatch/middleware/templates/rescues/diagnostics.erb within rescues/layout (19.9ms)
+
+
+Started GET "/go/20" for 127.0.0.1 at 2014-08-07 19:25:08 -0400
+Processing by EmployeesController#email as HTML
+  Parameters: {"id"=>"20"}
+  [1m[36mEmployee Load (0.2ms)[0m  [1mSELECT  "employees".* FROM "employees"  WHERE "employees"."id" = ? LIMIT 1[0m  [["id", 20]]
+  [1m[35mCACHE (0.0ms)[0m  SELECT  "employees".* FROM "employees"  WHERE "employees"."id" = ? LIMIT 1  [["id", "20"]]
+Completed 500 Internal Server Error in 3ms
+
+NoMethodError (undefined method `all' for ["mhmailer@gmail.com", "sammykhaleel83@gmail.com"]:Array):
+  app/controllers/employees_controller.rb:23:in `email'
+
+
+  Rendered /Users/samerkhaleel/.rvm/gems/ruby-2.1.1/gems/actionpack-4.1.4/lib/action_dispatch/middleware/templates/rescues/_source.erb (0.6ms)
+  Rendered /Users/samerkhaleel/.rvm/gems/ruby-2.1.1/gems/actionpack-4.1.4/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb (1.0ms)
+  Rendered /Users/samerkhaleel/.rvm/gems/ruby-2.1.1/gems/actionpack-4.1.4/lib/action_dispatch/middleware/templates/rescues/_request_and_response.html.erb (1.2ms)
+  Rendered /Users/samerkhaleel/.rvm/gems/ruby-2.1.1/gems/actionpack-4.1.4/lib/action_dispatch/middleware/templates/rescues/diagnostics.erb within rescues/layout (16.6ms)
+
+
+Started GET "/" for 127.0.0.1 at 2014-08-07 19:33:14 -0400
+Processing by EmployeesController#new as HTML
+  Rendered employees/_form.html.erb (6.3ms)
+  Rendered employees/new.html.erb within layouts/application (7.0ms)
+Completed 200 OK in 16ms (Views: 13.6ms | ActiveRecord: 0.4ms)
+
+
+Started GET "/assets/confirmation.css?body=1" for 127.0.0.1 at 2014-08-07 19:33:14 -0400
+
+
+Started GET "/assets/employees.css?body=1" for 127.0.0.1 at 2014-08-07 19:33:14 -0400
+
+
+Started GET "/assets/timesheets.css?body=1" for 127.0.0.1 at 2014-08-07 19:33:14 -0400
+
+
+Started GET "/assets/application.css?body=1" for 127.0.0.1 at 2014-08-07 19:33:14 -0400
+
+
+Started GET "/assets/confirmation.js?body=1" for 127.0.0.1 at 2014-08-07 19:33:14 -0400
+
+
+Started GET "/assets/jquery_ujs.js?body=1" for 127.0.0.1 at 2014-08-07 19:33:14 -0400
+
+
+Started GET "/assets/jquery.js?body=1" for 127.0.0.1 at 2014-08-07 19:33:14 -0400
+
+
+Started GET "/assets/timesheets.js?body=1" for 127.0.0.1 at 2014-08-07 19:33:14 -0400
+
+
+Started GET "/assets/employees.js?body=1" for 127.0.0.1 at 2014-08-07 19:33:14 -0400
+
+
+Started GET "/assets/application.js?body=1" for 127.0.0.1 at 2014-08-07 19:33:14 -0400
+
+
+Started GET "/assets/turbolinks.js?body=1" for 127.0.0.1 at 2014-08-07 19:33:14 -0400
+
+
+Started POST "/employees" for 127.0.0.1 at 2014-08-07 19:33:31 -0400
+Processing by EmployeesController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"T6u5piubV8uAqWmcUAs7q5wQUnXAogsjap/xvZqED2s=", "employee"=>{"date"=>"", "first_name"=>"Chris", "last_name"=>"Lehneis", "email"=>"cdlehneis@gmail.com", "title"=>";lkj;lkj", "shift_start_time"=>";lkj", "hours_worked"=>";lkj"}, "timesheet"=>{"work_week"=>""}, "commit"=>"Create Employee"}
+  [1m[36m (0.1ms)[0m  [1mbegin transaction[0m
+  [1m[35mSQL (0.3ms)[0m  INSERT INTO "employees" ("created_at", "email", "first_name", "hours_worked", "last_name", "shift_start_time", "title", "updated_at") VALUES (?, ?, ?, ?, ?, ?, ?, ?)  [["created_at", "2014-08-07 23:33:31.868315"], ["email", "cdlehneis@gmail.com"], ["first_name", "Chris"], ["hours_worked", 0], ["last_name", "Lehneis"], ["shift_start_time", ";lkj"], ["title", ";lkj;lkj"], ["updated_at", "2014-08-07 23:33:31.868315"]]
+  [1m[36m (0.8ms)[0m  [1mcommit transaction[0m
+Redirected to http://localhost:3000/employees/21
+Completed 302 Found in 5ms (ActiveRecord: 1.2ms)
+
+
+Started GET "/employees/21" for 127.0.0.1 at 2014-08-07 19:33:31 -0400
+Processing by EmployeesController#show as HTML
+  Parameters: {"id"=>"21"}
+  [1m[35mEmployee Load (0.3ms)[0m  SELECT  "employees".* FROM "employees"  WHERE "employees"."id" = ? LIMIT 1  [["id", 21]]
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT  "employees".* FROM "employees"  WHERE "employees"."id" = ? LIMIT 1[0m  [["id", "21"]]
+  Rendered employees/show.html.erb within layouts/application (0.6ms)
+Completed 200 OK in 11ms (Views: 8.0ms | ActiveRecord: 0.3ms)
+
+
+Started GET "/assets/confirmation.css?body=1" for 127.0.0.1 at 2014-08-07 19:33:31 -0400
+
+
+Started GET "/assets/employees.css?body=1" for 127.0.0.1 at 2014-08-07 19:33:31 -0400
+
+
+Started GET "/assets/timesheets.css?body=1" for 127.0.0.1 at 2014-08-07 19:33:31 -0400
+
+
+Started GET "/assets/jquery_ujs.js?body=1" for 127.0.0.1 at 2014-08-07 19:33:31 -0400
+
+
+Started GET "/assets/application.css?body=1" for 127.0.0.1 at 2014-08-07 19:33:31 -0400
+
+
+Started GET "/assets/jquery.js?body=1" for 127.0.0.1 at 2014-08-07 19:33:31 -0400
+
+
+Started GET "/assets/turbolinks.js?body=1" for 127.0.0.1 at 2014-08-07 19:33:31 -0400
+
+
+Started GET "/assets/confirmation.js?body=1" for 127.0.0.1 at 2014-08-07 19:33:31 -0400
+
+
+Started GET "/assets/employees.js?body=1" for 127.0.0.1 at 2014-08-07 19:33:31 -0400
+
+
+Started GET "/assets/timesheets.js?body=1" for 127.0.0.1 at 2014-08-07 19:33:31 -0400
+
+
+Started GET "/assets/application.js?body=1" for 127.0.0.1 at 2014-08-07 19:33:31 -0400
+
+
+Started GET "/go/21" for 127.0.0.1 at 2014-08-07 19:33:33 -0400
+Processing by EmployeesController#email as HTML
+  Parameters: {"id"=>"21"}
+  [1m[35mEmployee Load (0.2ms)[0m  SELECT  "employees".* FROM "employees"  WHERE "employees"."id" = ? LIMIT 1  [["id", 21]]
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT  "employees".* FROM "employees"  WHERE "employees"."id" = ? LIMIT 1[0m  [["id", "21"]]
+  [1m[35mEmployee Load (0.2ms)[0m  SELECT  "employees".* FROM "employees"   ORDER BY "employees"."id" DESC LIMIT 1
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT  "employees".* FROM "employees"   ORDER BY "employees"."id" DESC LIMIT 1[0m
+  [1m[35mCACHE (0.0ms)[0m  SELECT  "employees".* FROM "employees"   ORDER BY "employees"."id" DESC LIMIT 1
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT  "employees".* FROM "employees"   ORDER BY "employees"."id" DESC LIMIT 1[0m
+  [1m[35mCACHE (0.0ms)[0m  SELECT  "employees".* FROM "employees"   ORDER BY "employees"."id" DESC LIMIT 1
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT  "employees".* FROM "employees"   ORDER BY "employees"."id" DESC LIMIT 1[0m
+  [1m[35mCACHE (0.0ms)[0m  SELECT  "employees".* FROM "employees"   ORDER BY "employees"."id" DESC LIMIT 1
+  Rendered confirmation_mailer/confirmation_email.html.erb (2.8ms)
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT  "employees".* FROM "employees"   ORDER BY "employees"."id" DESC LIMIT 1[0m
+  [1m[35mCACHE (0.0ms)[0m  SELECT  "employees".* FROM "employees"   ORDER BY "employees"."id" DESC LIMIT 1
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT  "employees".* FROM "employees"   ORDER BY "employees"."id" DESC LIMIT 1[0m
+  [1m[35mCACHE (0.0ms)[0m  SELECT  "employees".* FROM "employees"   ORDER BY "employees"."id" DESC LIMIT 1
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT  "employees".* FROM "employees"   ORDER BY "employees"."id" DESC LIMIT 1[0m
+  [1m[35mCACHE (0.0ms)[0m  SELECT  "employees".* FROM "employees"   ORDER BY "employees"."id" DESC LIMIT 1
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT  "employees".* FROM "employees"   ORDER BY "employees"."id" DESC LIMIT 1[0m
+  Rendered confirmation_mailer/confirmation_email.html.erb (2.8ms)
+
+ConfirmationMailer#confirmation_email: processed outbound mail in 23.4ms
+
+Sent mail to cdlehneis@gmail.com (3139.7ms)
+Date: Thu, 07 Aug 2014 19:33:33 -0400
+From: mhmailr@gmail.com
+To: cdlehneis@gmail.com
+Message-ID: <53e40ccda225a_957b839d2fc8749a9@samers-air.mail>
+Subject: Sent from Timesheet app!
+Mime-Version: 1.0
+Content-Type: text/html;
+ charset=UTF-8
+Content-Transfer-Encoding: 7bit
+
+<table style="width:800px">
+  <thead>
+    <tr>
+      <th>First name</th>
+      <th>Last name</th>
+      <th>Email</th>
+      <th>Title</th>
+      <th>Date</th>
+      <th>Shift</th>
+      <th>Hours worked</th>
+    </tr>
+  </thead>
+
+  <tbody>
+    
+      <tr>
+        <td><b>Chris</b></td>
+        <td><b>Lehneis</b></td>
+        <td><b>cdlehneis@gmail.com</b></td>
+        <td><b>;lkj;lkj</b></td>
+        <td><b></b></td>
+        <td><b>;lkj</b></td>
+        <td><b>0</b></td>
+      </tr>
+
+  
+  </tbody>
+</table>
+  Rendered employees/email.html.erb within layouts/application (0.1ms)
+Completed 200 OK in 3181ms (Views: 9.6ms | ActiveRecord: 0.5ms)
+
+
+Started GET "/" for 127.0.0.1 at 2014-08-07 19:35:58 -0400
+Processing by EmployeesController#new as HTML
+  Rendered employees/_form.html.erb (5.4ms)
+  Rendered employees/new.html.erb within layouts/application (6.0ms)
+Completed 200 OK in 15ms (Views: 12.1ms | ActiveRecord: 0.4ms)
+
+
+Started GET "/assets/confirmation.css?body=1" for 127.0.0.1 at 2014-08-07 19:35:58 -0400
+
+
+Started GET "/assets/timesheets.css?body=1" for 127.0.0.1 at 2014-08-07 19:35:58 -0400
+
+
+Started GET "/assets/jquery_ujs.js?body=1" for 127.0.0.1 at 2014-08-07 19:35:58 -0400
+
+
+Started GET "/assets/jquery.js?body=1" for 127.0.0.1 at 2014-08-07 19:35:58 -0400
+
+
+Started GET "/assets/application.css?body=1" for 127.0.0.1 at 2014-08-07 19:35:58 -0400
+
+
+Started GET "/assets/employees.css?body=1" for 127.0.0.1 at 2014-08-07 19:35:58 -0400
+
+
+Started GET "/assets/turbolinks.js?body=1" for 127.0.0.1 at 2014-08-07 19:35:58 -0400
+
+
+Started GET "/assets/confirmation.js?body=1" for 127.0.0.1 at 2014-08-07 19:35:58 -0400
+
+
+Started GET "/assets/employees.js?body=1" for 127.0.0.1 at 2014-08-07 19:35:58 -0400
+
+
+Started GET "/assets/timesheets.js?body=1" for 127.0.0.1 at 2014-08-07 19:35:58 -0400
+
+
+Started GET "/assets/application.js?body=1" for 127.0.0.1 at 2014-08-07 19:35:58 -0400
+
+
+Started POST "/employees" for 127.0.0.1 at 2014-08-07 19:36:18 -0400
+Processing by EmployeesController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"T6u5piubV8uAqWmcUAs7q5wQUnXAogsjap/xvZqED2s=", "employee"=>{"date"=>"2014-08-07", "first_name"=>"Sammy ", "last_name"=>"Chris", "email"=>"cdlehneis@gmail.com", "title"=>"TEST", "shift_start_time"=>"", "hours_worked"=>""}, "timesheet"=>{"work_week"=>""}, "commit"=>"Create Employee"}
+  [1m[35m (0.1ms)[0m  begin transaction
+  [1m[36mSQL (0.5ms)[0m  [1mINSERT INTO "employees" ("created_at", "date", "email", "first_name", "last_name", "shift_start_time", "title", "updated_at") VALUES (?, ?, ?, ?, ?, ?, ?, ?)[0m  [["created_at", "2014-08-07 23:36:18.864241"], ["date", "2014-08-07"], ["email", "cdlehneis@gmail.com"], ["first_name", "Sammy "], ["last_name", "Chris"], ["shift_start_time", ""], ["title", "TEST"], ["updated_at", "2014-08-07 23:36:18.864241"]]
+  [1m[35m (0.8ms)[0m  commit transaction
+Redirected to http://localhost:3000/employees/22
+Completed 302 Found in 7ms (ActiveRecord: 1.4ms)
+
+
+Started GET "/employees/22" for 127.0.0.1 at 2014-08-07 19:36:18 -0400
+Processing by EmployeesController#show as HTML
+  Parameters: {"id"=>"22"}
+  [1m[36mEmployee Load (0.3ms)[0m  [1mSELECT  "employees".* FROM "employees"  WHERE "employees"."id" = ? LIMIT 1[0m  [["id", 22]]
+  [1m[35mCACHE (0.0ms)[0m  SELECT  "employees".* FROM "employees"  WHERE "employees"."id" = ? LIMIT 1  [["id", "22"]]
+  Rendered employees/show.html.erb within layouts/application (0.7ms)
+Completed 200 OK in 35ms (Views: 31.4ms | ActiveRecord: 0.3ms)
+
+
+Started GET "/assets/employees.css?body=1" for 127.0.0.1 at 2014-08-07 19:36:18 -0400
+
+
+Started GET "/assets/confirmation.css?body=1" for 127.0.0.1 at 2014-08-07 19:36:18 -0400
+
+
+Started GET "/assets/jquery.js?body=1" for 127.0.0.1 at 2014-08-07 19:36:18 -0400
+
+
+Started GET "/assets/application.css?body=1" for 127.0.0.1 at 2014-08-07 19:36:18 -0400
+
+
+Started GET "/assets/jquery_ujs.js?body=1" for 127.0.0.1 at 2014-08-07 19:36:18 -0400
+
+
+Started GET "/assets/timesheets.css?body=1" for 127.0.0.1 at 2014-08-07 19:36:18 -0400
+
+
+Started GET "/assets/turbolinks.js?body=1" for 127.0.0.1 at 2014-08-07 19:36:18 -0400
+
+
+Started GET "/assets/confirmation.js?body=1" for 127.0.0.1 at 2014-08-07 19:36:18 -0400
+
+
+Started GET "/assets/employees.js?body=1" for 127.0.0.1 at 2014-08-07 19:36:18 -0400
+
+
+Started GET "/assets/timesheets.js?body=1" for 127.0.0.1 at 2014-08-07 19:36:18 -0400
+
+
+Started GET "/assets/application.js?body=1" for 127.0.0.1 at 2014-08-07 19:36:18 -0400
+
+
+Started GET "/go/22" for 127.0.0.1 at 2014-08-07 19:36:20 -0400
+Processing by EmployeesController#email as HTML
+  Parameters: {"id"=>"22"}
+  [1m[36mEmployee Load (0.2ms)[0m  [1mSELECT  "employees".* FROM "employees"  WHERE "employees"."id" = ? LIMIT 1[0m  [["id", 22]]
+  [1m[35mCACHE (0.0ms)[0m  SELECT  "employees".* FROM "employees"  WHERE "employees"."id" = ? LIMIT 1  [["id", "22"]]
+  [1m[36mEmployee Load (0.3ms)[0m  [1mSELECT  "employees".* FROM "employees"   ORDER BY "employees"."id" DESC LIMIT 1[0m
+  [1m[35mCACHE (0.0ms)[0m  SELECT  "employees".* FROM "employees"   ORDER BY "employees"."id" DESC LIMIT 1
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT  "employees".* FROM "employees"   ORDER BY "employees"."id" DESC LIMIT 1[0m
+  [1m[35mCACHE (0.0ms)[0m  SELECT  "employees".* FROM "employees"   ORDER BY "employees"."id" DESC LIMIT 1
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT  "employees".* FROM "employees"   ORDER BY "employees"."id" DESC LIMIT 1[0m
+  [1m[35mCACHE (0.0ms)[0m  SELECT  "employees".* FROM "employees"   ORDER BY "employees"."id" DESC LIMIT 1
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT  "employees".* FROM "employees"   ORDER BY "employees"."id" DESC LIMIT 1[0m
+  Rendered confirmation_mailer/confirmation_email.html.erb (3.5ms)
+  [1m[35mCACHE (0.0ms)[0m  SELECT  "employees".* FROM "employees"   ORDER BY "employees"."id" DESC LIMIT 1
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT  "employees".* FROM "employees"   ORDER BY "employees"."id" DESC LIMIT 1[0m
+  [1m[35mCACHE (0.0ms)[0m  SELECT  "employees".* FROM "employees"   ORDER BY "employees"."id" DESC LIMIT 1
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT  "employees".* FROM "employees"   ORDER BY "employees"."id" DESC LIMIT 1[0m
+  [1m[35mCACHE (0.0ms)[0m  SELECT  "employees".* FROM "employees"   ORDER BY "employees"."id" DESC LIMIT 1
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT  "employees".* FROM "employees"   ORDER BY "employees"."id" DESC LIMIT 1[0m
+  [1m[35mCACHE (0.0ms)[0m  SELECT  "employees".* FROM "employees"   ORDER BY "employees"."id" DESC LIMIT 1
+  Rendered confirmation_mailer/confirmation_email.html.erb (2.8ms)
+
+ConfirmationMailer#confirmation_email: processed outbound mail in 24.5ms
+
+Sent mail to cdlehneis@gmail.com (1972.8ms)
+Date: Thu, 07 Aug 2014 19:36:20 -0400
+From: mhmailr@gmail.com
+To: cdlehneis@gmail.com
+Message-ID: <53e40d74439b6_957b80ddc1587504d@samers-air.mail>
+Subject: Sent from Timesheet app!
+Mime-Version: 1.0
+Content-Type: text/html;
+ charset=UTF-8
+Content-Transfer-Encoding: 7bit
+
+<table style="width:800px">
+  <thead>
+    <tr>
+      <th>First name</th>
+      <th>Last name</th>
+      <th>Email</th>
+      <th>Title</th>
+      <th>Date</th>
+      <th>Shift</th>
+      <th>Hours worked</th>
+    </tr>
+  </thead>
+
+  <tbody>
+    
+      <tr>
+        <td><b>Sammy </b></td>
+        <td><b>Chris</b></td>
+        <td><b>cdlehneis@gmail.com</b></td>
+        <td><b>TEST</b></td>
+        <td><b>2014-08-07</b></td>
+        <td><b></b></td>
+        <td><b></b></td>
+      </tr>
+
+  
+  </tbody>
+</table>
+  Rendered employees/email.html.erb within layouts/application (0.1ms)
+Completed 200 OK in 2018ms (Views: 10.4ms | ActiveRecord: 0.6ms)
+
+
+Started GET "/" for 127.0.0.1 at 2014-08-07 19:38:53 -0400
+Processing by EmployeesController#new as HTML
+  Rendered employees/_form.html.erb (6.4ms)
+  Rendered employees/new.html.erb within layouts/application (7.2ms)
+Completed 200 OK in 18ms (Views: 14.8ms | ActiveRecord: 0.5ms)
+
+
+Started GET "/assets/employees.css?body=1" for 127.0.0.1 at 2014-08-07 19:38:53 -0400
+
+
+Started GET "/assets/timesheets.css?body=1" for 127.0.0.1 at 2014-08-07 19:38:53 -0400
+
+
+Started GET "/assets/application.css?body=1" for 127.0.0.1 at 2014-08-07 19:38:53 -0400
+
+
+Started GET "/assets/turbolinks.js?body=1" for 127.0.0.1 at 2014-08-07 19:38:53 -0400
+
+
+Started GET "/assets/jquery_ujs.js?body=1" for 127.0.0.1 at 2014-08-07 19:38:53 -0400
+
+
+Started GET "/assets/jquery.js?body=1" for 127.0.0.1 at 2014-08-07 19:38:53 -0400
+
+
+Started GET "/assets/confirmation.js?body=1" for 127.0.0.1 at 2014-08-07 19:38:53 -0400
+
+
+Started GET "/assets/employees.js?body=1" for 127.0.0.1 at 2014-08-07 19:38:53 -0400
+
+
+Started GET "/assets/timesheets.js?body=1" for 127.0.0.1 at 2014-08-07 19:38:53 -0400
+
+
+Started GET "/assets/application.js?body=1" for 127.0.0.1 at 2014-08-07 19:38:53 -0400
+
+
+Started GET "/assets/confirmation.css?body=1" for 127.0.0.1 at 2014-08-07 19:38:53 -0400
+
+
+Started POST "/employees" for 127.0.0.1 at 2014-08-07 19:39:13 -0400
+Processing by EmployeesController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"T6u5piubV8uAqWmcUAs7q5wQUnXAogsjap/xvZqED2s=", "employee"=>{"date"=>"", "first_name"=>"Chris and Sammy", "last_name"=>"Bad Mother Fuckers", "email"=>"cdlehneis@gmail.com", "title"=>"TEST", "shift_start_time"=>"", "hours_worked"=>""}, "timesheet"=>{"work_week"=>""}, "commit"=>"Create Employee"}
+  [1m[36m (0.1ms)[0m  [1mbegin transaction[0m
+  [1m[35mSQL (0.5ms)[0m  INSERT INTO "employees" ("created_at", "email", "first_name", "last_name", "shift_start_time", "title", "updated_at") VALUES (?, ?, ?, ?, ?, ?, ?)  [["created_at", "2014-08-07 23:39:13.372847"], ["email", "cdlehneis@gmail.com"], ["first_name", "Chris and Sammy"], ["last_name", "Bad Mother Fuckers"], ["shift_start_time", ""], ["title", "TEST"], ["updated_at", "2014-08-07 23:39:13.372847"]]
+  [1m[36m (0.7ms)[0m  [1mcommit transaction[0m
+Redirected to http://localhost:3000/employees/23
+Completed 302 Found in 6ms (ActiveRecord: 1.3ms)
+
+
+Started GET "/employees/23" for 127.0.0.1 at 2014-08-07 19:39:13 -0400
+Processing by EmployeesController#show as HTML
+  Parameters: {"id"=>"23"}
+  [1m[35mEmployee Load (0.2ms)[0m  SELECT  "employees".* FROM "employees"  WHERE "employees"."id" = ? LIMIT 1  [["id", 23]]
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT  "employees".* FROM "employees"  WHERE "employees"."id" = ? LIMIT 1[0m  [["id", "23"]]
+  Rendered employees/show.html.erb within layouts/application (0.8ms)
+Completed 200 OK in 11ms (Views: 8.4ms | ActiveRecord: 0.2ms)
+
+
+Started GET "/assets/confirmation.css?body=1" for 127.0.0.1 at 2014-08-07 19:39:13 -0400
+
+
+Started GET "/assets/employees.css?body=1" for 127.0.0.1 at 2014-08-07 19:39:13 -0400
+
+
+Started GET "/assets/jquery_ujs.js?body=1" for 127.0.0.1 at 2014-08-07 19:39:13 -0400
+
+
+Started GET "/assets/timesheets.css?body=1" for 127.0.0.1 at 2014-08-07 19:39:13 -0400
+
+
+Started GET "/assets/jquery.js?body=1" for 127.0.0.1 at 2014-08-07 19:39:13 -0400
+
+
+Started GET "/assets/application.css?body=1" for 127.0.0.1 at 2014-08-07 19:39:13 -0400
+
+
+Started GET "/assets/turbolinks.js?body=1" for 127.0.0.1 at 2014-08-07 19:39:13 -0400
+
+
+Started GET "/assets/confirmation.js?body=1" for 127.0.0.1 at 2014-08-07 19:39:13 -0400
+
+
+Started GET "/assets/employees.js?body=1" for 127.0.0.1 at 2014-08-07 19:39:13 -0400
+
+
+Started GET "/assets/application.js?body=1" for 127.0.0.1 at 2014-08-07 19:39:13 -0400
+
+
+Started GET "/assets/timesheets.js?body=1" for 127.0.0.1 at 2014-08-07 19:39:13 -0400
+
+
+Started GET "/go/23" for 127.0.0.1 at 2014-08-07 19:39:14 -0400
+Processing by EmployeesController#email as HTML
+  Parameters: {"id"=>"23"}
+  [1m[35mEmployee Load (0.2ms)[0m  SELECT  "employees".* FROM "employees"  WHERE "employees"."id" = ? LIMIT 1  [["id", 23]]
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT  "employees".* FROM "employees"  WHERE "employees"."id" = ? LIMIT 1[0m  [["id", "23"]]
+  [1m[35mEmployee Load (0.2ms)[0m  SELECT  "employees".* FROM "employees"   ORDER BY "employees"."id" DESC LIMIT 1
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT  "employees".* FROM "employees"   ORDER BY "employees"."id" DESC LIMIT 1[0m
+  [1m[35mCACHE (0.0ms)[0m  SELECT  "employees".* FROM "employees"   ORDER BY "employees"."id" DESC LIMIT 1
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT  "employees".* FROM "employees"   ORDER BY "employees"."id" DESC LIMIT 1[0m
+  [1m[35mCACHE (0.0ms)[0m  SELECT  "employees".* FROM "employees"   ORDER BY "employees"."id" DESC LIMIT 1
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT  "employees".* FROM "employees"   ORDER BY "employees"."id" DESC LIMIT 1[0m
+  [1m[35mCACHE (0.0ms)[0m  SELECT  "employees".* FROM "employees"   ORDER BY "employees"."id" DESC LIMIT 1
+  Rendered confirmation_mailer/confirmation_email.html.erb (3.8ms)
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT  "employees".* FROM "employees"   ORDER BY "employees"."id" DESC LIMIT 1[0m
+  [1m[35mCACHE (0.0ms)[0m  SELECT  "employees".* FROM "employees"   ORDER BY "employees"."id" DESC LIMIT 1
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT  "employees".* FROM "employees"   ORDER BY "employees"."id" DESC LIMIT 1[0m
+  [1m[35mCACHE (0.0ms)[0m  SELECT  "employees".* FROM "employees"   ORDER BY "employees"."id" DESC LIMIT 1
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT  "employees".* FROM "employees"   ORDER BY "employees"."id" DESC LIMIT 1[0m
+  [1m[35mCACHE (0.0ms)[0m  SELECT  "employees".* FROM "employees"   ORDER BY "employees"."id" DESC LIMIT 1
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT  "employees".* FROM "employees"   ORDER BY "employees"."id" DESC LIMIT 1[0m
+  Rendered confirmation_mailer/confirmation_email.html.erb (3.6ms)
+
+ConfirmationMailer#confirmation_email: processed outbound mail in 24.0ms
+
+Sent mail to cdlehneis@gmail.com (2142.7ms)
+Date: Thu, 07 Aug 2014 19:39:14 -0400
+From: mhmailr@gmail.com
+To: cdlehneis@gmail.com
+Message-ID: <53e40e22c085a_957b81472ddc75132@samers-air.mail>
+Subject: Sent from Timesheet app!
+Mime-Version: 1.0
+Content-Type: text/html;
+ charset=UTF-8
+Content-Transfer-Encoding: 7bit
+
+<table style="width:800px">
+  <thead>
+    <tr>
+      <th>First name</th>
+      <th>Last name</th>
+      <th>Email</th>
+      <th>Title</th>
+      <th>Date</th>
+      <th>Shift</th>
+      <th>Hours worked</th>
+    </tr>
+  </thead>
+
+  <tbody>
+    
+      <tr>
+        <td><b>Chris and Sammy</b></td>
+        <td><b>Bad Mother Fuckers</b></td>
+        <td><b>cdlehneis@gmail.com</b></td>
+        <td><b>TEST</b></td>
+        <td><b></b></td>
+        <td><b></b></td>
+        <td><b></b></td>
+      </tr>
+
+  
+  </tbody>
+</table>
+  Rendered employees/email.html.erb within layouts/application (0.1ms)
+Completed 200 OK in 2185ms (Views: 10.0ms | ActiveRecord: 0.7ms)
+
+
+Started GET "/" for 127.0.0.1 at 2014-08-07 19:45:01 -0400
+Processing by EmployeesController#new as HTML
+  Rendered employees/_form.html.erb (11.6ms)
+  Rendered employees/new.html.erb within layouts/application (12.9ms)
+Completed 200 OK in 30ms (Views: 24.7ms | ActiveRecord: 0.7ms)
+
+
+Started GET "/assets/confirmation.css?body=1" for 127.0.0.1 at 2014-08-07 19:45:02 -0400
+
+
+Started GET "/assets/jquery.js?body=1" for 127.0.0.1 at 2014-08-07 19:45:02 -0400
+
+
+Started GET "/assets/timesheets.css?body=1" for 127.0.0.1 at 2014-08-07 19:45:02 -0400
+
+
+Started GET "/assets/application.css?body=1" for 127.0.0.1 at 2014-08-07 19:45:02 -0400
+
+
+Started GET "/assets/employees.css?body=1" for 127.0.0.1 at 2014-08-07 19:45:02 -0400
+
+
+Started GET "/assets/jquery_ujs.js?body=1" for 127.0.0.1 at 2014-08-07 19:45:02 -0400
+
+
+Started GET "/assets/turbolinks.js?body=1" for 127.0.0.1 at 2014-08-07 19:45:02 -0400
+
+
+Started GET "/assets/confirmation.js?body=1" for 127.0.0.1 at 2014-08-07 19:45:02 -0400
+
+
+Started GET "/assets/employees.js?body=1" for 127.0.0.1 at 2014-08-07 19:45:02 -0400
+
+
+Started GET "/assets/timesheets.js?body=1" for 127.0.0.1 at 2014-08-07 19:45:02 -0400
+
+
+Started GET "/assets/application.js?body=1" for 127.0.0.1 at 2014-08-07 19:45:02 -0400
+
+
+Started POST "/employees" for 127.0.0.1 at 2014-08-07 19:45:19 -0400
+Processing by EmployeesController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"T6u5piubV8uAqWmcUAs7q5wQUnXAogsjap/xvZqED2s=", "employee"=>{"date"=>"2014-08-21", "first_name"=>"Chris and Sammy", "last_name"=>"", "email"=>"cdlehneis@gmail.com", "title"=>"Are bad mother fuckers", "shift_start_time"=>"", "hours_worked"=>""}, "timesheet"=>{"work_week"=>""}, "commit"=>"Create Employee"}
+  [1m[35m (0.1ms)[0m  begin transaction
+  [1m[36mSQL (0.7ms)[0m  [1mINSERT INTO "employees" ("created_at", "date", "email", "first_name", "last_name", "shift_start_time", "title", "updated_at") VALUES (?, ?, ?, ?, ?, ?, ?, ?)[0m  [["created_at", "2014-08-07 23:45:19.955035"], ["date", "2014-08-21"], ["email", "cdlehneis@gmail.com"], ["first_name", "Chris and Sammy"], ["last_name", ""], ["shift_start_time", ""], ["title", "Are bad mother fuckers"], ["updated_at", "2014-08-07 23:45:19.955035"]]
+  [1m[35m (0.7ms)[0m  commit transaction
+Redirected to http://localhost:3000/employees/24
+Completed 302 Found in 6ms (ActiveRecord: 1.4ms)
+
+
+Started GET "/employees/24" for 127.0.0.1 at 2014-08-07 19:45:19 -0400
+Processing by EmployeesController#show as HTML
+  Parameters: {"id"=>"24"}
+  [1m[36mEmployee Load (0.3ms)[0m  [1mSELECT  "employees".* FROM "employees"  WHERE "employees"."id" = ? LIMIT 1[0m  [["id", 24]]
+  [1m[35mCACHE (0.1ms)[0m  SELECT  "employees".* FROM "employees"  WHERE "employees"."id" = ? LIMIT 1  [["id", "24"]]
+  Rendered employees/show.html.erb within layouts/application (0.7ms)
+Completed 200 OK in 54ms (Views: 50.7ms | ActiveRecord: 0.3ms)
+
+
+Started GET "/assets/employees.css?body=1" for 127.0.0.1 at 2014-08-07 19:45:20 -0400
+
+
+Started GET "/assets/confirmation.css?body=1" for 127.0.0.1 at 2014-08-07 19:45:20 -0400
+
+
+Started GET "/assets/jquery.js?body=1" for 127.0.0.1 at 2014-08-07 19:45:20 -0400
+
+
+Started GET "/assets/timesheets.css?body=1" for 127.0.0.1 at 2014-08-07 19:45:20 -0400
+
+
+Started GET "/assets/application.css?body=1" for 127.0.0.1 at 2014-08-07 19:45:20 -0400
+
+
+Started GET "/assets/jquery_ujs.js?body=1" for 127.0.0.1 at 2014-08-07 19:45:20 -0400
+
+
+Started GET "/assets/turbolinks.js?body=1" for 127.0.0.1 at 2014-08-07 19:45:20 -0400
+
+
+Started GET "/assets/confirmation.js?body=1" for 127.0.0.1 at 2014-08-07 19:45:20 -0400
+
+
+Started GET "/assets/timesheets.js?body=1" for 127.0.0.1 at 2014-08-07 19:45:20 -0400
+
+
+Started GET "/assets/employees.js?body=1" for 127.0.0.1 at 2014-08-07 19:45:20 -0400
+
+
+Started GET "/assets/application.js?body=1" for 127.0.0.1 at 2014-08-07 19:45:20 -0400
+
+
+Started GET "/go/24" for 127.0.0.1 at 2014-08-07 19:45:21 -0400
+Processing by EmployeesController#email as HTML
+  Parameters: {"id"=>"24"}
+  [1m[36mEmployee Load (0.2ms)[0m  [1mSELECT  "employees".* FROM "employees"  WHERE "employees"."id" = ? LIMIT 1[0m  [["id", 24]]
+  [1m[35mCACHE (0.0ms)[0m  SELECT  "employees".* FROM "employees"  WHERE "employees"."id" = ? LIMIT 1  [["id", "24"]]
+
+ConfirmationMailer#confirmation_email: processed outbound mail in 0.5ms
+Completed 500 Internal Server Error in 10ms
+
+ArgumentError (wrong number of arguments (1 for 2)):
+  app/mailers/confirmation_mailer.rb:4:in `confirmation_email'
+  app/controllers/employees_controller.rb:24:in `block in email'
+  app/controllers/employees_controller.rb:23:in `each'
+  app/controllers/employees_controller.rb:23:in `email'
+
+
+  Rendered /Users/samerkhaleel/.rvm/gems/ruby-2.1.1/gems/actionpack-4.1.4/lib/action_dispatch/middleware/templates/rescues/_source.erb (0.8ms)
+  Rendered /Users/samerkhaleel/.rvm/gems/ruby-2.1.1/gems/actionpack-4.1.4/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb (1.3ms)
+  Rendered /Users/samerkhaleel/.rvm/gems/ruby-2.1.1/gems/actionpack-4.1.4/lib/action_dispatch/middleware/templates/rescues/_request_and_response.html.erb (1.0ms)
+  Rendered /Users/samerkhaleel/.rvm/gems/ruby-2.1.1/gems/actionpack-4.1.4/lib/action_dispatch/middleware/templates/rescues/diagnostics.erb within rescues/layout (18.6ms)
+
+
+Started GET "/go/24" for 127.0.0.1 at 2014-08-07 19:45:21 -0400
+Processing by EmployeesController#email as HTML
+  Parameters: {"id"=>"24"}
+  [1m[36mEmployee Load (0.1ms)[0m  [1mSELECT  "employees".* FROM "employees"  WHERE "employees"."id" = ? LIMIT 1[0m  [["id", 24]]
+  [1m[35mCACHE (0.0ms)[0m  SELECT  "employees".* FROM "employees"  WHERE "employees"."id" = ? LIMIT 1  [["id", "24"]]
+
+ConfirmationMailer#confirmation_email: processed outbound mail in 0.4ms
+Completed 500 Internal Server Error in 4ms
+
+ArgumentError (wrong number of arguments (1 for 2)):
+  app/mailers/confirmation_mailer.rb:4:in `confirmation_email'
+  app/controllers/employees_controller.rb:24:in `block in email'
+  app/controllers/employees_controller.rb:23:in `each'
+  app/controllers/employees_controller.rb:23:in `email'
+
+
+  Rendered /Users/samerkhaleel/.rvm/gems/ruby-2.1.1/gems/actionpack-4.1.4/lib/action_dispatch/middleware/templates/rescues/_source.erb (0.7ms)
+  Rendered /Users/samerkhaleel/.rvm/gems/ruby-2.1.1/gems/actionpack-4.1.4/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb (1.2ms)
+  Rendered /Users/samerkhaleel/.rvm/gems/ruby-2.1.1/gems/actionpack-4.1.4/lib/action_dispatch/middleware/templates/rescues/_request_and_response.html.erb (0.9ms)
+  Rendered /Users/samerkhaleel/.rvm/gems/ruby-2.1.1/gems/actionpack-4.1.4/lib/action_dispatch/middleware/templates/rescues/diagnostics.erb within rescues/layout (15.4ms)
+
+
+Started POST "/employees" for 127.0.0.1 at 2014-08-07 19:46:21 -0400
+Processing by EmployeesController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"T6u5piubV8uAqWmcUAs7q5wQUnXAogsjap/xvZqED2s=", "employee"=>{"date"=>"2014-08-21", "first_name"=>"Chris and Sammy", "last_name"=>"", "email"=>"cdlehneis@gmail.com", "title"=>"Are bad mother fuckers", "shift_start_time"=>"", "hours_worked"=>""}, "timesheet"=>{"work_week"=>""}, "commit"=>"Create Employee"}
+  [1m[36m (0.1ms)[0m  [1mbegin transaction[0m
+  [1m[35mSQL (0.4ms)[0m  INSERT INTO "employees" ("created_at", "date", "email", "first_name", "last_name", "shift_start_time", "title", "updated_at") VALUES (?, ?, ?, ?, ?, ?, ?, ?)  [["created_at", "2014-08-07 23:46:21.221736"], ["date", "2014-08-21"], ["email", "cdlehneis@gmail.com"], ["first_name", "Chris and Sammy"], ["last_name", ""], ["shift_start_time", ""], ["title", "Are bad mother fuckers"], ["updated_at", "2014-08-07 23:46:21.221736"]]
+  [1m[36m (0.9ms)[0m  [1mcommit transaction[0m
+Redirected to http://localhost:3000/employees/25
+Completed 302 Found in 13ms (ActiveRecord: 1.9ms)
+
+
+Started GET "/employees/25" for 127.0.0.1 at 2014-08-07 19:46:21 -0400
+Processing by EmployeesController#show as HTML
+  Parameters: {"id"=>"25"}
+  [1m[35mEmployee Load (0.2ms)[0m  SELECT  "employees".* FROM "employees"  WHERE "employees"."id" = ? LIMIT 1  [["id", 25]]
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT  "employees".* FROM "employees"  WHERE "employees"."id" = ? LIMIT 1[0m  [["id", "25"]]
+  Rendered employees/show.html.erb within layouts/application (0.5ms)
+Completed 200 OK in 9ms (Views: 7.1ms | ActiveRecord: 0.2ms)
+
+
+Started GET "/assets/confirmation.css?body=1" for 127.0.0.1 at 2014-08-07 19:46:21 -0400
+
+
+Started GET "/assets/employees.css?body=1" for 127.0.0.1 at 2014-08-07 19:46:21 -0400
+
+
+Started GET "/assets/jquery_ujs.js?body=1" for 127.0.0.1 at 2014-08-07 19:46:21 -0400
+
+
+Started GET "/assets/timesheets.css?body=1" for 127.0.0.1 at 2014-08-07 19:46:21 -0400
+
+
+Started GET "/assets/application.css?body=1" for 127.0.0.1 at 2014-08-07 19:46:21 -0400
+
+
+Started GET "/assets/turbolinks.js?body=1" for 127.0.0.1 at 2014-08-07 19:46:21 -0400
+
+
+Started GET "/assets/jquery.js?body=1" for 127.0.0.1 at 2014-08-07 19:46:21 -0400
+
+
+Started GET "/assets/confirmation.js?body=1" for 127.0.0.1 at 2014-08-07 19:46:21 -0400
+
+
+Started GET "/assets/employees.js?body=1" for 127.0.0.1 at 2014-08-07 19:46:21 -0400
+
+
+Started GET "/assets/timesheets.js?body=1" for 127.0.0.1 at 2014-08-07 19:46:21 -0400
+
+
+Started GET "/assets/application.js?body=1" for 127.0.0.1 at 2014-08-07 19:46:21 -0400
+
+
+Started GET "/go/25" for 127.0.0.1 at 2014-08-07 19:46:22 -0400
+Processing by EmployeesController#email as HTML
+  Parameters: {"id"=>"25"}
+  [1m[35mEmployee Load (0.2ms)[0m  SELECT  "employees".* FROM "employees"  WHERE "employees"."id" = ? LIMIT 1  [["id", 25]]
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT  "employees".* FROM "employees"  WHERE "employees"."id" = ? LIMIT 1[0m  [["id", "25"]]
+  [1m[35mEmployee Load (0.2ms)[0m  SELECT  "employees".* FROM "employees"   ORDER BY "employees"."id" DESC LIMIT 1
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT  "employees".* FROM "employees"   ORDER BY "employees"."id" DESC LIMIT 1[0m
+  [1m[35mCACHE (0.0ms)[0m  SELECT  "employees".* FROM "employees"   ORDER BY "employees"."id" DESC LIMIT 1
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT  "employees".* FROM "employees"   ORDER BY "employees"."id" DESC LIMIT 1[0m
+  [1m[35mCACHE (0.0ms)[0m  SELECT  "employees".* FROM "employees"   ORDER BY "employees"."id" DESC LIMIT 1
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT  "employees".* FROM "employees"   ORDER BY "employees"."id" DESC LIMIT 1[0m
+  [1m[35mCACHE (0.0ms)[0m  SELECT  "employees".* FROM "employees"   ORDER BY "employees"."id" DESC LIMIT 1
+  Rendered confirmation_mailer/confirmation_email.html.erb (4.2ms)
+
+ConfirmationMailer#confirmation_email: processed outbound mail in 17.6ms
+
+Sent mail to mhmailr@gmail.com (2209.9ms)
+Date: Thu, 07 Aug 2014 19:46:22 -0400
+From: mhmailr@gmail.com
+To: mhmailr@gmail.com
+Message-ID: <53e40fcee715c_957b82c41fd075246@samers-air.mail>
+Subject: Sent from Timesheet app!
+Mime-Version: 1.0
+Content-Type: text/html;
+ charset=UTF-8
+Content-Transfer-Encoding: 7bit
+
+<table style="width:800px">
+  <thead>
+    <tr>
+      <th>First name</th>
+      <th>Last name</th>
+      <th>Email</th>
+      <th>Title</th>
+      <th>Date</th>
+      <th>Shift</th>
+      <th>Hours worked</th>
+    </tr>
+  </thead>
+
+  <tbody>
+    
+      <tr>
+        <td><b>Chris and Sammy</b></td>
+        <td><b></b></td>
+        <td><b>cdlehneis@gmail.com</b></td>
+        <td><b>Are bad mother fuckers</b></td>
+        <td><b>2014-08-21</b></td>
+        <td><b></b></td>
+        <td><b></b></td>
+      </tr>
+
+  
+  </tbody>
+</table>
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT  "employees".* FROM "employees"   ORDER BY "employees"."id" DESC LIMIT 1[0m
+  [1m[35mCACHE (0.0ms)[0m  SELECT  "employees".* FROM "employees"   ORDER BY "employees"."id" DESC LIMIT 1
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT  "employees".* FROM "employees"   ORDER BY "employees"."id" DESC LIMIT 1[0m
+  [1m[35mCACHE (0.0ms)[0m  SELECT  "employees".* FROM "employees"   ORDER BY "employees"."id" DESC LIMIT 1
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT  "employees".* FROM "employees"   ORDER BY "employees"."id" DESC LIMIT 1[0m
+  [1m[35mCACHE (0.0ms)[0m  SELECT  "employees".* FROM "employees"   ORDER BY "employees"."id" DESC LIMIT 1
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT  "employees".* FROM "employees"   ORDER BY "employees"."id" DESC LIMIT 1[0m
+  Rendered confirmation_mailer/confirmation_email.html.erb (2.7ms)
+
+ConfirmationMailer#confirmation_email: processed outbound mail in 13.9ms
+
+Sent mail to cdlehneis@gmail.com (2094.0ms)
+Date: Thu, 07 Aug 2014 19:46:25 -0400
+From: mhmailr@gmail.com
+To: cdlehneis@gmail.com
+Message-ID: <53e40fd129cb4_957b82c41fd075312@samers-air.mail>
+Subject: Sent from Timesheet app!
+Mime-Version: 1.0
+Content-Type: text/html;
+ charset=UTF-8
+Content-Transfer-Encoding: 7bit
+
+<table style="width:800px">
+  <thead>
+    <tr>
+      <th>First name</th>
+      <th>Last name</th>
+      <th>Email</th>
+      <th>Title</th>
+      <th>Date</th>
+      <th>Shift</th>
+      <th>Hours worked</th>
+    </tr>
+  </thead>
+
+  <tbody>
+    
+      <tr>
+        <td><b>Chris and Sammy</b></td>
+        <td><b></b></td>
+        <td><b>cdlehneis@gmail.com</b></td>
+        <td><b>Are bad mother fuckers</b></td>
+        <td><b>2014-08-21</b></td>
+        <td><b></b></td>
+        <td><b></b></td>
+      </tr>
+
+  
+  </tbody>
+</table>
+  Rendered employees/email.html.erb within layouts/application (0.1ms)
+Completed 200 OK in 4353ms (Views: 8.1ms | ActiveRecord: 0.6ms)
+
+
+Started GET "/" for 127.0.0.1 at 2014-08-07 19:48:48 -0400
+Processing by EmployeesController#new as HTML
+  Rendered employees/_form.html.erb (5.1ms)
+  Rendered employees/new.html.erb within layouts/application (5.8ms)
+Completed 200 OK in 16ms (Views: 12.9ms | ActiveRecord: 0.4ms)
+
+
+Started GET "/assets/confirmation.css?body=1" for 127.0.0.1 at 2014-08-07 19:48:48 -0400
+
+
+Started GET "/assets/timesheets.css?body=1" for 127.0.0.1 at 2014-08-07 19:48:48 -0400
+
+
+Started GET "/assets/jquery_ujs.js?body=1" for 127.0.0.1 at 2014-08-07 19:48:48 -0400
+
+
+Started GET "/assets/jquery.js?body=1" for 127.0.0.1 at 2014-08-07 19:48:48 -0400
+
+
+Started GET "/assets/application.css?body=1" for 127.0.0.1 at 2014-08-07 19:48:48 -0400
+
+
+Started GET "/assets/employees.css?body=1" for 127.0.0.1 at 2014-08-07 19:48:48 -0400
+
+
+Started GET "/assets/turbolinks.js?body=1" for 127.0.0.1 at 2014-08-07 19:48:48 -0400
+
+
+Started GET "/assets/confirmation.js?body=1" for 127.0.0.1 at 2014-08-07 19:48:48 -0400
+
+
+Started GET "/assets/employees.js?body=1" for 127.0.0.1 at 2014-08-07 19:48:48 -0400
+
+
+Started GET "/assets/timesheets.js?body=1" for 127.0.0.1 at 2014-08-07 19:48:48 -0400
+
+
+Started GET "/assets/application.js?body=1" for 127.0.0.1 at 2014-08-07 19:48:48 -0400
+
+
+Started POST "/employees" for 127.0.0.1 at 2014-08-07 19:48:56 -0400
+Processing by EmployeesController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"T6u5piubV8uAqWmcUAs7q5wQUnXAogsjap/xvZqED2s=", "employee"=>{"date"=>"", "first_name"=>"", "last_name"=>"", "email"=>"cdlehneis@gmail.com", "title"=>"", "shift_start_time"=>"", "hours_worked"=>""}, "timesheet"=>{"work_week"=>""}, "commit"=>"Create Employee"}
+  [1m[35m (0.1ms)[0m  begin transaction
+  [1m[36mSQL (0.5ms)[0m  [1mINSERT INTO "employees" ("created_at", "email", "first_name", "last_name", "shift_start_time", "title", "updated_at") VALUES (?, ?, ?, ?, ?, ?, ?)[0m  [["created_at", "2014-08-07 23:48:56.693519"], ["email", "cdlehneis@gmail.com"], ["first_name", ""], ["last_name", ""], ["shift_start_time", ""], ["title", ""], ["updated_at", "2014-08-07 23:48:56.693519"]]
+  [1m[35m (0.7ms)[0m  commit transaction
+Redirected to http://localhost:3000/employees/26
+Completed 302 Found in 6ms (ActiveRecord: 1.3ms)
+
+
+Started GET "/employees/26" for 127.0.0.1 at 2014-08-07 19:48:56 -0400
+Processing by EmployeesController#show as HTML
+  Parameters: {"id"=>"26"}
+  [1m[36mEmployee Load (0.2ms)[0m  [1mSELECT  "employees".* FROM "employees"  WHERE "employees"."id" = ? LIMIT 1[0m  [["id", 26]]
+  [1m[35mCACHE (0.0ms)[0m  SELECT  "employees".* FROM "employees"  WHERE "employees"."id" = ? LIMIT 1  [["id", "26"]]
+  Rendered employees/show.html.erb within layouts/application (0.5ms)
+Completed 200 OK in 10ms (Views: 7.3ms | ActiveRecord: 0.2ms)
+
+
+Started GET "/assets/employees.css?body=1" for 127.0.0.1 at 2014-08-07 19:48:56 -0400
+
+
+Started GET "/assets/confirmation.css?body=1" for 127.0.0.1 at 2014-08-07 19:48:56 -0400
+
+
+Started GET "/assets/jquery_ujs.js?body=1" for 127.0.0.1 at 2014-08-07 19:48:56 -0400
+
+
+Started GET "/assets/application.css?body=1" for 127.0.0.1 at 2014-08-07 19:48:56 -0400
+
+
+Started GET "/assets/timesheets.css?body=1" for 127.0.0.1 at 2014-08-07 19:48:56 -0400
+
+
+Started GET "/assets/jquery.js?body=1" for 127.0.0.1 at 2014-08-07 19:48:56 -0400
+
+
+Started GET "/assets/turbolinks.js?body=1" for 127.0.0.1 at 2014-08-07 19:48:56 -0400
+
+
+Started GET "/assets/confirmation.js?body=1" for 127.0.0.1 at 2014-08-07 19:48:56 -0400
+
+
+Started GET "/assets/employees.js?body=1" for 127.0.0.1 at 2014-08-07 19:48:56 -0400
+
+
+Started GET "/assets/timesheets.js?body=1" for 127.0.0.1 at 2014-08-07 19:48:56 -0400
+
+
+Started GET "/assets/application.js?body=1" for 127.0.0.1 at 2014-08-07 19:48:56 -0400
+
+
+Started GET "/go/26" for 127.0.0.1 at 2014-08-07 19:48:57 -0400
+Processing by EmployeesController#email as HTML
+  Parameters: {"id"=>"26"}
+  [1m[36mEmployee Load (0.1ms)[0m  [1mSELECT  "employees".* FROM "employees"  WHERE "employees"."id" = ? LIMIT 1[0m  [["id", 26]]
+  [1m[35mCACHE (0.0ms)[0m  SELECT  "employees".* FROM "employees"  WHERE "employees"."id" = ? LIMIT 1  [["id", "26"]]
+  [1m[36mEmployee Load (0.2ms)[0m  [1mSELECT  "employees".* FROM "employees"   ORDER BY "employees"."id" DESC LIMIT 1[0m
+  [1m[35mCACHE (0.0ms)[0m  SELECT  "employees".* FROM "employees"   ORDER BY "employees"."id" DESC LIMIT 1
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT  "employees".* FROM "employees"   ORDER BY "employees"."id" DESC LIMIT 1[0m
+  [1m[35mCACHE (0.0ms)[0m  SELECT  "employees".* FROM "employees"   ORDER BY "employees"."id" DESC LIMIT 1
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT  "employees".* FROM "employees"   ORDER BY "employees"."id" DESC LIMIT 1[0m
+  [1m[35mCACHE (0.0ms)[0m  SELECT  "employees".* FROM "employees"   ORDER BY "employees"."id" DESC LIMIT 1
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT  "employees".* FROM "employees"   ORDER BY "employees"."id" DESC LIMIT 1[0m
+  Rendered confirmation_mailer/confirmation_email.html.erb (3.1ms)
+
+ConfirmationMailer#confirmation_email: processed outbound mail in 16.2ms
+
+Sent mail to mhmailr@gmail.com (2446.5ms)
+Date: Thu, 07 Aug 2014 19:48:57 -0400
+From: mhmailr@gmail.com
+To: mhmailr@gmail.com
+Message-ID: <53e41069c8cea_957b83a0f4dc75482@samers-air.mail>
+Subject: Sent from Timesheet app!
+Mime-Version: 1.0
+Content-Type: text/html;
+ charset=UTF-8
+Content-Transfer-Encoding: 7bit
+
+<table style="width:800px">
+  <thead>
+    <tr>
+      <th>First name</th>
+      <th>Last name</th>
+      <th>Email</th>
+      <th>Title</th>
+      <th>Date</th>
+      <th>Shift</th>
+      <th>Hours worked</th>
+    </tr>
+  </thead>
+
+  <tbody>
+    
+      <tr>
+        <td><b></b></td>
+        <td><b></b></td>
+        <td><b>cdlehneis@gmail.com</b></td>
+        <td><b></b></td>
+        <td><b></b></td>
+        <td><b></b></td>
+        <td><b></b></td>
+      </tr>
+
+  
+  </tbody>
+</table>
+  [1m[35mCACHE (0.0ms)[0m  SELECT  "employees".* FROM "employees"   ORDER BY "employees"."id" DESC LIMIT 1
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT  "employees".* FROM "employees"   ORDER BY "employees"."id" DESC LIMIT 1[0m
+  [1m[35mCACHE (0.0ms)[0m  SELECT  "employees".* FROM "employees"   ORDER BY "employees"."id" DESC LIMIT 1
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT  "employees".* FROM "employees"   ORDER BY "employees"."id" DESC LIMIT 1[0m
+  [1m[35mCACHE (0.0ms)[0m  SELECT  "employees".* FROM "employees"   ORDER BY "employees"."id" DESC LIMIT 1
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT  "employees".* FROM "employees"   ORDER BY "employees"."id" DESC LIMIT 1[0m
+  [1m[35mCACHE (0.0ms)[0m  SELECT  "employees".* FROM "employees"   ORDER BY "employees"."id" DESC LIMIT 1
+  Rendered confirmation_mailer/confirmation_email.html.erb (3.4ms)
+
+ConfirmationMailer#confirmation_email: processed outbound mail in 16.1ms
+
+Sent mail to cdlehneis@gmail.com (2119.5ms)
+Date: Thu, 07 Aug 2014 19:49:00 -0400
+From: mhmailr@gmail.com
+To: cdlehneis@gmail.com
+Message-ID: <53e4106c45b83_957b83a0f4dc75513@samers-air.mail>
+Subject: Sent from Timesheet app!
+Mime-Version: 1.0
+Content-Type: text/html;
+ charset=UTF-8
+Content-Transfer-Encoding: 7bit
+
+<table style="width:800px">
+  <thead>
+    <tr>
+      <th>First name</th>
+      <th>Last name</th>
+      <th>Email</th>
+      <th>Title</th>
+      <th>Date</th>
+      <th>Shift</th>
+      <th>Hours worked</th>
+    </tr>
+  </thead>
+
+  <tbody>
+    
+      <tr>
+        <td><b></b></td>
+        <td><b></b></td>
+        <td><b>cdlehneis@gmail.com</b></td>
+        <td><b></b></td>
+        <td><b></b></td>
+        <td><b></b></td>
+        <td><b></b></td>
+      </tr>
+
+  
+  </tbody>
+</table>
+  Rendered employees/email.html.erb within layouts/application (0.1ms)
+Completed 200 OK in 4619ms (Views: 11.5ms | ActiveRecord: 0.5ms)
+
+
+Started GET "/" for 127.0.0.1 at 2014-08-07 19:49:58 -0400
+Processing by EmployeesController#new as HTML
+  Rendered employees/_form.html.erb (5.6ms)
+  Rendered employees/new.html.erb within layouts/application (6.3ms)
+Completed 200 OK in 16ms (Views: 12.6ms | ActiveRecord: 0.5ms)
+
+
+Started GET "/assets/confirmation.css?body=1" for 127.0.0.1 at 2014-08-07 19:49:58 -0400
+
+
+Started GET "/assets/application.css?body=1" for 127.0.0.1 at 2014-08-07 19:49:58 -0400
+
+
+Started GET "/assets/timesheets.css?body=1" for 127.0.0.1 at 2014-08-07 19:49:58 -0400
+
+
+Started GET "/assets/employees.css?body=1" for 127.0.0.1 at 2014-08-07 19:49:58 -0400
+
+
+Started GET "/assets/jquery.js?body=1" for 127.0.0.1 at 2014-08-07 19:49:58 -0400
+
+
+Started GET "/assets/jquery_ujs.js?body=1" for 127.0.0.1 at 2014-08-07 19:49:58 -0400
+
+
+Started GET "/assets/turbolinks.js?body=1" for 127.0.0.1 at 2014-08-07 19:49:58 -0400
+
+
+Started GET "/assets/confirmation.js?body=1" for 127.0.0.1 at 2014-08-07 19:49:58 -0400
+
+
+Started GET "/assets/employees.js?body=1" for 127.0.0.1 at 2014-08-07 19:49:58 -0400
+
+
+Started GET "/assets/timesheets.js?body=1" for 127.0.0.1 at 2014-08-07 19:49:58 -0400
+
+
+Started GET "/assets/application.js?body=1" for 127.0.0.1 at 2014-08-07 19:49:58 -0400
+
+
+Started POST "/employees" for 127.0.0.1 at 2014-08-07 19:50:02 -0400
+Processing by EmployeesController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"T6u5piubV8uAqWmcUAs7q5wQUnXAogsjap/xvZqED2s=", "employee"=>{"date"=>"", "first_name"=>"", "last_name"=>"", "email"=>"", "title"=>"sssssss", "shift_start_time"=>"", "hours_worked"=>""}, "timesheet"=>{"work_week"=>""}, "commit"=>"Create Employee"}
+  [1m[36m (0.1ms)[0m  [1mbegin transaction[0m
+  [1m[35mSQL (0.7ms)[0m  INSERT INTO "employees" ("created_at", "email", "first_name", "last_name", "shift_start_time", "title", "updated_at") VALUES (?, ?, ?, ?, ?, ?, ?)  [["created_at", "2014-08-07 23:50:02.310026"], ["email", ""], ["first_name", ""], ["last_name", ""], ["shift_start_time", ""], ["title", "sssssss"], ["updated_at", "2014-08-07 23:50:02.310026"]]
+  [1m[36m (0.9ms)[0m  [1mcommit transaction[0m
+Redirected to http://localhost:3000/employees/27
+Completed 302 Found in 9ms (ActiveRecord: 1.7ms)
+
+
+Started GET "/employees/27" for 127.0.0.1 at 2014-08-07 19:50:02 -0400
+Processing by EmployeesController#show as HTML
+  Parameters: {"id"=>"27"}
+  [1m[35mEmployee Load (0.3ms)[0m  SELECT  "employees".* FROM "employees"  WHERE "employees"."id" = ? LIMIT 1  [["id", 27]]
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT  "employees".* FROM "employees"  WHERE "employees"."id" = ? LIMIT 1[0m  [["id", "27"]]
+  Rendered employees/show.html.erb within layouts/application (0.9ms)
+Completed 200 OK in 17ms (Views: 13.4ms | ActiveRecord: 0.3ms)
+
+
+Started GET "/assets/employees.css?body=1" for 127.0.0.1 at 2014-08-07 19:50:02 -0400
+
+
+Started GET "/assets/application.css?body=1" for 127.0.0.1 at 2014-08-07 19:50:02 -0400
+
+
+Started GET "/assets/jquery.js?body=1" for 127.0.0.1 at 2014-08-07 19:50:02 -0400
+
+
+Started GET "/assets/jquery_ujs.js?body=1" for 127.0.0.1 at 2014-08-07 19:50:02 -0400
+
+
+Started GET "/assets/confirmation.css?body=1" for 127.0.0.1 at 2014-08-07 19:50:02 -0400
+
+
+Started GET "/assets/timesheets.css?body=1" for 127.0.0.1 at 2014-08-07 19:50:02 -0400
+
+
+Started GET "/assets/turbolinks.js?body=1" for 127.0.0.1 at 2014-08-07 19:50:02 -0400
+
+
+Started GET "/assets/confirmation.js?body=1" for 127.0.0.1 at 2014-08-07 19:50:02 -0400
+
+
+Started GET "/assets/employees.js?body=1" for 127.0.0.1 at 2014-08-07 19:50:02 -0400
+
+
+Started GET "/assets/timesheets.js?body=1" for 127.0.0.1 at 2014-08-07 19:50:02 -0400
+
+
+Started GET "/assets/application.js?body=1" for 127.0.0.1 at 2014-08-07 19:50:02 -0400
+
+
+Started GET "/go/27" for 127.0.0.1 at 2014-08-07 19:50:03 -0400
+Processing by EmployeesController#email as HTML
+  Parameters: {"id"=>"27"}
+  [1m[35mEmployee Load (0.1ms)[0m  SELECT  "employees".* FROM "employees"  WHERE "employees"."id" = ? LIMIT 1  [["id", 27]]
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT  "employees".* FROM "employees"  WHERE "employees"."id" = ? LIMIT 1[0m  [["id", "27"]]
+  [1m[35mEmployee Load (0.2ms)[0m  SELECT  "employees".* FROM "employees"   ORDER BY "employees"."id" DESC LIMIT 1
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT  "employees".* FROM "employees"   ORDER BY "employees"."id" DESC LIMIT 1[0m
+  [1m[35mCACHE (0.0ms)[0m  SELECT  "employees".* FROM "employees"   ORDER BY "employees"."id" DESC LIMIT 1
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT  "employees".* FROM "employees"   ORDER BY "employees"."id" DESC LIMIT 1[0m
+  [1m[35mCACHE (0.0ms)[0m  SELECT  "employees".* FROM "employees"   ORDER BY "employees"."id" DESC LIMIT 1
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT  "employees".* FROM "employees"   ORDER BY "employees"."id" DESC LIMIT 1[0m
+  [1m[35mCACHE (0.0ms)[0m  SELECT  "employees".* FROM "employees"   ORDER BY "employees"."id" DESC LIMIT 1
+  Rendered confirmation_mailer/confirmation_email.html.erb (4.2ms)
+
+ConfirmationMailer#confirmation_email: processed outbound mail in 22.7ms
+
+Sent mail to mhmailr@gmail.com (2386.6ms)
+Date: Thu, 07 Aug 2014 19:50:03 -0400
+From: mhmailr@gmail.com
+To: mhmailr@gmail.com
+Message-ID: <53e410ab4f5ee_957b809eda4c756a7@samers-air.mail>
+Subject: Sent from Timesheet app!
+Mime-Version: 1.0
+Content-Type: text/html;
+ charset=UTF-8
+Content-Transfer-Encoding: 7bit
+
+<table style="width:800px">
+  <thead>
+    <tr>
+      <th>First name</th>
+      <th>Last name</th>
+      <th>Email</th>
+      <th>Title</th>
+      <th>Date</th>
+      <th>Shift</th>
+      <th>Hours worked</th>
+    </tr>
+  </thead>
+
+  <tbody>
+    
+      <tr>
+        <td><b></b></td>
+        <td><b></b></td>
+        <td><b></b></td>
+        <td><b>sssssss</b></td>
+        <td><b></b></td>
+        <td><b></b></td>
+        <td><b></b></td>
+      </tr>
+
+  
+  </tbody>
+</table>
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT  "employees".* FROM "employees"   ORDER BY "employees"."id" DESC LIMIT 1[0m
+  [1m[35mCACHE (0.0ms)[0m  SELECT  "employees".* FROM "employees"   ORDER BY "employees"."id" DESC LIMIT 1
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT  "employees".* FROM "employees"   ORDER BY "employees"."id" DESC LIMIT 1[0m
+  [1m[35mCACHE (0.0ms)[0m  SELECT  "employees".* FROM "employees"   ORDER BY "employees"."id" DESC LIMIT 1
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT  "employees".* FROM "employees"   ORDER BY "employees"."id" DESC LIMIT 1[0m
+  [1m[35mCACHE (0.0ms)[0m  SELECT  "employees".* FROM "employees"   ORDER BY "employees"."id" DESC LIMIT 1
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT  "employees".* FROM "employees"   ORDER BY "employees"."id" DESC LIMIT 1[0m
+  Rendered confirmation_mailer/confirmation_email.html.erb (2.2ms)
+
+ConfirmationMailer#confirmation_email: processed outbound mail in 10.2ms
+
+Sent mail to  (2.6ms)
+Date: Thu, 07 Aug 2014 19:50:05 -0400
+From: mhmailr@gmail.com
+Message-ID: <53e410adb03a9_957b809eda4c7575a@samers-air.mail>
+Subject: Sent from Timesheet app!
+Mime-Version: 1.0
+Content-Type: text/html;
+ charset=UTF-8
+Content-Transfer-Encoding: 7bit
+
+<table style="width:800px">
+  <thead>
+    <tr>
+      <th>First name</th>
+      <th>Last name</th>
+      <th>Email</th>
+      <th>Title</th>
+      <th>Date</th>
+      <th>Shift</th>
+      <th>Hours worked</th>
+    </tr>
+  </thead>
+
+  <tbody>
+    
+      <tr>
+        <td><b></b></td>
+        <td><b></b></td>
+        <td><b></b></td>
+        <td><b>sssssss</b></td>
+        <td><b></b></td>
+        <td><b></b></td>
+        <td><b></b></td>
+      </tr>
+
+  
+  </tbody>
+</table>
+  Rendered employees/email.html.erb within layouts/application (0.0ms)
+Completed 200 OK in 2445ms (Views: 6.6ms | ActiveRecord: 0.6ms)

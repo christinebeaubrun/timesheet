@@ -12,17 +12,17 @@
   </thead>
 
   <tbody>
-    <% Employee.all.each do |employee| %>
+    
       <tr>
-        <td><b><%=employee.first_name %></b></td>
-        <td><b><%=employee.last_name %></b></td>
-        <td><b><%=employee.email %></b></td>
-        <td><b><%=employee.title %></b></td>
-        <td><b><%=employee.date %></b></td>
-        <td><b><%=employee.shift_start_time %></b></td>
-        <td><b><%=employee.hours_worked %></b></td>
+        <td><b><%=Employee.last.first_name %></b></td>
+        <td><b><%=Employee.last.last_name %></b></td>
+        <td><b><%=Employee.last.email %></b></td>
+        <td><b><%=Employee.last.title %></b></td>
+        <td><b><%=Employee.last.date %></b></td>
+        <td><b><%=Employee.last.shift_start_time %></b></td>
+        <td><b><%=Employee.last.hours_worked %></b></td>
       </tr>
 
-    <% end %>
+  
   </tbody>
 </table>

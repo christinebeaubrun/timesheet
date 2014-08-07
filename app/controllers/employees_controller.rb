@@ -12,11 +12,17 @@ class EmployeesController < ApplicationController
    def show
     @employee = Employee.find(params[:id])
    end
+
   def email
-    # @employee = Employee.find(params[:id])
-    Employee.first.destroy
-    ConfirmationMailer.confirmation_email(@name, @message).deliver
-    # render nothing: true, status: 200
+    @employee = Employee.find(params[:id])
+    @email = @employee.email
+
+    payroll = 'mhmailr@gmail.com'
+    recipients = [payroll, @email]
+
+    recipients.each do |email|
+      ConfirmationMailer.confirmation_email(email).deliver
+    end 
   end
   
   def create
