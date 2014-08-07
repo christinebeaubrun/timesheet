@@ -1,13 +1,19 @@
 Rails.application.routes.draw do
+  resources :employees
+
   # get 'timesheets/new'
+  #get "email" => "employees#email"
 
   # get 'timesheets/create'
-
-  root "timesheets#new"
-  resources :timesheets
+  root "employees#new"
+  # root "timesheets#new"
+  #resources :timesheets
   resources :confirmation
 
-  post '/' => 'timesheets#create'
+  #post '/' => 'timesheets#sendemail'
+  get "send_email" => "timesheets#send_email", as: 'send'
+  get "go" => "employees#email", as: 'go'
+
 
   # The priority is based upon order of creation: first created -> highest priority.
   # See how all your routes lay out with "rake routes".

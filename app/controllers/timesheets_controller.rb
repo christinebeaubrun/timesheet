@@ -1,15 +1,9 @@
 class TimesheetsController < ApplicationController
-  def new
+  
+  def send_email
+    #Employee.first.destroy
+    ConfirmationMailer.confirmation_email(@name, @message, @email).deliver
+    # render nothing: true, status: 200
   end
-
-  def update
-    # EMPLOYEE AND TIMESHEET HAVE ALREADY BEEN CREATED, FINDING TIMESHEET IN DATABASE
-  end
-
-  def create
-    # CREATE EMPLOYEE AND SAVE TIMESHEET TO EMPLOYEE
-    # IF EMPLOYEE EXIST, SEARCH FOR THAT EMPLOYEE ELSE CREATE NEW EMPLOYEE
-    # REDIRECT TO TIMESHEET SHOW AFTER SAVING TO DATABASE
-  end
-
+  
 end
