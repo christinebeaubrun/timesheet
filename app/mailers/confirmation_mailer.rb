@@ -6,6 +6,6 @@ class ConfirmationMailer < ActionMailer::Base
     @message = message
     @email = "mhmailr@gmail.com"
     mail(to: "mhmailr@gmail.com" ,subject: "Sent from Timesheet app!")
-
   end
 end
+#{}"april.rabkin@gmail.com"

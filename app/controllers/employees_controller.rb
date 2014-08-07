@@ -13,7 +13,9 @@ class EmployeesController < ApplicationController
     @employee = Employee.find(params[:id])
    end
   def email
-    ConfirmationMailer.confirmation_email(@name, @message, @email).deliver
+    # @employee = Employee.find(params[:id])
+
+    #ConfirmationMailer.confirmation_email(@name, @message, @email).deliver
     # render nothing: true, status: 200
   end
   
@@ -22,7 +24,7 @@ class EmployeesController < ApplicationController
     @employee = Employee.new(employee_params)
     respond_to do |format|
       if @employee.save
-        format.html { redirect_to @employee, notice: 'employee was successfully created.' }
+        format.html { redirect_to @employee, notice: 'Review before sending an email.' }
       else
         format.html { render :new }
       end
@@ -37,7 +39,7 @@ class EmployeesController < ApplicationController
     @employee = Employee.find(params[:id])
     respond_to do |format|
       if @employee.update(employee_params)
-        format.html { redirect_to @employee, notice: 'employee was successfully updated.' }
+        format.html { redirect_to @employee, notice: 'Review before sending an email.' }
       else
         format.html { render :edit }
       end
