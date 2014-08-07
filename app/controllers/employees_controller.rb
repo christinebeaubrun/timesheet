@@ -15,7 +15,7 @@ class EmployeesController < ApplicationController
   def email
     # @employee = Employee.find(params[:id])
 
-    #ConfirmationMailer.confirmation_email(@name, @message, @email).deliver
+    ConfirmationMailer.confirmation_email(@name, @message, @email).deliver
     # render nothing: true, status: 200
   end
   

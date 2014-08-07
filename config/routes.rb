@@ -12,7 +12,7 @@ Rails.application.routes.draw do
 
   #post '/' => 'timesheets#sendemail'
   get "send_email" => "timesheets#send_email", as: 'send'
-  get "go" => "employees#email", as: 'go'
+  get "go/:id" => "employees#email", as: 'go'
 
 
   # The priority is based upon order of creation: first created -> highest priority.

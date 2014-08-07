@@ -25074,3 +25074,629 @@ Started GET "/assets/employees.js?body=1" for 127.0.0.1 at 2014-08-07 15:00:28 -
 
 
 Started GET "/assets/application.js?body=1" for 127.0.0.1 at 2014-08-07 15:00:28 -0400
+
+
+Started GET "/" for 127.0.0.1 at 2014-08-07 16:33:35 -0400
+  [1m[36mActiveRecord::SchemaMigration Load (0.1ms)[0m  [1mSELECT "schema_migrations".* FROM "schema_migrations"[0m
+Processing by EmployeesController#new as HTML
+  Rendered employees/_form.html.erb (18.6ms)
+  Rendered employees/new.html.erb within layouts/application (23.1ms)
+Completed 200 OK in 88ms (Views: 75.5ms | ActiveRecord: 0.5ms)
+
+
+Started GET "/assets/confirmation.css?body=1" for 127.0.0.1 at 2014-08-07 16:33:35 -0400
+
+
+Started GET "/assets/timesheets.css?body=1" for 127.0.0.1 at 2014-08-07 16:33:35 -0400
+
+
+Started GET "/assets/jquery.js?body=1" for 127.0.0.1 at 2014-08-07 16:33:35 -0400
+
+
+Started GET "/assets/employees.css?body=1" for 127.0.0.1 at 2014-08-07 16:33:35 -0400
+
+
+Started GET "/assets/jquery_ujs.js?body=1" for 127.0.0.1 at 2014-08-07 16:33:35 -0400
+
+
+Started GET "/assets/turbolinks.js?body=1" for 127.0.0.1 at 2014-08-07 16:33:35 -0400
+
+
+Started GET "/assets/application.css?body=1" for 127.0.0.1 at 2014-08-07 16:33:35 -0400
+
+
+Started GET "/assets/confirmation.js?body=1" for 127.0.0.1 at 2014-08-07 16:33:35 -0400
+
+
+Started GET "/assets/employees.js?body=1" for 127.0.0.1 at 2014-08-07 16:33:35 -0400
+
+
+Started GET "/assets/timesheets.js?body=1" for 127.0.0.1 at 2014-08-07 16:33:35 -0400
+
+
+Started GET "/assets/application.js?body=1" for 127.0.0.1 at 2014-08-07 16:33:35 -0400
+
+
+Started POST "/employees" for 127.0.0.1 at 2014-08-07 16:33:45 -0400
+Processing by EmployeesController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"T6u5piubV8uAqWmcUAs7q5wQUnXAogsjap/xvZqED2s=", "employee"=>{"date"=>"2014-08-20", "first_name"=>"", "last_name"=>"", "email"=>"asasa@jhjh.com", "title"=>"", "shift_start_time"=>"", "hours_worked"=>""}, "timesheet"=>{"work_week"=>""}, "commit"=>"Create Employee"}
+  [1m[35m (0.1ms)[0m  begin transaction
+  [1m[36mSQL (0.9ms)[0m  [1mINSERT INTO "employees" ("created_at", "date", "email", "first_name", "last_name", "shift_start_time", "title", "updated_at") VALUES (?, ?, ?, ?, ?, ?, ?, ?)[0m  [["created_at", "2014-08-07 20:33:45.810831"], ["date", "2014-08-20"], ["email", "asasa@jhjh.com"], ["first_name", ""], ["last_name", ""], ["shift_start_time", ""], ["title", ""], ["updated_at", "2014-08-07 20:33:45.810831"]]
+  [1m[35m (1.1ms)[0m  commit transaction
+Redirected to http://localhost:3000/employees/12
+Completed 302 Found in 11ms (ActiveRecord: 2.1ms)
+
+
+Started GET "/employees/12" for 127.0.0.1 at 2014-08-07 16:33:45 -0400
+Processing by EmployeesController#show as HTML
+  Parameters: {"id"=>"12"}
+  [1m[36mEmployee Load (0.3ms)[0m  [1mSELECT  "employees".* FROM "employees"  WHERE "employees"."id" = ? LIMIT 1[0m  [["id", 12]]
+  [1m[35mCACHE (0.0ms)[0m  SELECT  "employees".* FROM "employees"  WHERE "employees"."id" = ? LIMIT 1  [["id", "12"]]
+  Rendered employees/show.html.erb within layouts/application (1.1ms)
+Completed 200 OK in 12ms (Views: 8.5ms | ActiveRecord: 0.4ms)
+
+
+Started GET "/assets/confirmation.css?body=1" for 127.0.0.1 at 2014-08-07 16:33:45 -0400
+
+
+Started GET "/assets/employees.css?body=1" for 127.0.0.1 at 2014-08-07 16:33:45 -0400
+
+
+Started GET "/assets/timesheets.css?body=1" for 127.0.0.1 at 2014-08-07 16:33:45 -0400
+
+
+Started GET "/assets/jquery.js?body=1" for 127.0.0.1 at 2014-08-07 16:33:45 -0400
+
+
+Started GET "/assets/jquery_ujs.js?body=1" for 127.0.0.1 at 2014-08-07 16:33:45 -0400
+
+
+Started GET "/assets/application.css?body=1" for 127.0.0.1 at 2014-08-07 16:33:45 -0400
+
+
+Started GET "/assets/turbolinks.js?body=1" for 127.0.0.1 at 2014-08-07 16:33:45 -0400
+
+
+Started GET "/assets/confirmation.js?body=1" for 127.0.0.1 at 2014-08-07 16:33:45 -0400
+
+
+Started GET "/assets/employees.js?body=1" for 127.0.0.1 at 2014-08-07 16:33:45 -0400
+
+
+Started GET "/assets/application.js?body=1" for 127.0.0.1 at 2014-08-07 16:33:45 -0400
+
+
+Started GET "/send_email" for 127.0.0.1 at 2014-08-07 16:33:47 -0400
+Processing by TimesheetsController#send_email as HTML
+  [1m[36mEmployee Load (0.2ms)[0m  [1mSELECT "employees".* FROM "employees"[0m
+  Rendered confirmation_mailer/confirmation_email.html.erb (3.3ms)
+
+ConfirmationMailer#confirmation_email: processed outbound mail in 28.1ms
+
+Sent mail to mhmailr@gmail.com (2717.2ms)
+Date: Thu, 07 Aug 2014 16:33:47 -0400
+From: mhmailr@gmail.com
+To: mhmailr@gmail.com
+Message-ID: <53e3e2ab131f7_120a980bb576c35450@samers-air.mail>
+Subject: Sent from Timesheet app!
+Mime-Version: 1.0
+Content-Type: text/html;
+ charset=UTF-8
+Content-Transfer-Encoding: 7bit
+
+<table style="width:800px">
+  <thead>
+    <tr>
+      <th>First name</th>
+      <th>Last name</th>
+      <th>Email</th>
+      <th>Title</th>
+      <th>Date</th>
+      <th>Shift</th>
+      <th>Hours worked</th>
+    </tr>
+  </thead>
+
+  <tbody>
+      <tr>
+        <td><b>sad</b></td>
+        <td><b>asdd</b></td>
+        <td><b>asd@eere.xoc</b></td>
+        <td><b></b></td>
+        <td><b>2014-08-15</b></td>
+        <td><b></b></td>
+        <td><b>2</b></td>
+      </tr>
+
+      <tr>
+        <td><b>asdasd</b></td>
+        <td><b>asdasd</b></td>
+        <td><b>sammy@gmail.com</b></td>
+        <td><b>sdswd</b></td>
+        <td><b>2014-08-13</b></td>
+        <td><b></b></td>
+        <td><b>0</b></td>
+      </tr>
+
+      <tr>
+        <td><b>sam</b></td>
+        <td><b>ss</b></td>
+        <td><b>asasa@jhjh.com</b></td>
+        <td><b>as</b></td>
+        <td><b>2014-08-21</b></td>
+        <td><b>121</b></td>
+        <td><b>212</b></td>
+      </tr>
+
+      <tr>
+        <td><b>sam</b></td>
+        <td><b>s</b></td>
+        <td><b>ss@gmail.com</b></td>
+        <td><b>ww</b></td>
+        <td><b>2014-08-14</b></td>
+        <td><b>22</b></td>
+        <td><b>2</b></td>
+      </tr>
+
+      <tr>
+        <td><b>ad</b></td>
+        <td><b>sd</b></td>
+        <td><b>ss@gmail.com</b></td>
+        <td><b>sd</b></td>
+        <td><b>2014-08-06</b></td>
+        <td><b>sds</b></td>
+        <td><b>0</b></td>
+      </tr>
+
+      <tr>
+        <td><b>ad</b></td>
+        <td><b>sd</b></td>
+        <td><b>sssss@gmail.com</b></td>
+        <td><b>sd</b></td>
+        <td><b>2014-08-06</b></td>
+        <td><b>sds</b></td>
+        <td><b>0</b></td>
+      </tr>
+
+      <tr>
+        <td><b>ad</b></td>
+        <td><b>sd</b></td>
+        <td><b>sssss@gmail.com</b></td>
+        <td><b>sd</b></td>
+        <td><b>2014-08-06</b></td>
+        <td><b>sds</b></td>
+        <td><b>0</b></td>
+      </tr>
+
+      <tr>
+        <td><b>sammy</b></td>
+        <td><b>adas</b></td>
+        <td><b>sam@gmail.com</b></td>
+        <td><b>asd</b></td>
+        <td><b></b></td>
+        <td><b>dasd</b></td>
+        <td><b>0</b></td>
+      </tr>
+
+      <tr>
+        <td><b>ss</b></td>
+        <td><b>ss</b></td>
+        <td><b>sam@gmail.co</b></td>
+        <td><b>ss</b></td>
+        <td><b>2014-08-20</b></td>
+        <td><b>s</b></td>
+        <td><b>33</b></td>
+      </tr>
+
+      <tr>
+        <td><b>ss</b></td>
+        <td><b>ss</b></td>
+        <td><b>sam@gmail.co</b></td>
+        <td><b>ss</b></td>
+        <td><b>2014-08-20</b></td>
+        <td><b>s</b></td>
+        <td><b>33</b></td>
+      </tr>
+
+      <tr>
+        <td><b></b></td>
+        <td><b></b></td>
+        <td><b>asasa@jhjh.com</b></td>
+        <td><b></b></td>
+        <td><b>2014-08-20</b></td>
+        <td><b></b></td>
+        <td><b></b></td>
+      </tr>
+
+  </tbody>
+</table>
+  Rendered timesheets/send_email.html.erb within layouts/application (1.0ms)
+Completed 200 OK in 2771ms (Views: 16.8ms | ActiveRecord: 0.2ms)
+
+
+Started GET "/" for 127.0.0.1 at 2014-08-07 16:33:54 -0400
+Processing by EmployeesController#new as HTML
+  Rendered employees/_form.html.erb (2.8ms)
+  Rendered employees/new.html.erb within layouts/application (4.3ms)
+Completed 200 OK in 19ms (Views: 17.5ms | ActiveRecord: 0.0ms)
+
+
+Started POST "/employees" for 127.0.0.1 at 2014-08-07 16:35:01 -0400
+Processing by EmployeesController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"T6u5piubV8uAqWmcUAs7q5wQUnXAogsjap/xvZqED2s=", "employee"=>{"date"=>"", "first_name"=>"", "last_name"=>"", "email"=>"sds@gmail.com", "title"=>"", "shift_start_time"=>"", "hours_worked"=>""}, "timesheet"=>{"work_week"=>""}, "commit"=>"Create Employee"}
+  [1m[35m (0.1ms)[0m  begin transaction
+  [1m[36mSQL (0.4ms)[0m  [1mINSERT INTO "employees" ("created_at", "email", "first_name", "last_name", "shift_start_time", "title", "updated_at") VALUES (?, ?, ?, ?, ?, ?, ?)[0m  [["created_at", "2014-08-07 20:35:01.985774"], ["email", "sds@gmail.com"], ["first_name", ""], ["last_name", ""], ["shift_start_time", ""], ["title", ""], ["updated_at", "2014-08-07 20:35:01.985774"]]
+  [1m[35m (0.8ms)[0m  commit transaction
+Redirected to http://localhost:3000/employees/13
+Completed 302 Found in 17ms (ActiveRecord: 1.8ms)
+
+
+Started GET "/employees/13" for 127.0.0.1 at 2014-08-07 16:35:01 -0400
+Processing by EmployeesController#show as HTML
+  Parameters: {"id"=>"13"}
+  [1m[36mEmployee Load (0.3ms)[0m  [1mSELECT  "employees".* FROM "employees"  WHERE "employees"."id" = ? LIMIT 1[0m  [["id", 13]]
+  [1m[35mCACHE (0.0ms)[0m  SELECT  "employees".* FROM "employees"  WHERE "employees"."id" = ? LIMIT 1  [["id", "13"]]
+  Rendered employees/show.html.erb within layouts/application (1.5ms)
+Completed 200 OK in 15ms (Views: 10.4ms | ActiveRecord: 0.3ms)
+
+
+Started GET "/assets/confirmation.css?body=1" for 127.0.0.1 at 2014-08-07 16:35:02 -0400
+
+
+Started GET "/assets/jquery.js?body=1" for 127.0.0.1 at 2014-08-07 16:35:02 -0400
+
+
+Started GET "/assets/employees.css?body=1" for 127.0.0.1 at 2014-08-07 16:35:02 -0400
+
+
+Started GET "/assets/timesheets.css?body=1" for 127.0.0.1 at 2014-08-07 16:35:02 -0400
+
+
+Started GET "/assets/turbolinks.js?body=1" for 127.0.0.1 at 2014-08-07 16:35:02 -0400
+
+
+Started GET "/assets/application.css?body=1" for 127.0.0.1 at 2014-08-07 16:35:02 -0400
+
+
+Started GET "/assets/jquery_ujs.js?body=1" for 127.0.0.1 at 2014-08-07 16:35:02 -0400
+
+
+Started GET "/assets/confirmation.js?body=1" for 127.0.0.1 at 2014-08-07 16:35:02 -0400
+
+
+Started GET "/assets/employees.js?body=1" for 127.0.0.1 at 2014-08-07 16:35:02 -0400
+
+
+Started GET "/assets/application.js?body=1" for 127.0.0.1 at 2014-08-07 16:35:02 -0400
+
+
+Started GET "/go" for 127.0.0.1 at 2014-08-07 16:35:05 -0400
+Processing by EmployeesController#email as HTML
+Completed 404 Not Found in 1ms
+
+ActiveRecord::RecordNotFound (Couldn't find Employee without an ID):
+  app/controllers/employees_controller.rb:61:in `set_employee'
+
+
+  Rendered /Users/samerkhaleel/.rvm/gems/ruby-2.1.1/gems/actionpack-4.1.4/lib/action_dispatch/middleware/templates/rescues/_source.erb (0.7ms)
+  Rendered /Users/samerkhaleel/.rvm/gems/ruby-2.1.1/gems/actionpack-4.1.4/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb (1.5ms)
+  Rendered /Users/samerkhaleel/.rvm/gems/ruby-2.1.1/gems/actionpack-4.1.4/lib/action_dispatch/middleware/templates/rescues/_request_and_response.html.erb (1.0ms)
+  Rendered /Users/samerkhaleel/.rvm/gems/ruby-2.1.1/gems/actionpack-4.1.4/lib/action_dispatch/middleware/templates/rescues/diagnostics.erb within rescues/layout (19.1ms)
+
+
+Started GET "/go" for 127.0.0.1 at 2014-08-07 16:35:05 -0400
+Processing by EmployeesController#email as HTML
+Completed 404 Not Found in 1ms
+
+ActiveRecord::RecordNotFound (Couldn't find Employee without an ID):
+  app/controllers/employees_controller.rb:61:in `set_employee'
+
+
+  Rendered /Users/samerkhaleel/.rvm/gems/ruby-2.1.1/gems/actionpack-4.1.4/lib/action_dispatch/middleware/templates/rescues/_source.erb (0.8ms)
+  Rendered /Users/samerkhaleel/.rvm/gems/ruby-2.1.1/gems/actionpack-4.1.4/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb (1.2ms)
+  Rendered /Users/samerkhaleel/.rvm/gems/ruby-2.1.1/gems/actionpack-4.1.4/lib/action_dispatch/middleware/templates/rescues/_request_and_response.html.erb (0.9ms)
+  Rendered /Users/samerkhaleel/.rvm/gems/ruby-2.1.1/gems/actionpack-4.1.4/lib/action_dispatch/middleware/templates/rescues/diagnostics.erb within rescues/layout (15.4ms)
+
+
+Started GET "/go" for 127.0.0.1 at 2014-08-07 16:35:22 -0400
+
+ActionController::RoutingError (No route matches [GET] "/go"):
+  actionpack (4.1.4) lib/action_dispatch/middleware/debug_exceptions.rb:21:in `call'
+  actionpack (4.1.4) lib/action_dispatch/middleware/show_exceptions.rb:30:in `call'
+  railties (4.1.4) lib/rails/rack/logger.rb:38:in `call_app'
+  railties (4.1.4) lib/rails/rack/logger.rb:20:in `block in call'
+  activesupport (4.1.4) lib/active_support/tagged_logging.rb:68:in `block in tagged'
+  activesupport (4.1.4) lib/active_support/tagged_logging.rb:26:in `tagged'
+  activesupport (4.1.4) lib/active_support/tagged_logging.rb:68:in `tagged'
+  railties (4.1.4) lib/rails/rack/logger.rb:20:in `call'
+  actionpack (4.1.4) lib/action_dispatch/middleware/request_id.rb:21:in `call'
+  rack (1.5.2) lib/rack/methodoverride.rb:21:in `call'
+  rack (1.5.2) lib/rack/runtime.rb:17:in `call'
+  activesupport (4.1.4) lib/active_support/cache/strategy/local_cache_middleware.rb:26:in `call'
+  rack (1.5.2) lib/rack/lock.rb:17:in `call'
+  actionpack (4.1.4) lib/action_dispatch/middleware/static.rb:64:in `call'
+  rack (1.5.2) lib/rack/sendfile.rb:112:in `call'
+  railties (4.1.4) lib/rails/engine.rb:514:in `call'
+  railties (4.1.4) lib/rails/application.rb:144:in `call'
+  rack (1.5.2) lib/rack/lock.rb:17:in `call'
+  rack (1.5.2) lib/rack/content_length.rb:14:in `call'
+  rack (1.5.2) lib/rack/handler/webrick.rb:60:in `service'
+  /Users/samerkhaleel/.rvm/rubies/ruby-2.1.1/lib/ruby/2.1.0/webrick/httpserver.rb:138:in `service'
+  /Users/samerkhaleel/.rvm/rubies/ruby-2.1.1/lib/ruby/2.1.0/webrick/httpserver.rb:94:in `run'
+  /Users/samerkhaleel/.rvm/rubies/ruby-2.1.1/lib/ruby/2.1.0/webrick/server.rb:295:in `block in start_thread'
+
+
+  Rendered /Users/samerkhaleel/.rvm/gems/ruby-2.1.1/gems/actionpack-4.1.4/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb (1.0ms)
+  Rendered /Users/samerkhaleel/.rvm/gems/ruby-2.1.1/gems/actionpack-4.1.4/lib/action_dispatch/middleware/templates/routes/_route.html.erb (1.9ms)
+  Rendered /Users/samerkhaleel/.rvm/gems/ruby-2.1.1/gems/actionpack-4.1.4/lib/action_dispatch/middleware/templates/routes/_table.html.erb (2.3ms)
+  Rendered /Users/samerkhaleel/.rvm/gems/ruby-2.1.1/gems/actionpack-4.1.4/lib/action_dispatch/middleware/templates/rescues/routing_error.html.erb within rescues/layout (24.4ms)
+
+
+Started GET "/go" for 127.0.0.1 at 2014-08-07 16:35:54 -0400
+
+ActionController::RoutingError (No route matches [GET] "/go"):
+  actionpack (4.1.4) lib/action_dispatch/middleware/debug_exceptions.rb:21:in `call'
+  actionpack (4.1.4) lib/action_dispatch/middleware/show_exceptions.rb:30:in `call'
+  railties (4.1.4) lib/rails/rack/logger.rb:38:in `call_app'
+  railties (4.1.4) lib/rails/rack/logger.rb:20:in `block in call'
+  activesupport (4.1.4) lib/active_support/tagged_logging.rb:68:in `block in tagged'
+  activesupport (4.1.4) lib/active_support/tagged_logging.rb:26:in `tagged'
+  activesupport (4.1.4) lib/active_support/tagged_logging.rb:68:in `tagged'
+  railties (4.1.4) lib/rails/rack/logger.rb:20:in `call'
+  actionpack (4.1.4) lib/action_dispatch/middleware/request_id.rb:21:in `call'
+  rack (1.5.2) lib/rack/methodoverride.rb:21:in `call'
+  rack (1.5.2) lib/rack/runtime.rb:17:in `call'
+  activesupport (4.1.4) lib/active_support/cache/strategy/local_cache_middleware.rb:26:in `call'
+  rack (1.5.2) lib/rack/lock.rb:17:in `call'
+  actionpack (4.1.4) lib/action_dispatch/middleware/static.rb:64:in `call'
+  rack (1.5.2) lib/rack/sendfile.rb:112:in `call'
+  railties (4.1.4) lib/rails/engine.rb:514:in `call'
+  railties (4.1.4) lib/rails/application.rb:144:in `call'
+  rack (1.5.2) lib/rack/lock.rb:17:in `call'
+  rack (1.5.2) lib/rack/content_length.rb:14:in `call'
+  rack (1.5.2) lib/rack/handler/webrick.rb:60:in `service'
+  /Users/samerkhaleel/.rvm/rubies/ruby-2.1.1/lib/ruby/2.1.0/webrick/httpserver.rb:138:in `service'
+  /Users/samerkhaleel/.rvm/rubies/ruby-2.1.1/lib/ruby/2.1.0/webrick/httpserver.rb:94:in `run'
+  /Users/samerkhaleel/.rvm/rubies/ruby-2.1.1/lib/ruby/2.1.0/webrick/server.rb:295:in `block in start_thread'
+
+
+  Rendered /Users/samerkhaleel/.rvm/gems/ruby-2.1.1/gems/actionpack-4.1.4/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb (1.2ms)
+  Rendered /Users/samerkhaleel/.rvm/gems/ruby-2.1.1/gems/actionpack-4.1.4/lib/action_dispatch/middleware/templates/routes/_route.html.erb (1.9ms)
+  Rendered /Users/samerkhaleel/.rvm/gems/ruby-2.1.1/gems/actionpack-4.1.4/lib/action_dispatch/middleware/templates/routes/_table.html.erb (1.5ms)
+  Rendered /Users/samerkhaleel/.rvm/gems/ruby-2.1.1/gems/actionpack-4.1.4/lib/action_dispatch/middleware/templates/rescues/routing_error.html.erb within rescues/layout (23.3ms)
+
+
+Started GET "/go" for 127.0.0.1 at 2014-08-07 16:35:56 -0400
+
+ActionController::RoutingError (No route matches [GET] "/go"):
+  actionpack (4.1.4) lib/action_dispatch/middleware/debug_exceptions.rb:21:in `call'
+  actionpack (4.1.4) lib/action_dispatch/middleware/show_exceptions.rb:30:in `call'
+  railties (4.1.4) lib/rails/rack/logger.rb:38:in `call_app'
+  railties (4.1.4) lib/rails/rack/logger.rb:20:in `block in call'
+  activesupport (4.1.4) lib/active_support/tagged_logging.rb:68:in `block in tagged'
+  activesupport (4.1.4) lib/active_support/tagged_logging.rb:26:in `tagged'
+  activesupport (4.1.4) lib/active_support/tagged_logging.rb:68:in `tagged'
+  railties (4.1.4) lib/rails/rack/logger.rb:20:in `call'
+  actionpack (4.1.4) lib/action_dispatch/middleware/request_id.rb:21:in `call'
+  rack (1.5.2) lib/rack/methodoverride.rb:21:in `call'
+  rack (1.5.2) lib/rack/runtime.rb:17:in `call'
+  activesupport (4.1.4) lib/active_support/cache/strategy/local_cache_middleware.rb:26:in `call'
+  rack (1.5.2) lib/rack/lock.rb:17:in `call'
+  actionpack (4.1.4) lib/action_dispatch/middleware/static.rb:64:in `call'
+  rack (1.5.2) lib/rack/sendfile.rb:112:in `call'
+  railties (4.1.4) lib/rails/engine.rb:514:in `call'
+  railties (4.1.4) lib/rails/application.rb:144:in `call'
+  rack (1.5.2) lib/rack/lock.rb:17:in `call'
+  rack (1.5.2) lib/rack/content_length.rb:14:in `call'
+  rack (1.5.2) lib/rack/handler/webrick.rb:60:in `service'
+  /Users/samerkhaleel/.rvm/rubies/ruby-2.1.1/lib/ruby/2.1.0/webrick/httpserver.rb:138:in `service'
+  /Users/samerkhaleel/.rvm/rubies/ruby-2.1.1/lib/ruby/2.1.0/webrick/httpserver.rb:94:in `run'
+  /Users/samerkhaleel/.rvm/rubies/ruby-2.1.1/lib/ruby/2.1.0/webrick/server.rb:295:in `block in start_thread'
+
+
+  Rendered /Users/samerkhaleel/.rvm/gems/ruby-2.1.1/gems/actionpack-4.1.4/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb (1.1ms)
+  Rendered /Users/samerkhaleel/.rvm/gems/ruby-2.1.1/gems/actionpack-4.1.4/lib/action_dispatch/middleware/templates/routes/_route.html.erb (1.9ms)
+  Rendered /Users/samerkhaleel/.rvm/gems/ruby-2.1.1/gems/actionpack-4.1.4/lib/action_dispatch/middleware/templates/routes/_table.html.erb (1.1ms)
+  Rendered /Users/samerkhaleel/.rvm/gems/ruby-2.1.1/gems/actionpack-4.1.4/lib/action_dispatch/middleware/templates/rescues/routing_error.html.erb within rescues/layout (22.6ms)
+
+
+Started GET "/employees/13" for 127.0.0.1 at 2014-08-07 16:35:59 -0400
+Processing by EmployeesController#show as HTML
+  Parameters: {"id"=>"13"}
+  [1m[36mEmployee Load (0.1ms)[0m  [1mSELECT  "employees".* FROM "employees"  WHERE "employees"."id" = ? LIMIT 1[0m  [["id", 13]]
+  [1m[35mCACHE (0.0ms)[0m  SELECT  "employees".* FROM "employees"  WHERE "employees"."id" = ? LIMIT 1  [["id", "13"]]
+  Rendered employees/show.html.erb within layouts/application (1.1ms)
+Completed 200 OK in 17ms (Views: 8.1ms | ActiveRecord: 0.7ms)
+
+
+Started GET "/assets/confirmation.css?body=1" for 127.0.0.1 at 2014-08-07 16:35:59 -0400
+
+
+Started GET "/assets/application.css?body=1" for 127.0.0.1 at 2014-08-07 16:35:59 -0400
+
+
+Started GET "/assets/jquery.js?body=1" for 127.0.0.1 at 2014-08-07 16:35:59 -0400
+
+
+Started GET "/assets/employees.css?body=1" for 127.0.0.1 at 2014-08-07 16:35:59 -0400
+
+
+Started GET "/assets/timesheets.css?body=1" for 127.0.0.1 at 2014-08-07 16:35:59 -0400
+
+
+Started GET "/assets/jquery_ujs.js?body=1" for 127.0.0.1 at 2014-08-07 16:35:59 -0400
+
+
+Started GET "/assets/turbolinks.js?body=1" for 127.0.0.1 at 2014-08-07 16:36:00 -0400
+
+
+Started GET "/assets/confirmation.js?body=1" for 127.0.0.1 at 2014-08-07 16:36:00 -0400
+
+
+Started GET "/assets/employees.js?body=1" for 127.0.0.1 at 2014-08-07 16:36:00 -0400
+
+
+Started GET "/assets/timesheets.js?body=1" for 127.0.0.1 at 2014-08-07 16:36:00 -0400
+
+
+Started GET "/assets/application.js?body=1" for 127.0.0.1 at 2014-08-07 16:36:00 -0400
+
+
+Started GET "/go/13" for 127.0.0.1 at 2014-08-07 16:36:01 -0400
+Processing by EmployeesController#email as HTML
+  Parameters: {"id"=>"13"}
+  [1m[36mEmployee Load (0.2ms)[0m  [1mSELECT  "employees".* FROM "employees"  WHERE "employees"."id" = ? LIMIT 1[0m  [["id", 13]]
+  [1m[35mEmployee Load (0.8ms)[0m  SELECT "employees".* FROM "employees"
+  Rendered confirmation_mailer/confirmation_email.html.erb (4.6ms)
+
+ConfirmationMailer#confirmation_email: processed outbound mail in 22.6ms
+
+Sent mail to mhmailr@gmail.com (2678.6ms)
+Date: Thu, 07 Aug 2014 16:36:01 -0400
+From: mhmailr@gmail.com
+To: mhmailr@gmail.com
+Message-ID: <53e3e331a01ee_120a98336797c35587@samers-air.mail>
+Subject: Sent from Timesheet app!
+Mime-Version: 1.0
+Content-Type: text/html;
+ charset=UTF-8
+Content-Transfer-Encoding: 7bit
+
+<table style="width:800px">
+  <thead>
+    <tr>
+      <th>First name</th>
+      <th>Last name</th>
+      <th>Email</th>
+      <th>Title</th>
+      <th>Date</th>
+      <th>Shift</th>
+      <th>Hours worked</th>
+    </tr>
+  </thead>
+
+  <tbody>
+      <tr>
+        <td><b>sad</b></td>
+        <td><b>asdd</b></td>
+        <td><b>asd@eere.xoc</b></td>
+        <td><b></b></td>
+        <td><b>2014-08-15</b></td>
+        <td><b></b></td>
+        <td><b>2</b></td>
+      </tr>
+
+      <tr>
+        <td><b>asdasd</b></td>
+        <td><b>asdasd</b></td>
+        <td><b>sammy@gmail.com</b></td>
+        <td><b>sdswd</b></td>
+        <td><b>2014-08-13</b></td>
+        <td><b></b></td>
+        <td><b>0</b></td>
+      </tr>
+
+      <tr>
+        <td><b>sam</b></td>
+        <td><b>ss</b></td>
+        <td><b>asasa@jhjh.com</b></td>
+        <td><b>as</b></td>
+        <td><b>2014-08-21</b></td>
+        <td><b>121</b></td>
+        <td><b>212</b></td>
+      </tr>
+
+      <tr>
+        <td><b>sam</b></td>
+        <td><b>s</b></td>
+        <td><b>ss@gmail.com</b></td>
+        <td><b>ww</b></td>
+        <td><b>2014-08-14</b></td>
+        <td><b>22</b></td>
+        <td><b>2</b></td>
+      </tr>
+
+      <tr>
+        <td><b>ad</b></td>
+        <td><b>sd</b></td>
+        <td><b>ss@gmail.com</b></td>
+        <td><b>sd</b></td>
+        <td><b>2014-08-06</b></td>
+        <td><b>sds</b></td>
+        <td><b>0</b></td>
+      </tr>
+
+      <tr>
+        <td><b>ad</b></td>
+        <td><b>sd</b></td>
+        <td><b>sssss@gmail.com</b></td>
+        <td><b>sd</b></td>
+        <td><b>2014-08-06</b></td>
+        <td><b>sds</b></td>
+        <td><b>0</b></td>
+      </tr>
+
+      <tr>
+        <td><b>ad</b></td>
+        <td><b>sd</b></td>
+        <td><b>sssss@gmail.com</b></td>
+        <td><b>sd</b></td>
+        <td><b>2014-08-06</b></td>
+        <td><b>sds</b></td>
+        <td><b>0</b></td>
+      </tr>
+
+      <tr>
+        <td><b>sammy</b></td>
+        <td><b>adas</b></td>
+        <td><b>sam@gmail.com</b></td>
+        <td><b>asd</b></td>
+        <td><b></b></td>
+        <td><b>dasd</b></td>
+        <td><b>0</b></td>
+      </tr>
+
+      <tr>
+        <td><b>ss</b></td>
+        <td><b>ss</b></td>
+        <td><b>sam@gmail.co</b></td>
+        <td><b>ss</b></td>
+        <td><b>2014-08-20</b></td>
+        <td><b>s</b></td>
+        <td><b>33</b></td>
+      </tr>
+
+      <tr>
+        <td><b>ss</b></td>
+        <td><b>ss</b></td>
+        <td><b>sam@gmail.co</b></td>
+        <td><b>ss</b></td>
+        <td><b>2014-08-20</b></td>
+        <td><b>s</b></td>
+        <td><b>33</b></td>
+      </tr>
+
+      <tr>
+        <td><b></b></td>
+        <td><b></b></td>
+        <td><b>asasa@jhjh.com</b></td>
+        <td><b></b></td>
+        <td><b>2014-08-20</b></td>
+        <td><b></b></td>
+        <td><b></b></td>
+      </tr>
+
+      <tr>
+        <td><b></b></td>
+        <td><b></b></td>
+        <td><b>sds@gmail.com</b></td>
+        <td><b></b></td>
+        <td><b></b></td>
+        <td><b></b></td>
+        <td><b></b></td>
+      </tr>
+
+  </tbody>
+</table>
+  Rendered employees/email.html.erb within layouts/application (0.6ms)
+Completed 200 OK in 2725ms (Views: 12.7ms | ActiveRecord: 0.9ms)
