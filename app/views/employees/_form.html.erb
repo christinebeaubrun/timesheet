@@ -1,30 +1,77 @@
-<h1>Timesheets#new</h1>
-<h1>Let's Get You Paid</h1>
-<p>Find me in app/views/timesheets/new.html.erb</p>
-  <%= form_for(@employee) do |f| %>
-  <% if @employee.errors.any? %>
-    <div id="error_explanation">
-      <h2><%= pluralize(@employee.errors.count, "error") %> prohibited this employee from being saved:</h2>
-
-      <ul>
-      <% @employee.errors.full_messages.each do |message| %>
-        <li><%= message %></li>
-      <% end %>
-      </ul>
+<form>
+  <div class="row">
+    <div id="title" class="large-12 columns">
+      <h1>Let's Get You Paid</h1>
     </div>
-  <% end %>
-    Date: <%= f.date_field :date %><br />
-    First name: <%= f.text_field :first_name %><br />
-    Last name:  <%= f.text_field :last_name %><br />
-    Email:  <%= f.email_field :email %><br />
-    Title:  <%= f.text_field :title %><br />
-    Shift:  <%= f.text_field :shift_start_time %><br />
-    Start time:  <%= f.text_field :hours_worked %><br />
-    Hours worked:  <%= f.text_field :hours_worked %><br />
-    <%= hidden_field(:timesheet, :work_week) %><br />
-    
-  <p>
-  <%= f.submit %>
-  </p>
-<% end %>
+  </div>
 
+
+    <%= form_for(@employee) do |f| %>
+    <% if @employee.errors.any? %>
+      <div id="error_explanation">
+        <h2><%= pluralize(@employee.errors.count, "error") %> prohibited this employee from being saved:</h2>
+
+        <ul>
+        <% @employee.errors.full_messages.each do |message| %>
+          <li><%= message %></li>
+        <% end %>
+        </ul>
+      </div>
+    <% end %>
+    
+    <div class="row">
+      <div class="large-12 columns">
+        <label>First Name
+          <%= f.text_field :first_name %>
+        </label>
+      </div>
+    </div>
+    <div class="row">
+      <div class="large-12 columns">
+        <label>Last Name
+          <%= f.text_field :last_name %>
+        </label>
+      </div>
+    </div>
+
+
+    <div class="row">
+      <div class="large-6 columns">
+        <label>Email
+          <%= f.text_field :first_name %>
+        </label>
+      </div>
+      <div class="large-6 columns">
+        <label>Todays Date
+          <%= f.date_field :date %>
+        </label>
+      </div>
+    </div>
+
+    <div class="row">
+      <div class="large-4 columns">
+        <label>Title
+          <%= f.text_field :title %>
+        </label>
+      </div>
+      <div class="large-4 columns">
+        <label>Shift Date
+          <%= f.date_field :shift_start_time %>
+        </label>
+      </div>
+      <div class="large-4 columns">
+        <label>Hours Worked
+          <%= f.text_field :hours_worked %>
+        </label>
+      </div>
+    </div>
+
+    <%= hidden_field(:timesheet, :work_week) %>
+
+    <div class="row">
+
+      <%= f.submit 'submit', class: 'button' %>
+    </div>
+
+  <% end %>
+</form>

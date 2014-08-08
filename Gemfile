@@ -44,7 +44,6 @@ gem "pg"
 end
 # Use Capistrano for deployment
 # gem 'capistrano-rails', group: :development
-
+gem 'foundation-rails'
 # Use debugger
 # gem 'debugger', group: [:development, :test]
-
