@@ -1,18 +1,20 @@
-
+  <div class='container'>
   <%= form_for(@employee) do |f| %>
     <%= render "error_messages", :target=> @employee %>
     Date: <%= f.date_field :date %><br />
     First name: <%= f.text_field :first_name %><br />
     Last name:  <%= f.text_field :last_name %><br />
     Email:  <%= f.email_field :email %><br />
-    Title:  <%= f.text_field :title %><br />
-    Shift:  <%= f.text_field :shift_start_time %><br />
-    Start time:  <%= f.text_field :hours_worked %><br />
-    Hours worked:  <%= f.text_field :hours_worked %><br />
-    <%= hidden_field(:timesheet, :work_week) %><br />
-    
+    <%#= hidden_field(:timesheet, :work_week) %><br />
+   <a class="add-form" href="#">Add a form for another shift</a><br>
+
+    Grand Total: <%= f.grand_total%>   
   <p>
   <%= f.submit %>
   </p>
 <% end %>
+
+</div>
+
+
 

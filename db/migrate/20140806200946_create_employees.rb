@@ -6,9 +6,6 @@ class CreateEmployees < ActiveRecord::Migration
       t.string :email
       t.date :date
       t.string :title
-      t.integer :hours_worked
-      t.string :shift_start_time
-
       t.timestamps
     end
   end
