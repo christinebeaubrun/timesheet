@@ -3,15 +3,15 @@ class EmployeesController < ApplicationController
 
   def index
     @employees = Employee.all
-   end
+  end
    
-   def new
+  def new
     @employee = Employee.new
-   end
+  end
 
-   def show
+  def show
     @employee = Employee.find(params[:id])
-   end
+  end
 
   def email
     @employee = Employee.find(params[:id])
@@ -26,15 +26,15 @@ class EmployeesController < ApplicationController
   end
   
   def create
-    
     @employee = Employee.new(employee_params)
-    respond_to do |format|
+    # respond_to do |format|
       if @employee.save
-        format.html { redirect_to @employee, notice: 'Review before sending an email.' }
+        redirect_to @employee, notice: 'Review your timesheet'
       else
-        format.html { render :new }
+        flash[:notice]
+        # format.html { render :new }
       end
-    end
+    # end
   end
 
   def edit
