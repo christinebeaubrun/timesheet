@@ -32816,3 +32816,210 @@ Content-Transfer-Encoding: 7bit
 </table>
   Rendered employees/email.html.erb within layouts/application (0.1ms)
 Completed 200 OK in 5935ms (Views: 14.6ms | ActiveRecord: 1.7ms)
+
+
+Started GET "/" for 127.0.0.1 at 2014-08-08 11:15:25 -0400
+  [1m[36mActiveRecord::SchemaMigration Load (0.7ms)[0m  [1mSELECT "schema_migrations".* FROM "schema_migrations"[0m
+Processing by EmployeesController#new as HTML
+  Rendered employees/_error_messages.html.erb (2.8ms)
+  Rendered employees/_form.html.erb (40.6ms)
+  Rendered employees/new.html.erb within layouts/application (45.7ms)
+Completed 200 OK in 194ms (Views: 160.1ms | ActiveRecord: 3.2ms)
+
+
+Started GET "/assets/employees.css?body=1" for 127.0.0.1 at 2014-08-08 11:15:25 -0400
+
+
+Started GET "/assets/timesheets.css?body=1" for 127.0.0.1 at 2014-08-08 11:15:25 -0400
+
+
+Started GET "/assets/application.css?body=1" for 127.0.0.1 at 2014-08-08 11:15:25 -0400
+
+
+Started GET "/assets/jquery.js?body=1" for 127.0.0.1 at 2014-08-08 11:15:25 -0400
+
+
+Started GET "/assets/jquery_ujs.js?body=1" for 127.0.0.1 at 2014-08-08 11:15:25 -0400
+
+
+Started GET "/assets/application.js?body=1" for 127.0.0.1 at 2014-08-08 11:15:25 -0400
+
+
+Started GET "/assets/turbolinks.js?body=1" for 127.0.0.1 at 2014-08-08 11:15:25 -0400
+
+
+Started GET "/assets/confirmation.js?body=1" for 127.0.0.1 at 2014-08-08 11:15:25 -0400
+
+
+Started GET "/assets/employees.js?body=1" for 127.0.0.1 at 2014-08-08 11:15:25 -0400
+
+
+Started GET "/assets/timesheets.js?body=1" for 127.0.0.1 at 2014-08-08 11:15:25 -0400
+
+
+Started GET "/assets/confirmation.css?body=1" for 127.0.0.1 at 2014-08-08 11:15:25 -0400
+
+
+Started GET "/" for 127.0.0.1 at 2014-08-08 11:21:51 -0400
+  [1m[36mActiveRecord::SchemaMigration Load (0.7ms)[0m  [1mSELECT "schema_migrations".* FROM "schema_migrations"[0m
+Processing by EmployeesController#new as HTML
+  Rendered employees/_error_messages.html.erb (2.8ms)
+  Rendered employees/_form.html.erb (30.4ms)
+  Rendered employees/new.html.erb within layouts/application (50.7ms)
+Completed 200 OK in 145ms (Views: 115.7ms | ActiveRecord: 4.5ms)
+
+
+Started GET "/assets/employees.css?body=1" for 127.0.0.1 at 2014-08-08 11:21:52 -0400
+
+
+Started GET "/assets/timesheets.css?body=1" for 127.0.0.1 at 2014-08-08 11:21:52 -0400
+
+
+Started GET "/assets/application.css?body=1" for 127.0.0.1 at 2014-08-08 11:21:52 -0400
+
+
+Started GET "/assets/jquery.js?body=1" for 127.0.0.1 at 2014-08-08 11:21:52 -0400
+
+
+Started GET "/assets/jquery_ujs.js?body=1" for 127.0.0.1 at 2014-08-08 11:21:52 -0400
+
+
+Started GET "/assets/application.js?body=1" for 127.0.0.1 at 2014-08-08 11:21:52 -0400
+
+
+Started GET "/assets/turbolinks.js?body=1" for 127.0.0.1 at 2014-08-08 11:21:52 -0400
+
+
+Started GET "/assets/confirmation.js?body=1" for 127.0.0.1 at 2014-08-08 11:21:52 -0400
+
+
+Started GET "/assets/employees.js?body=1" for 127.0.0.1 at 2014-08-08 11:21:52 -0400
+
+
+Started GET "/assets/timesheets.js?body=1" for 127.0.0.1 at 2014-08-08 11:21:52 -0400
+
+
+Started GET "/assets/confirmation.css?body=1" for 127.0.0.1 at 2014-08-08 11:21:52 -0400
+
+
+Started POST "/employees" for 127.0.0.1 at 2014-08-08 11:21:56 -0400
+Processing by EmployeesController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"+6PnebMuOyuT5ah0EX+SZ/mYjF18EfVtZQR8tYzYML4=", "employee"=>{"date"=>"", "first_name"=>"", "last_name"=>"", "email"=>"", "title"=>"", "shift_start_time"=>"", "hours_worked"=>""}, "timesheet"=>{"work_week"=>""}, "commit"=>"Create Employee"}
+  [1m[35m (0.2ms)[0m  BEGIN
+  [1m[36m (0.2ms)[0m  [1mROLLBACK[0m
+  Rendered employees/_error_messages.html.erb (5.5ms)
+  Rendered employees/_form.html.erb (10.4ms)
+  Rendered employees/create.html.erb within layouts/application (15.1ms)
+Completed 200 OK in 41ms (Views: 32.9ms | ActiveRecord: 0.4ms)
+
+
+Started GET "/assets/employees.css?body=1" for 127.0.0.1 at 2014-08-08 11:21:56 -0400
+
+
+Started GET "/assets/application.css?body=1" for 127.0.0.1 at 2014-08-08 11:21:56 -0400
+
+
+Started GET "/assets/jquery.js?body=1" for 127.0.0.1 at 2014-08-08 11:21:56 -0400
+
+
+Started GET "/assets/jquery_ujs.js?body=1" for 127.0.0.1 at 2014-08-08 11:21:56 -0400
+
+
+Started GET "/assets/timesheets.css?body=1" for 127.0.0.1 at 2014-08-08 11:21:56 -0400
+
+
+Started GET "/assets/confirmation.css?body=1" for 127.0.0.1 at 2014-08-08 11:21:56 -0400
+
+
+Started GET "/assets/turbolinks.js?body=1" for 127.0.0.1 at 2014-08-08 11:21:56 -0400
+
+
+Started GET "/assets/confirmation.js?body=1" for 127.0.0.1 at 2014-08-08 11:21:56 -0400
+
+
+Started GET "/assets/employees.js?body=1" for 127.0.0.1 at 2014-08-08 11:21:56 -0400
+
+
+Started GET "/assets/timesheets.js?body=1" for 127.0.0.1 at 2014-08-08 11:21:56 -0400
+
+
+Started GET "/assets/application.js?body=1" for 127.0.0.1 at 2014-08-08 11:21:56 -0400
+
+
+Started POST "/employees" for 127.0.0.1 at 2014-08-08 11:27:54 -0400
+Processing by EmployeesController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"+6PnebMuOyuT5ah0EX+SZ/mYjF18EfVtZQR8tYzYML4=", "employee"=>{"date"=>"", "first_name"=>"", "last_name"=>"", "email"=>"", "title"=>"", "shift_start_time"=>"", "hours_worked"=>""}, "timesheet"=>{"work_week"=>""}, "commit"=>"Create Employee"}
+  [1m[35m (0.3ms)[0m  BEGIN
+  [1m[36m (0.2ms)[0m  [1mROLLBACK[0m
+  Rendered employees/_error_messages.html.erb (5.9ms)
+  Rendered employees/_form.html.erb (27.6ms)
+  Rendered employees/create.html.erb within layouts/application (28.4ms)
+Completed 500 Internal Server Error in 37ms
+
+ActionView::Template::Error (undefined method `week' for #<Employee:0x007ffabea0d898>):
+    2:   <%= form_for(@employee) do |f| %>
+    3:     <%= render "error_messages", :target=> @employee %>
+    4:     Date: <%= f.date_field :date %><br />
+    5:     Week: <%= f.week_field :week %><br />
+    6:     First name: <%= f.text_field :first_name %><br />
+    7:     Last name:  <%= f.text_field :last_name %><br />
+    8:     Email:  <%= f.email_field :email %><br />
+  app/views/employees/_form.html.erb:5:in `block in _app_views_employees__form_html_erb___3519754204512061558_70357440430640'
+  app/views/employees/_form.html.erb:2:in `_app_views_employees__form_html_erb___3519754204512061558_70357440430640'
+  app/views/employees/create.html.erb:5:in `_app_views_employees_create_html_erb__2816219984978807971_70357460105240'
+
+
+  Rendered /Users/christinebeaubrun/.rvm/gems/ruby-2.1.1/gems/actionpack-4.1.4/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb (2.5ms)
+  Rendered /Users/christinebeaubrun/.rvm/gems/ruby-2.1.1/gems/actionpack-4.1.4/lib/action_dispatch/middleware/templates/rescues/_request_and_response.html.erb (1.9ms)
+  Rendered /Users/christinebeaubrun/.rvm/gems/ruby-2.1.1/gems/actionpack-4.1.4/lib/action_dispatch/middleware/templates/rescues/template_error.html.erb within rescues/layout (35.5ms)
+
+
+Started GET "/" for 127.0.0.1 at 2014-08-08 11:28:37 -0400
+  [1m[36mActiveRecord::SchemaMigration Load (0.9ms)[0m  [1mSELECT "schema_migrations".* FROM "schema_migrations"[0m
+Processing by EmployeesController#new as HTML
+  Rendered employees/_error_messages.html.erb (3.5ms)
+  Rendered employees/_form.html.erb (28.0ms)
+  Rendered employees/new.html.erb within layouts/application (34.7ms)
+Completed 500 Internal Server Error in 64ms
+
+ActionView::Template::Error (undefined method `week' for #<Employee:0x007fec873226e0>):
+    2:   <%= form_for(@employee) do |f| %>
+    3:     <%= render "error_messages", :target=> @employee %>
+    4:     Date: <%= f.date_field :date %><br />
+    5:     Week: <%= f.week_field :week %><br />
+    6:     First name: <%= f.text_field :first_name %><br />
+    7:     Last name:  <%= f.text_field :last_name %><br />
+    8:     Email:  <%= f.email_field :email %><br />
+  app/views/employees/_form.html.erb:5:in `block in _app_views_employees__form_html_erb__3077936564165432876_70326928264140'
+  app/views/employees/_form.html.erb:2:in `_app_views_employees__form_html_erb__3077936564165432876_70326928264140'
+  app/views/employees/new.html.erb:5:in `_app_views_employees_new_html_erb___3333304267960129376_70326928442880'
+
+
+  Rendered /Users/christinebeaubrun/.rvm/gems/ruby-2.1.1/gems/actionpack-4.1.4/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb (2.0ms)
+  Rendered /Users/christinebeaubrun/.rvm/gems/ruby-2.1.1/gems/actionpack-4.1.4/lib/action_dispatch/middleware/templates/rescues/_request_and_response.html.erb (1.8ms)
+  Rendered /Users/christinebeaubrun/.rvm/gems/ruby-2.1.1/gems/actionpack-4.1.4/lib/action_dispatch/middleware/templates/rescues/template_error.html.erb within rescues/layout (18.9ms)
+
+
+Started GET "/" for 127.0.0.1 at 2014-08-08 11:28:37 -0400
+Processing by EmployeesController#new as HTML
+  Rendered employees/_error_messages.html.erb (0.1ms)
+  Rendered employees/_form.html.erb (3.2ms)
+  Rendered employees/new.html.erb within layouts/application (4.0ms)
+Completed 500 Internal Server Error in 7ms
+
+ActionView::Template::Error (undefined method `week' for #<Employee:0x007fec859d27d0>):
+    2:   <%= form_for(@employee) do |f| %>
+    3:     <%= render "error_messages", :target=> @employee %>
+    4:     Date: <%= f.date_field :date %><br />
+    5:     Week: <%= f.week_field :week %><br />
+    6:     First name: <%= f.text_field :first_name %><br />
+    7:     Last name:  <%= f.text_field :last_name %><br />
+    8:     Email:  <%= f.email_field :email %><br />
+  app/views/employees/_form.html.erb:5:in `block in _app_views_employees__form_html_erb__3077936564165432876_70326928264140'
+  app/views/employees/_form.html.erb:2:in `_app_views_employees__form_html_erb__3077936564165432876_70326928264140'
+  app/views/employees/new.html.erb:5:in `_app_views_employees_new_html_erb___3333304267960129376_70326928442880'
+
+
+  Rendered /Users/christinebeaubrun/.rvm/gems/ruby-2.1.1/gems/actionpack-4.1.4/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb (2.1ms)
+  Rendered /Users/christinebeaubrun/.rvm/gems/ruby-2.1.1/gems/actionpack-4.1.4/lib/action_dispatch/middleware/templates/rescues/_request_and_response.html.erb (1.4ms)
+  Rendered /Users/christinebeaubrun/.rvm/gems/ruby-2.1.1/gems/actionpack-4.1.4/lib/action_dispatch/middleware/templates/rescues/template_error.html.erb within rescues/layout (17.7ms)
